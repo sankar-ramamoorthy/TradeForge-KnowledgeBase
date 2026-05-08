@@ -2,6 +2,12 @@
 
 ## Current System Identity
 
+Canonical repository name:
+
+```text
+TradeForge-KnowledgeBase
+```
+
 TradeForge is a persona-driven, workflow- and decision-centric situational awareness and decision support system for investing and trading workflows.
 
 The system is designed to improve:

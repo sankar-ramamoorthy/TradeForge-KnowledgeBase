@@ -1,8 +1,14 @@
-# TradeForge Knowledge Base
+# TradeForge-KnowledgeBase
 
 TradeForge is a persona-driven, workflow-centric, event-sourced decision support architecture for trading and investing workflows.
 
 This repository is the canonical semantic and architectural knowledge system for TradeForge.
+
+Canonical repository name:
+
+```text
+TradeForge-KnowledgeBase
+```
 
 It preserves:
 
