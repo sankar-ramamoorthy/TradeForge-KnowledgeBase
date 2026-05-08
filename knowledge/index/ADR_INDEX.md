@@ -68,6 +68,21 @@ Related concepts:
 
 ---
 
+## Runtime Environment Layer
+
+- [ADR 0011: Runtime Development Environment](../../../../TradeForge/DOCS/adr/0011-runtime-development-environment.md)
+
+Related concepts:
+
+- [[Semantic Truth Layer]]
+- [[Architectural Memory]]
+- [[Event Ledger]]
+- [[Decision Lifecycle Engine]]
+
+Note: ADR 0011 is infrastructure-scoped. It defines repeatable runtime tooling and does not define domain semantics.
+
+---
+
 ## Replay And Interpretation Layer
 
 - [ADR 0008: Replay System Design](../../../../TradeForge/DOCS/adr/0008-replay-system-design.md)
@@ -86,5 +101,4 @@ Related concepts:
 
 ## Numbering Note
 
-The source raw note grouped ADRs by semantic layer but used shortened labels such as `ADR-001`. This index preserves the runtime repository's four-digit ADR numbering: `ADR 0001` through `ADR 0010`.
-
+The source raw note grouped ADRs by semantic layer but used shortened labels such as `ADR-001`. This index preserves the runtime repository's four-digit ADR numbering: `ADR 0001` through `ADR 0011`.
