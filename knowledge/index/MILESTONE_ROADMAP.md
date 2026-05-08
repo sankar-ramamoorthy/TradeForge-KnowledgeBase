@@ -54,6 +54,7 @@ Runtime ADR alignment references:
 - [ADR 0008: Replay System Design](../../../../TradeForge/DOCS/adr/0008-replay-system-design.md)
 - [ADR 0009: Persona Interpretation Model](../../../../TradeForge/DOCS/adr/0009-persona-interpretation-model.md)
 - [ADR 0010: Market Intelligence Interpretation Layer](../../../../TradeForge/DOCS/adr/0010-market-intelligence-interpretation-layer.md)
+- [ADR 0011: Runtime Development Environment](../../../../TradeForge/DOCS/adr/0011-runtime-development-environment.md)
 
 Note: runtime ADRs are alignment references until corresponding KB ADR, ontology, entity, or workflow pages are explicitly promoted.
 
@@ -61,7 +62,7 @@ Note: runtime ADRs are alignment references until corresponding KB ADR, ontology
 
 ## M0: Planning Discipline And Architectural Memory
 
-**Status:** In Progress
+**Status:** Done
 
 **Semantic Intent:** Establish durable planning discipline before implementation expands.
 
@@ -90,6 +91,7 @@ Note: runtime ADRs are alignment references until corresponding KB ADR, ontology
 - [ADR 0008](../../../../TradeForge/DOCS/adr/0008-replay-system-design.md)
 - [ADR 0009](../../../../TradeForge/DOCS/adr/0009-persona-interpretation-model.md)
 - [ADR 0010](../../../../TradeForge/DOCS/adr/0010-market-intelligence-interpretation-layer.md)
+- [ADR 0011](../../../../TradeForge/DOCS/adr/0011-runtime-development-environment.md)
 
 **KB Acceptance Meaning:**
 
@@ -99,39 +101,39 @@ Note: runtime ADRs are alignment references until corresponding KB ADR, ontology
 
 ---
 
-## M1: Event Ledger And Canonical Event Model
+## M1: Runtime Scaffold And Developer Environment
 
 **Status:** Planned
 
-**Semantic Intent:** Stabilize the Event Ledger as the canonical truth layer.
+**Semantic Intent:** Establish a reproducible implementation environment before runtime domain code begins.
 
-**Architectural Significance:** All durable state must derive from immutable, replayable events. This milestone protects the distinction between facts, derived state, inferred state, and advisory interpretation.
+**Architectural Significance:** Runtime tooling supports implementation consistency, but it does not define TradeForge semantics. Python, `uv`, Docker, Docker Compose, pytest, lint, type, and README setup conventions must remain infrastructure concerns subordinate to the knowledge-base truth layer.
 
 **Canonical Concepts:**
 
+- [[Semantic Truth Layer]]
+- [[Architectural Memory]]
 - [[Event Ledger]]
-- [[Event]]
-- [[Canonical State]]
-- [[Derived State]]
-- [[Replay System]]
+- [[Decision Lifecycle Engine]]
 
 **Linked Runtime Issues:**
 
-- TF-0002: Define event envelope and canonical event domains
-- TF-0003: Define append-only event store interface
-- TF-0004: Implement in-memory event store adapter
+- TF-0002: Create Python project scaffold with pyproject.toml and uv
+- TF-0003: Add Dockerfile using uv Python 3.12 slim base image
+- TF-0004: Add docker-compose.yml for local development
+- TF-0005: Add pytest baseline and test command
+- TF-0006: Add lint, type, and dev command conventions
+- TF-0007: Add README developer setup section
 
 **Linked ADRs:**
 
-- [ADR 0001](../../../../TradeForge/DOCS/adr/0001-event-sourcing-core-model.md)
-- [ADR 0003](../../../../TradeForge/DOCS/adr/0003-canonical-event-taxonomy.md)
-- [ADR 0008](../../../../TradeForge/DOCS/adr/0008-replay-system-design.md)
+- [ADR 0011](../../../../TradeForge/DOCS/adr/0011-runtime-development-environment.md)
 
 **KB Acceptance Meaning:**
 
-- Event semantics align with [[EVENT_TAXONOMY]].
-- Events remain facts, not interpretations.
-- The Event Ledger is preserved as canonical truth.
+- Runtime environment decisions are acknowledged as implementation alignment, not semantic authority.
+- Tooling does not define event semantics, lifecycle rules, persona meaning, workspace behavior, replay rules, or AI authority.
+- Domain implementation can rely on repeatable local development commands.
 
 ---
 
@@ -181,7 +183,43 @@ Note: runtime ADRs are alignment references until corresponding KB ADR, ontology
 
 ---
 
-## M2: Decision Lifecycle Engine
+## M2: Event Ledger And Canonical Event Model
+
+**Status:** Planned
+
+**Semantic Intent:** Stabilize the Event Ledger as the canonical truth layer.
+
+**Architectural Significance:** All durable state must derive from immutable, replayable events. This milestone protects the distinction between facts, derived state, inferred state, and advisory interpretation.
+
+**Canonical Concepts:**
+
+- [[Event Ledger]]
+- [[Event]]
+- [[Canonical State]]
+- [[Derived State]]
+- [[Replay System]]
+
+**Linked Runtime Issues:**
+
+- TF-0008: Define event envelope and canonical event domains
+- TF-0009: Define append-only event store interface
+- TF-0010: Implement in-memory event store adapter
+
+**Linked ADRs:**
+
+- [ADR 0001](../../../../TradeForge/DOCS/adr/0001-event-sourcing-core-model.md)
+- [ADR 0003](../../../../TradeForge/DOCS/adr/0003-canonical-event-taxonomy.md)
+- [ADR 0008](../../../../TradeForge/DOCS/adr/0008-replay-system-design.md)
+
+**KB Acceptance Meaning:**
+
+- Event semantics align with [[EVENT_TAXONOMY]].
+- Events remain facts, not interpretations.
+- The Event Ledger is preserved as canonical truth.
+
+---
+
+## M3: Decision Lifecycle Engine
 
 **Status:** Planned
 
@@ -201,9 +239,9 @@ Note: runtime ADRs are alignment references until corresponding KB ADR, ontology
 
 **Linked Runtime Issues:**
 
-- TF-0005: Define lifecycle state model
-- TF-0006: Implement lifecycle transition validator
-- TF-0007: Implement lifecycle orchestration service
+- TF-0011: Define lifecycle state model
+- TF-0012: Implement lifecycle transition validator
+- TF-0013: Implement lifecycle orchestration service
 
 **Linked ADRs:**
 
@@ -219,7 +257,7 @@ Note: runtime ADRs are alignment references until corresponding KB ADR, ontology
 
 ---
 
-## M3: Replay And Projection Foundation
+## M4: Replay And Projection Foundation
 
 **Status:** Planned
 
@@ -237,8 +275,8 @@ Note: runtime ADRs are alignment references until corresponding KB ADR, ontology
 
 **Linked Runtime Issues:**
 
-- TF-0008: Implement replay projector foundation
-- TF-0009: Implement workspace projection read model
+- TF-0014: Implement replay projector foundation
+- TF-0015: Implement workspace projection read model
 
 **Linked ADRs:**
 
@@ -254,7 +292,7 @@ Note: runtime ADRs are alignment references until corresponding KB ADR, ontology
 
 ---
 
-## M4: Persona Workspace Projection Model
+## M5: Persona Workspace Projection Model
 
 **Status:** Planned
 
@@ -275,8 +313,8 @@ Note: runtime ADRs are alignment references until corresponding KB ADR, ontology
 
 **Linked Runtime Issues:**
 
-- TF-0009: Implement workspace projection read model
-- TF-0010: Define persona context model
+- TF-0015: Implement workspace projection read model
+- TF-0016: Define persona context model
 
 **Linked ADRs:**
 
@@ -292,7 +330,7 @@ Note: runtime ADRs are alignment references until corresponding KB ADR, ontology
 
 ---
 
-## M5: Market Intelligence And Scenario Discovery
+## M6: Market Intelligence And Scenario Discovery
 
 **Status:** Planned
 
@@ -310,8 +348,8 @@ Note: runtime ADRs are alignment references until corresponding KB ADR, ontology
 
 **Linked Runtime Issues:**
 
-- TF-0011: Define market intelligence interpretation model
-- TF-0012: Define scenario discovery advisory model
+- TF-0017: Define market intelligence interpretation model
+- TF-0018: Define scenario discovery advisory model
 
 **Linked ADRs:**
 
@@ -327,7 +365,7 @@ Note: runtime ADRs are alignment references until corresponding KB ADR, ontology
 
 ---
 
-## M6: AI Advisory Boundary
+## M7: AI Advisory Boundary
 
 **Status:** Planned
 
@@ -345,7 +383,7 @@ Note: runtime ADRs are alignment references until corresponding KB ADR, ontology
 
 **Linked Runtime Issues:**
 
-- TF-0013: Define AI advisory boundary interfaces
+- TF-0019: Define AI advisory boundary interfaces
 
 **Linked ADRs:**
 
@@ -362,7 +400,7 @@ Note: runtime ADRs are alignment references until corresponding KB ADR, ontology
 
 ---
 
-## M7: First Replayable Vertical Slice
+## M8: First Replayable Vertical Slice
 
 **Status:** Planned
 
@@ -380,7 +418,7 @@ Note: runtime ADRs are alignment references until corresponding KB ADR, ontology
 
 **Linked Runtime Issues:**
 
-- TF-0014: Implement first vertical slice from Idea through Review replay
+- TF-0020: Implement first vertical slice from Idea through Review replay
 
 **Linked ADRs:**
 
