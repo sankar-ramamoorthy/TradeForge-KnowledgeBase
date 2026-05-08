@@ -44,7 +44,7 @@ Runtime implementation issue tracking lives in:
 
 | ID | Status | Milestone | Semantic Concern |
 | --- | --- | --- | --- |
-| KB-0001 | Planned | M1A | Canonical entity semantics |
+| KB-0001 | Done | M1A | Canonical entity semantics |
 | TF-0001 | Done | M0 | Planning discipline and architectural memory |
 | TF-0002 | Planned | M1 | Event envelope and canonical event domains |
 | TF-0003 | Planned | M1 | Append-only Event Ledger interface |
@@ -64,7 +64,7 @@ Runtime implementation issue tracking lives in:
 
 ## KB-0001: Define Canonical Entity Semantics
 
-**Status:** Planned
+**Status:** Done
 
 **Milestone:** M1A
 
@@ -115,6 +115,10 @@ Runtime implementation issue tracking lives in:
 - Entity definitions are distinguished from runtime model implementation.
 - Entity pages define meaning, lifecycle role, event relationships, replay relevance, and authority boundaries.
 - Runtime models may implement these concepts, but they do not become the source of semantic truth.
+
+**Completion Note:**
+
+Initial canonical entity pages exist under `knowledge/entities/`.
 
 ---
 

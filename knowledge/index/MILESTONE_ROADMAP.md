@@ -137,7 +137,7 @@ Note: runtime ADRs are alignment references until corresponding KB ADR, ontology
 
 ## M1A: Canonical Entity Definitions
 
-**Status:** Planned
+**Status:** Done
 
 **Semantic Intent:** Define the durable semantic objects that events, workflows, projections, replay, and review refer to.
 

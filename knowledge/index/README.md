@@ -36,6 +36,23 @@ It links durable architecture doctrine, runtime alignment references, milestone 
 
 ---
 
+## Entity Map
+
+- [[TradeIdea]]
+- [[TradeThesis]]
+- [[TradePlan]]
+- [[Scenario]]
+- [[Workspace]]
+- [[LifecycleEvent]]
+- [[Persona]]
+- [[ReplaySession]]
+- [[ReviewArtifact]]
+- [[MarketContext]]
+- [[PositionIntent]]
+- [[ExecutionIntent]]
+
+---
+
 ## Operating Guidance
 
 - [[Codex Operating Boundaries]]
@@ -52,4 +69,3 @@ These areas should be expanded progressively as canonical pages are promoted:
 - replay map
 - persona map
 - knowledge graph entrypoint
-
