@@ -30,6 +30,42 @@ This repository exists to preserve:
 - how the system should evolve over time
 
 ---
+# Mandatory Semantic Boot Sequence
+
+Before performing design or implementation work, Codex MUST initialize semantic context in this order:
+
+## 1. Semantic Truth Layer
+
+Read:
+
+- knowledge-base/TradeForge/SEMANTIC_BOOTSTRAP.md
+- knowledge-base/TradeForge/INVARIANTS.md
+- knowledge-base/TradeForge/ARCHITECTURE.md
+- knowledge-base/TradeForge/UX_DOCTRINE.md
+- knowledge-base/TradeForge/GLOSSARY.md
+- knowledge-base/TradeForge/EVENT_TAXONOMY.md
+
+Optional depending on task:
+- PERSONAS.md
+- WORKSPACES.md
+- EXECUTION_CONTRACT.md
+
+## 2. Runtime Documentation Layer
+
+Read:
+- TradeForge/DOCS/
+- TradeForge/DOCS/adr/
+
+## 3. Runtime Implementation Layer
+
+Only after semantic initialization:
+- inspect src/
+- evaluate implementation impact
+- generate design reasoning
+- produce code
+
+If semantic initialization has not occurred:
+STOP.
 
 # Canonical Truth Hierarchy
 
@@ -203,7 +239,6 @@ Replay reconstruction should rely on:
 Replay systems must NOT depend on live external APIs.
 
 ---
-
 # Repository Structure
 
 ## Core Files
@@ -378,6 +413,61 @@ created: YYYY-MM-DD
 updated: YYYY-MM-DD
 ---
 ```
+---
+# Progressive Discovery Rules
+
+TradeForge follows a progressive discovery knowledge model.
+
+Agents should prefer:
+
+* smaller semantic nodes
+* incremental refinement
+* explicit conceptual relationships
+* cross-linked knowledge
+* progressive synthesis over monolithic documents
+
+Prefer:
+
+* YAML front matter
+* Obsidian-compatible wikilinks
+* durable semantic references
+* focused conceptual pages
+* explicit ontology relationships
+
+Examples:
+
+```text
+[[TradePlan]]
+[[Replay Session]]
+[[Decision Lifecycle]]
+[[Market Intelligence Layer]]
+```
+
+Avoid:
+
+* giant master documents
+* duplicated semantic definitions
+* disconnected notes
+* silent ontology drift
+* prematurely canonicalizing exploratory material
+
+Knowledge should evolve progressively:
+
+```text
+raw discovery
+    ↓
+processed synthesis
+    ↓
+topic refinement
+    ↓
+canonical entity definition
+    ↓
+architectural stabilization
+```
+
+Generated outputs are NOT automatically canonical truth.
+
+Promote knowledge incrementally and explicitly.
 
 ---
 

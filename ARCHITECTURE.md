@@ -262,6 +262,138 @@ TradeForge separates state into:
 Only Canonical State is authoritative.
 
 ---
+# Knowledge Architecture Doctrine
+
+TradeForge follows a progressive discovery knowledge model.
+
+The knowledge-base is NOT intended to behave as:
+
+* static documentation
+* monolithic specifications
+* linear design records
+* disconnected markdown notes
+
+Instead, the system is designed as an evolving semantic graph composed of:
+
+* ontology nodes
+* workflow definitions
+* ADRs
+* entities
+* topics
+* replay artifacts
+* synthesized operational knowledge
+
+---
+
+# Progressive Discovery Principles
+
+Knowledge should evolve through progressive refinement:
+
+```
+raw discovery
+    ↓
+processed synthesis
+    ↓
+topic refinement
+    ↓
+canonical entity definition
+    ↓
+architectural stabilization
+```
+
+The system prioritizes:
+
+* incremental refinement
+* semantic linking
+* durable relationships
+* contextual discovery
+* replayable reasoning
+* ontology stability
+
+---
+
+# Knowledge Maturity Layers
+
+TradeForge distinguishes between multiple levels of semantic maturity.
+
+## raw/
+
+Exploratory, unstable, imported, or unverified material.
+
+Not canonical.
+
+---
+
+## processed/
+
+Refined synthesis derived from exploratory material.
+
+More stable, but still evolving.
+
+---
+
+## topics/
+
+Cross-cutting thematic syntheses and operational concepts.
+
+Represents higher-level contextual understanding.
+
+---
+
+## entities/
+
+Canonical operational concepts and semantic objects.
+
+These represent stable system meaning.
+
+---
+
+## outputs/
+
+Generated or synthesized artifacts.
+
+Outputs are NOT automatically canonical truth.
+
+Generated material must be explicitly promoted before becoming authoritative.
+
+---
+
+# Semantic Linking
+
+TradeForge uses graph-oriented semantic discovery.
+
+Preferred conventions:
+
+* YAML front matter
+* Obsidian-compatible wikilinks
+* small semantic nodes
+* explicit relationships
+* progressive refinement over monolithic documentation
+
+Examples:
+
+```
+[[TradePlan]]
+[[Replay Session]]
+[[Decision Lifecycle]]
+[[Market Intelligence Layer]]
+```
+
+---
+
+# Architectural Goal
+
+The knowledge-base exists to support:
+
+* replayable reasoning
+* ontology stability
+* AI-assisted engineering
+* semantic governance
+* workflow continuity
+* long-lived architectural coherence
+
+Correct semantic evolution is more important than rapid documentation expansion.
+---
 
 # Event Sourcing Model
 

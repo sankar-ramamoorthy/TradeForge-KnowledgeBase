@@ -1,19 +1,55 @@
-Advice from chatgpt 2026/05/05 9:25 am 
-create this README.md in index
+---
+title: Knowledge Index
+type: index
+status: active
+tags: [TradeForge, index, navigation]
+created: 2026-05-08
+updated: 2026-05-08
+---
 
-Purpose:
+# Knowledge Index
 
-semantic navigation entrypoint
+## Purpose
 
-Eventually this becomes:
+This directory is the semantic navigation entrypoint for the TradeForge knowledge base.
 
-ontology map
-workflow map
-ADR map
-workspace map
-replay map
-knowledge graph entrypoint
+It links durable architecture doctrine, runtime alignment references, milestone intent, issue inventory, and future ontology/workflow maps.
 
-You do not need it populated heavily yet.
+---
 
-create the placeholder now.
+## Core Doctrine
+
+- [[INVARIANTS]]
+- [[ARCHITECTURE]]
+- [[GLOSSARY]]
+- [[EVENT_TAXONOMY]]
+- [[UX_DOCTRINE]]
+- [[SEMANTIC_BOOTSTRAP]]
+
+---
+
+## Planning And Governance
+
+- [[MILESTONE_ROADMAP]]
+- [[ISSUE_REGISTER]]
+- [[ADR_INDEX]]
+
+---
+
+## Operating Guidance
+
+- [[Codex Operating Boundaries]]
+
+---
+
+## Future Index Areas
+
+These areas should be expanded progressively as canonical pages are promoted:
+
+- ontology map
+- workflow map
+- workspace map
+- replay map
+- persona map
+- knowledge graph entrypoint
+
