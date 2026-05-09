@@ -47,12 +47,12 @@ Runtime implementation issue tracking lives in:
 | KB-0001 | Done | M1A | Canonical entity semantics |
 | TF-0001 | Done | M0 | Planning discipline and architectural memory |
 | TF-0002 | Done | M1 | Python project scaffold must not define domain semantics |
-| TF-0003 | Planned | M1 | Dockerfile must remain infrastructure-scoped |
-| TF-0004 | Planned | M1 | Docker Compose must not imply distributed architecture |
-| TF-0005 | Planned | M1 | Test baseline must support domain verification without external services |
-| TF-0006 | Planned | M1 | Dev command conventions must stay separate from semantic authority |
-| TF-0007 | Planned | M1 | README setup must point back to ADR and issue discipline |
-| TF-0008 | Planned | M2 | Event envelope and canonical event domains |
+| TF-0003 | Done | M1 | Dockerfile must remain infrastructure-scoped |
+| TF-0004 | Done | M1 | Docker Compose must not imply distributed architecture |
+| TF-0005 | Done | M1 | Test baseline must support domain verification without external services |
+| TF-0006 | Done | M1 | Dev command conventions must stay separate from semantic authority |
+| TF-0007 | Done | M1 | README setup must point back to ADR and issue discipline |
+| TF-0008 | Done | M2 | Event envelope and canonical event domains |
 | TF-0009 | Planned | M2 | Append-only Event Ledger interface |
 | TF-0010 | Planned | M2 | Early event store adapter without semantic drift |
 | TF-0011 | Planned | M3 | Canonical lifecycle state model |
@@ -150,7 +150,7 @@ Runtime `TF-0002` added `pyproject.toml` and `uv.lock`. Verification included `u
 
 ## TF-0003: Add Dockerfile Using uv Python 3.12 Slim Base Image
 
-**Status:** Planned
+**Status:** Done
 
 **Milestone:** M1
 
@@ -160,11 +160,15 @@ Runtime `TF-0002` added `pyproject.toml` and `uv.lock`. Verification included `u
 
 **KB Acceptance Meaning:** Container configuration does not encode lifecycle, event, workspace, persona, scenario, replay, or AI authority rules.
 
+**Completion Note:**
+
+Runtime `TF-0003` added `Dockerfile` and `.dockerignore` using the accepted uv Python 3.12 slim runtime base. The container remains infrastructure-scoped and does not encode domain behavior.
+
 ---
 
 ## TF-0004: Add docker-compose.yml For Local Development
 
-**Status:** Planned
+**Status:** Done
 
 **Milestone:** M1
 
@@ -174,11 +178,15 @@ Runtime `TF-0002` added `pyproject.toml` and `uv.lock`. Verification included `u
 
 **KB Acceptance Meaning:** Compose is a local development entrypoint, not a boundary model.
 
+**Completion Note:**
+
+Runtime `TF-0004` added `docker-compose.yml` as a local development entrypoint for the TradeForge runtime container. It does not introduce distributed architecture semantics.
+
 ---
 
 ## TF-0005: Add Pytest Baseline And Test Command
 
-**Status:** Planned
+**Status:** Done
 
 **Milestone:** M1
 
@@ -188,11 +196,15 @@ Runtime `TF-0002` added `pyproject.toml` and `uv.lock`. Verification included `u
 
 **KB Acceptance Meaning:** Test tooling supports replayable, deterministic implementation work.
 
+**Completion Note:**
+
+Runtime `TF-0005` added the pytest baseline and scaffold test coverage. The test setup does not require live external services.
+
 ---
 
 ## TF-0006: Add Lint, Type, And Dev Command Conventions
 
-**Status:** Planned
+**Status:** Done
 
 **Milestone:** M1
 
@@ -202,11 +214,15 @@ Runtime `TF-0002` added `pyproject.toml` and `uv.lock`. Verification included `u
 
 **KB Acceptance Meaning:** Tool commands remain subordinate to doctrine, ADRs, and canonical entity definitions.
 
+**Completion Note:**
+
+Runtime `TF-0006` added lint and type-check command conventions through `ruff`, `mypy`, and `uv` project configuration.
+
 ---
 
 ## TF-0007: Add README Developer Setup Section
 
-**Status:** Planned
+**Status:** Done
 
 **Milestone:** M1
 
@@ -216,11 +232,15 @@ Runtime `TF-0002` added `pyproject.toml` and `uv.lock`. Verification included `u
 
 **KB Acceptance Meaning:** Runtime README setup should point implementers back to ADR and issue discipline before code changes.
 
+**Completion Note:**
+
+Runtime `TF-0007` updated `README.md` with local setup, Docker Compose usage, and development command conventions while preserving the tooling/domain boundary.
+
 ---
 
 ## TF-0008: Define Event Envelope And Canonical Event Domains
 
-**Status:** Planned
+**Status:** Done
 
 **Milestone:** M2
 
@@ -231,6 +251,10 @@ Runtime `TF-0002` added `pyproject.toml` and `uv.lock`. Verification included `u
 **Linked Concepts:** [[Event Ledger]], [[LifecycleEvent]], [[Canonical State]], [[Derived State]], [[Inferred State]]
 
 **KB Acceptance Meaning:** Event meaning is not defined by persistence infrastructure or runtime scaffolding.
+
+**Completion Note:**
+
+Runtime `TF-0008` added the framework-free event envelope and canonical event domain identifiers under `src/domain/events/`. Event store persistence remains out of scope for TF-0009 and TF-0010.
 
 ---
 
