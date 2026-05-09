@@ -47,7 +47,7 @@ Runtime implementation issue tracking lives in:
 | KB-0001 | Done | M1A | Canonical entity semantics |
 | TF-0001 | Done | M0 | Planning discipline and architectural memory |
 | TF-0002 | Done | M1 | Python project scaffold must not define domain semantics |
-| TF-0003 | Planned | M1 | Dockerfile must remain infrastructure-scoped |
+| TF-0003 | Done | M1 | Dockerfile must remain infrastructure-scoped |
 | TF-0004 | Planned | M1 | Docker Compose must not imply distributed architecture |
 | TF-0005 | Planned | M1 | Test baseline must support domain verification without external services |
 | TF-0006 | Planned | M1 | Dev command conventions must stay separate from semantic authority |
@@ -150,7 +150,7 @@ Runtime `TF-0002` added `pyproject.toml` and `uv.lock`. Verification included `u
 
 ## TF-0003: Add Dockerfile Using uv Python 3.12 Slim Base Image
 
-**Status:** Planned
+**Status:** Done
 
 **Milestone:** M1
 
@@ -159,6 +159,10 @@ Runtime `TF-0002` added `pyproject.toml` and `uv.lock`. Verification included `u
 **Linked ADRs:** [ADR 0011](../../../../TradeForge/DOCS/adr/0011-runtime-development-environment.md)
 
 **KB Acceptance Meaning:** Container configuration does not encode lifecycle, event, workspace, persona, scenario, replay, or AI authority rules.
+
+**Completion Note:**
+
+Runtime `TF-0003` added `Dockerfile` and `.dockerignore`. Verification included `docker build -t tradeforge-runtime:tf-0003 .` and `docker run --rm tradeforge-runtime:tf-0003`, which printed `Python 3.12.12`. No Compose, pytest, domain model, service code, broker, or database behavior was added.
 
 ---
 
