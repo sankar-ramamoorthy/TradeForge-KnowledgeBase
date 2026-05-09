@@ -14,6 +14,8 @@ related:
   - "[[runtime-kb-development-loop|Runtime KB Development Loop]]"
   - "[[Processed Development Workflow Formalization]]"
   - "[[Codex Operating Boundaries]]"
+  - "[[CodexSkill]]"
+  - "[[WorkflowPrompt]]"
   - "[[ReplaySession]]"
   - "[[INVARIANTS]]"
 ---
@@ -74,6 +76,28 @@ Why does this concept exist, and what does it mean?
 ```
 
 Both are required for replayable development cognition.
+
+---
+
+## Operating Artifact Boundary
+
+Development replayability also depends on a stable boundary between KB operating artifacts:
+
+- [[CodexSkill]] preserves reusable thinking constraints.
+- [[WorkflowPrompt]] preserves reusable operational workflows.
+- playbooks preserve governance intent and doctrine.
+- processed notes preserve stabilized reasoning and promotion history.
+
+The boundary matters because future replay must reconstruct not only what Codex did, but which operational prompt governed the work and which reasoning constraints shaped interpretation.
+
+The stable rule is:
+
+```text
+skills  = reusable thinking constraints
+prompts = reusable operational workflows
+```
+
+Collapsing these artifact types creates semantic drift. A prompt that becomes a hidden skill obscures reasoning constraints; a skill that becomes a hidden workflow obscures procedural authority.
 
 ---
 

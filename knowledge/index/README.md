@@ -39,6 +39,11 @@ It links durable architecture doctrine, runtime alignment references, milestone 
 
 ## Entity Map
 
+- [[CodexSkill]]
+- [[WorkflowPrompt]]
+- [[EventLedger]]
+- [[EventStorePort]]
+- [[InMemoryEventStoreAdapter]]
 - [[TradeIdea]]
 - [[TradeThesis]]
 - [[TradePlan]]
@@ -68,12 +73,15 @@ It links durable architecture doctrine, runtime alignment references, milestone 
 
 - [[Canonical Readiness]]
 - [[Behavioral And Experiential Architecture]]
+- [[Runtime KB Development Loop]]
 
 ---
 
 ## Processed Runtime Alignment
 
 - [[TF-0006 Through TF-0008 Runtime Alignment]]
+- [[TF-0009 Event Store Interface]]
+- [[TF-0010 In-Memory Event Store]]
 
 ---
 
