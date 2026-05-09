@@ -4,7 +4,7 @@ type: index
 status: canonical
 tags: [TradeForge, issues, architecture, roadmap]
 created: 2026-05-08
-updated: 2026-05-08
+updated: 2026-05-09
 ---
 
 # Issue Register
@@ -162,7 +162,7 @@ Runtime `TF-0002` added `pyproject.toml` and `uv.lock`. Verification included `u
 
 **Completion Note:**
 
-Runtime `TF-0003` added `Dockerfile` and `.dockerignore` using the accepted uv Python 3.12 slim runtime base. The container remains infrastructure-scoped and does not encode domain behavior.
+Runtime `TF-0003` added `Dockerfile` and `.dockerignore`. Verification included `docker build -t tradeforge-runtime:tf-0003 .` and `docker run --rm tradeforge-runtime:tf-0003`, which printed `Python 3.12.12`. No Compose, pytest, domain model, service code, broker, or database behavior was added.
 
 ---
 
@@ -180,7 +180,7 @@ Runtime `TF-0003` added `Dockerfile` and `.dockerignore` using the accepted uv P
 
 **Completion Note:**
 
-Runtime `TF-0004` added `docker-compose.yml` as a local development entrypoint for the TradeForge runtime container. It does not introduce distributed architecture semantics.
+Runtime `TF-0004` added `docker-compose.yml` with one local `tradeforge` service, local Dockerfile build, repo bind mount, and named `/app/.venv` volume so container `uv` does not alter the host venv. Verification included `docker compose config` and `docker compose run --rm tradeforge`, which printed `Python 3.12.12`.
 
 ---
 
@@ -198,7 +198,7 @@ Runtime `TF-0004` added `docker-compose.yml` as a local development entrypoint f
 
 **Completion Note:**
 
-Runtime `TF-0005` added the pytest baseline and scaffold test coverage. The test setup does not require live external services.
+Runtime `TF-0005` added pytest dev dependency/config in `pyproject.toml` and a baseline Python 3.12 scaffold test in `tests/test_scaffold.py`. Verification included `uv run pytest`, which passed with `1 passed`.
 
 ---
 
@@ -217,6 +217,8 @@ Runtime `TF-0005` added the pytest baseline and scaffold test coverage. The test
 **Completion Note:**
 
 Runtime `TF-0006` added lint and type-check command conventions through `ruff`, `mypy`, and `uv` project configuration.
+**Completion Note:** Runtime command conventions were implemented with pytest,
+ruff, and mypy through `uv`. See [[TF-0006 Through TF-0008 Runtime Alignment]].
 
 ---
 
@@ -235,6 +237,9 @@ Runtime `TF-0006` added lint and type-check command conventions through `ruff`, 
 **Completion Note:**
 
 Runtime `TF-0007` updated `README.md` with local setup, Docker Compose usage, and development command conventions while preserving the tooling/domain boundary.
+**Completion Note:** Runtime README developer setup now documents local `uv` and
+Docker Compose commands and preserves the tooling/domain boundary. See
+[[TF-0006 Through TF-0008 Runtime Alignment]].
 
 ---
 
@@ -255,6 +260,9 @@ Runtime `TF-0007` updated `README.md` with local setup, Docker Compose usage, an
 **Completion Note:**
 
 Runtime `TF-0008` added the framework-free event envelope and canonical event domain identifiers under `src/domain/events/`. Event store persistence remains out of scope for TF-0009 and TF-0010.
+**Completion Note:** Runtime domain code now defines the event envelope and
+canonical event domains without persistence, adapter, broker, API, or lifecycle
+orchestration scope. See [[TF-0006 Through TF-0008 Runtime Alignment]].
 
 ---
 
