@@ -66,6 +66,7 @@ It links durable architecture doctrine, runtime alignment references, milestone 
 - [[Development Replayability]]
 - [[DESIGN.md Role And Boundary]]
 - [[DESIGN.md Introduction Timing]]
+- [[Runtime KB Development Loop]]
 
 ---
 
