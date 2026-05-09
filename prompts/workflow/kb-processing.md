@@ -14,6 +14,7 @@ updated: 2026-05-09
 prompt_scope: knowledge-base-processing
 related:
   - [[Runtime ↔ KB Development Loop]]
+  - [[SEMANTIC_GOVERNANCE]]
   - [[ARCHITECTURE]]
   - [[EVENT_TAXONOMY]]
   - [[EXECUTION_CONTRACT]]
@@ -83,6 +84,7 @@ Before processing knowledge, load semantic context.
 
 Required:
 - [[SEMANTIC_BOOTSTRAP]]
+- [[SEMANTIC_GOVERNANCE]]
 - [[INVARIANTS]]
 - [[ARCHITECTURE]]
 - [[GLOSSARY]]
@@ -127,6 +129,42 @@ Rules:
 This step is a normalization aid, not a replacement for semantic analysis.
 
 ---
+
+## Deep Integration Heuristics
+
+For architectural, workflow, doctrine, ontology,
+or operational cognition notes, additionally evaluate:
+
+- ontology implications
+- workflow implications
+- playbook implications
+- doctrine integration opportunities
+- cross-linking opportunities
+- invariant conflicts
+- semantic overlap risks
+- canonicalization readiness
+- replayability implications
+- architectural synchronization impacts
+
+Codex should:
+- avoid premature canonicalization
+- avoid semantic duplication
+- identify convergence opportunities
+- preserve ontology stability
+- surface doctrine conflicts explicitly
+
+Not every note requires deep integration analysis.
+
+Use stronger synthesis behavior when:
+- architectural meaning is emerging
+- recurring concepts appear
+- operational patterns stabilize
+- workflow cognition evolves
+- semantic boundaries shift
+- canonical structure may require refinement
+
+---
+
 
 # 1. Detect Semantic Implications
 

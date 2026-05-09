@@ -39,6 +39,7 @@ Before performing design or implementation work, Codex MUST initialize semantic 
 Read:
 
 - knowledge-base/TradeForge/SEMANTIC_BOOTSTRAP.md
+- knowledge-base/TradeForge/SEMANTIC_GOVERNANCE.md
 - knowledge-base/TradeForge/INVARIANTS.md
 - knowledge-base/TradeForge/ARCHITECTURE.md
 - knowledge-base/TradeForge/UX_DOCTRINE.md
@@ -245,6 +246,9 @@ Replay systems must NOT depend on live external APIs.
 
 - `PROJECT.md`
   Active initiative focus and current architectural priorities.
+
+- `SEMANTIC_GOVERNANCE.md`
+  Canonical semantic governance, canonical readiness, ontology stabilization, and KB processing discipline.
 
 - `ARCHITECTURE.md`
   System architecture doctrine and layer ownership.

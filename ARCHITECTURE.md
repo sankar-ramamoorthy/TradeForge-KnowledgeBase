@@ -266,6 +266,8 @@ Only Canonical State is authoritative.
 
 TradeForge follows a progressive discovery knowledge model.
 
+Canonical semantic governance, canonical readiness, ontology stabilization, doctrine convergence, and KB processing discipline are defined in [[SEMANTIC_GOVERNANCE]].
+
 The knowledge-base is NOT intended to behave as:
 
 * static documentation

@@ -44,6 +44,7 @@ knowledge-base/TradeForge/
 Defines:
 
 * ontology (what things are)
+* semantic governance (how knowledge stabilizes)
 * event taxonomy (what is true)
 * invariants (what cannot break)
 * UX doctrine (how cognition is structured)
@@ -54,6 +55,8 @@ Defines:
 * workflow semantics
 
 This layer defines semantic truth.
+
+See `SEMANTIC_GOVERNANCE.md` for canonical readiness, ontology stabilization, doctrine convergence, and KB processing discipline.
 
 Implementation must NOT silently redefine concepts from this layer.
 

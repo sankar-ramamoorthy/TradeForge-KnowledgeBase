@@ -14,6 +14,7 @@ created: 2026-05-08
 updated: 2026-05-09
 canonical_location: playbooks/development/runtime-kb-development-loop.md
 related:
+  - [[SEMANTIC_GOVERNANCE]]
   - [[ARCHITECTURE]]
   - [[EVENT_TAXONOMY]]
   - [[EXECUTION_CONTRACT]]
@@ -136,6 +137,7 @@ Before planning or implementation work begins, semantic context MUST be initiali
 Required KB documents:
 
 - [[SEMANTIC_BOOTSTRAP]]
+- [[SEMANTIC_GOVERNANCE]]
 - [[INVARIANTS]]
 - [[ARCHITECTURE]]
 - [[UX_DOCTRINE]]
@@ -207,6 +209,8 @@ Canonical locations:
 # KB Knowledge Stabilization Model
 
 TradeForge follows progressive semantic refinement.
+
+Canonical governance for semantic stabilization, canonical readiness, ontology convergence, and KB processing discipline is defined in [[SEMANTIC_GOVERNANCE]].
 
 Knowledge evolves through:
 
