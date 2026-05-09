@@ -85,6 +85,7 @@ It links durable architecture doctrine, runtime alignment references, milestone 
 - [[TF-0009 Event Store Interface]]
 - [[TF-0010 In-Memory Event Store]]
 - [[TF-0011 Lifecycle State Model]]
+- [[Implemented TF-0012 Lifecycle Transition Validator]]
 
 ---
 
