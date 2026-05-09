@@ -25,6 +25,7 @@ It links durable architecture doctrine, runtime alignment references, milestone 
 - [[EVENT_TAXONOMY]]
 - [[UX_DOCTRINE]]
 - [[SEMANTIC_BOOTSTRAP]]
+- [[SEMANTIC_GOVERNANCE]]
 
 ---
 
@@ -58,6 +59,15 @@ It links durable architecture doctrine, runtime alignment references, milestone 
 - [[Codex Operating Boundaries]]
 - [[Processed Development Workflow Formalization]]
 - [[Development Replayability]]
+- [[DESIGN.md Role And Boundary]]
+- [[DESIGN.md Introduction Timing]]
+
+---
+
+## Topic Map
+
+- [[Canonical Readiness]]
+- [[Behavioral And Experiential Architecture]]
 
 ---
 

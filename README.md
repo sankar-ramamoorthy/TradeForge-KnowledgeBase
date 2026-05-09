@@ -135,6 +135,12 @@ SEMANTIC_BOOTSTRAP.md
 Initial semantic worldview and operational initialization context for Codex and AI-assisted workflows.
 
 ```text
+SEMANTIC_GOVERNANCE.md
+```
+
+Canonical doctrine for semantic governance, canonical readiness, ontology stabilization, doctrine convergence, and KB processing discipline.
+
+```text
 INVARIANTS.md
 ```
 

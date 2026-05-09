@@ -170,6 +170,7 @@ Implementation should follow doctrine, not precede it.
 Core references:
 
 - `AGENTS.md`
+- `SEMANTIC_GOVERNANCE.md`
 - `ARCHITECTURE.md`
 - `INVARIANTS.md`
 - `UX_DOCTRINE.md`
