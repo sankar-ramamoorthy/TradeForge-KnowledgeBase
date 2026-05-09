@@ -145,6 +145,34 @@ It is the source of truth for all system state.
 
 ---
 
+## Event Store Port
+
+An **Event Store Port** is a runtime interface boundary for appending immutable events and reading event history in deterministic order.
+
+It is NOT:
+- the Event Ledger itself
+- a projection
+- a persistence strategy
+- lifecycle authority
+
+It supports Event Ledger doctrine without defining canonical truth.
+
+---
+
+## In-Memory Event Store Adapter
+
+An **In-Memory Event Store Adapter** is a runtime infrastructure adapter that implements the Event Store Port using process-local memory.
+
+It is NOT:
+- the Event Ledger itself
+- durable persistence doctrine
+- distributed event streaming architecture
+- lifecycle authority
+
+It supports local testing and early vertical slices.
+
+---
+
 ## Replay System
 
 The **Replay System** reconstructs historical system state using:
@@ -300,6 +328,40 @@ Examples:
 - scenario probabilities
 
 Inferred state is advisory only.
+
+---
+
+## Codex Skill
+
+A **Codex Skill** is a reusable reasoning capability that constrains how Codex should think within TradeForge.
+
+Skills define:
+- behavioral modifiers
+- reasoning constraints
+- domain operating rules
+- architectural discipline
+
+Skills are NOT:
+- workflow prompts
+- task entrypoints
+- canonical doctrine by themselves
+
+---
+
+## Workflow Prompt
+
+A **Workflow Prompt** is a reusable operational invocation surface for Codex.
+
+Prompts define:
+- what Codex should do
+- which workflow sequence to follow
+- what context to load
+- what processing output is expected
+
+Prompts are NOT:
+- reusable reasoning capabilities
+- ontology definitions
+- replacements for playbooks or invariants
 
 ---
 

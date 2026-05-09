@@ -11,7 +11,7 @@ tags:
   - semantic-stabilization
   - architecture-governance
 created: 2026-05-08
-updated: 2026-05-08
+updated: 2026-05-09
 canonical_location: playbooks/development/runtime-kb-development-loop.md
 related:
   - [[ARCHITECTURE]]
@@ -22,6 +22,8 @@ related:
   - [[Decision Lifecycle]]
   - [[Event Ledger]]
   - [[Replay Session]]
+  - [[CodexSkill]]
+  - [[WorkflowPrompt]]
 ---
 
 # Runtime ↔ KB Development Loop
@@ -309,6 +311,11 @@ Contains:
 - reusable reasoning capabilities
 - modular cognition patterns
 
+Boundary:
+- skills define how Codex should think
+- skills preserve reusable reasoning constraints
+- skills should not become procedural task entrypoints
+
 ---
 
 ## prompts/
@@ -326,6 +333,24 @@ Examples:
 - `prompts/workflow/operational-sync.md`
 
 These prompts operationalize the Runtime ↔ KB Development Loop and provide reproducible execution behavior for Codex sessions.
+
+Boundary:
+- prompts define what Codex should do
+- prompts preserve reusable operational workflows
+- prompts may invoke skills, but should not absorb skill responsibilities
+
+Durable distinction:
+
+```text
+skills  = reusable thinking constraints
+prompts = reusable operational workflows
+```
+
+Related ontology:
+
+- [[CodexSkill]]
+- [[WorkflowPrompt]]
+- [[Codex Operating Boundaries]]
 
 ---
 
