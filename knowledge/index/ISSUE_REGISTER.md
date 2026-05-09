@@ -48,8 +48,8 @@ Runtime implementation issue tracking lives in:
 | TF-0001 | Done | M0 | Planning discipline and architectural memory |
 | TF-0002 | Done | M1 | Python project scaffold must not define domain semantics |
 | TF-0003 | Done | M1 | Dockerfile must remain infrastructure-scoped |
-| TF-0004 | Planned | M1 | Docker Compose must not imply distributed architecture |
-| TF-0005 | Planned | M1 | Test baseline must support domain verification without external services |
+| TF-0004 | Done | M1 | Docker Compose must not imply distributed architecture |
+| TF-0005 | Done | M1 | Test baseline must support domain verification without external services |
 | TF-0006 | Planned | M1 | Dev command conventions must stay separate from semantic authority |
 | TF-0007 | Planned | M1 | README setup must point back to ADR and issue discipline |
 | TF-0008 | Planned | M2 | Event envelope and canonical event domains |
@@ -168,7 +168,7 @@ Runtime `TF-0003` added `Dockerfile` and `.dockerignore`. Verification included 
 
 ## TF-0004: Add docker-compose.yml For Local Development
 
-**Status:** Planned
+**Status:** Done
 
 **Milestone:** M1
 
@@ -178,11 +178,15 @@ Runtime `TF-0003` added `Dockerfile` and `.dockerignore`. Verification included 
 
 **KB Acceptance Meaning:** Compose is a local development entrypoint, not a boundary model.
 
+**Completion Note:**
+
+Runtime `TF-0004` added `docker-compose.yml` with one local `tradeforge` service, local Dockerfile build, repo bind mount, and named `/app/.venv` volume so container `uv` does not alter the host venv. Verification included `docker compose config` and `docker compose run --rm tradeforge`, which printed `Python 3.12.12`.
+
 ---
 
 ## TF-0005: Add Pytest Baseline And Test Command
 
-**Status:** Planned
+**Status:** Done
 
 **Milestone:** M1
 
@@ -191,6 +195,10 @@ Runtime `TF-0003` added `Dockerfile` and `.dockerignore`. Verification included 
 **Linked ADRs:** [ADR 0011](../../../../TradeForge/DOCS/adr/0011-runtime-development-environment.md)
 
 **KB Acceptance Meaning:** Test tooling supports replayable, deterministic implementation work.
+
+**Completion Note:**
+
+Runtime `TF-0005` added pytest dev dependency/config in `pyproject.toml` and a baseline Python 3.12 scaffold test in `tests/test_scaffold.py`. Verification included `uv run pytest`, which passed with `1 passed`.
 
 ---
 
