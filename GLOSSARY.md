@@ -132,6 +132,34 @@ It is the ONLY system allowed to own lifecycle state transitions.
 
 ---
 
+## Decision Lifecycle State
+
+**Decision Lifecycle State** is the derived current lifecycle stage of a decision workflow reconstructed from event history.
+
+It is NOT:
+- canonical truth by itself
+- lifecycle authority
+- an approval
+- an execution instruction
+
+Canonical truth remains in lifecycle events recorded by the Event Ledger.
+
+---
+
+## Lifecycle Transition Validator
+
+A **Lifecycle Transition Validator** is a deterministic domain rule component that evaluates whether a requested next lifecycle stage is valid from the current Decision Lifecycle State.
+
+It is NOT:
+- service orchestration
+- event persistence
+- lifecycle event creation
+- AI judgment
+
+It prevents invalid lifecycle shortcuts from becoming accepted workflow transitions.
+
+---
+
 ## Event Ledger
 
 The **Event Ledger** is the canonical, immutable record of all system events.

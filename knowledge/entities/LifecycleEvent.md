@@ -50,8 +50,9 @@ Replay depends on LifecycleEvents to reconstruct workflow state, pending decisio
 ## Related Concepts
 
 - [[Event Ledger]]
+- [[DecisionLifecycleState]]
+- [[LifecycleTransitionValidator]]
 - [[TradeIdea]]
 - [[TradeThesis]]
 - [[TradePlan]]
 - [[ReviewArtifact]]
-
