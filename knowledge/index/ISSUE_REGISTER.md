@@ -4,7 +4,7 @@ type: index
 status: canonical
 tags: [TradeForge, issues, architecture, roadmap]
 created: 2026-05-08
-updated: 2026-05-08
+updated: 2026-05-09
 ---
 
 # Issue Register
@@ -50,9 +50,9 @@ Runtime implementation issue tracking lives in:
 | TF-0003 | Done | M1 | Dockerfile must remain infrastructure-scoped |
 | TF-0004 | Done | M1 | Docker Compose must not imply distributed architecture |
 | TF-0005 | Done | M1 | Test baseline must support domain verification without external services |
-| TF-0006 | Planned | M1 | Dev command conventions must stay separate from semantic authority |
-| TF-0007 | Planned | M1 | README setup must point back to ADR and issue discipline |
-| TF-0008 | Planned | M2 | Event envelope and canonical event domains |
+| TF-0006 | Done | M1 | Dev command conventions must stay separate from semantic authority |
+| TF-0007 | Done | M1 | README setup must point back to ADR and issue discipline |
+| TF-0008 | Done | M2 | Event envelope and canonical event domains |
 | TF-0009 | Planned | M2 | Append-only Event Ledger interface |
 | TF-0010 | Planned | M2 | Early event store adapter without semantic drift |
 | TF-0011 | Planned | M3 | Canonical lifecycle state model |
@@ -204,7 +204,7 @@ Runtime `TF-0005` added pytest dev dependency/config in `pyproject.toml` and a b
 
 ## TF-0006: Add Lint, Type, And Dev Command Conventions
 
-**Status:** Planned
+**Status:** Done
 
 **Milestone:** M1
 
@@ -214,11 +214,14 @@ Runtime `TF-0005` added pytest dev dependency/config in `pyproject.toml` and a b
 
 **KB Acceptance Meaning:** Tool commands remain subordinate to doctrine, ADRs, and canonical entity definitions.
 
+**Completion Note:** Runtime command conventions were implemented with pytest,
+ruff, and mypy through `uv`. See [[TF-0006 Through TF-0008 Runtime Alignment]].
+
 ---
 
 ## TF-0007: Add README Developer Setup Section
 
-**Status:** Planned
+**Status:** Done
 
 **Milestone:** M1
 
@@ -228,11 +231,15 @@ Runtime `TF-0005` added pytest dev dependency/config in `pyproject.toml` and a b
 
 **KB Acceptance Meaning:** Runtime README setup should point implementers back to ADR and issue discipline before code changes.
 
+**Completion Note:** Runtime README developer setup now documents local `uv` and
+Docker Compose commands and preserves the tooling/domain boundary. See
+[[TF-0006 Through TF-0008 Runtime Alignment]].
+
 ---
 
 ## TF-0008: Define Event Envelope And Canonical Event Domains
 
-**Status:** Planned
+**Status:** Done
 
 **Milestone:** M2
 
@@ -243,6 +250,10 @@ Runtime `TF-0005` added pytest dev dependency/config in `pyproject.toml` and a b
 **Linked Concepts:** [[Event Ledger]], [[LifecycleEvent]], [[Canonical State]], [[Derived State]], [[Inferred State]]
 
 **KB Acceptance Meaning:** Event meaning is not defined by persistence infrastructure or runtime scaffolding.
+
+**Completion Note:** Runtime domain code now defines the event envelope and
+canonical event domains without persistence, adapter, broker, API, or lifecycle
+orchestration scope. See [[TF-0006 Through TF-0008 Runtime Alignment]].
 
 ---
 
