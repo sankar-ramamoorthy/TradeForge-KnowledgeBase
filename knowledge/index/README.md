@@ -4,7 +4,7 @@ type: index
 status: active
 tags: [TradeForge, index, navigation]
 created: 2026-05-08
-updated: 2026-05-08
+updated: 2026-05-09
 ---
 
 # Knowledge Index
@@ -56,6 +56,12 @@ It links durable architecture doctrine, runtime alignment references, milestone 
 ## Operating Guidance
 
 - [[Codex Operating Boundaries]]
+
+---
+
+## Processed Runtime Alignment
+
+- [[TF-0006 Through TF-0008 Runtime Alignment]]
 
 ---
 

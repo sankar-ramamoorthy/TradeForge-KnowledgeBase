@@ -4,7 +4,7 @@ type: index
 status: canonical
 tags: [TradeForge, roadmap, milestones, architecture]
 created: 2026-05-08
-updated: 2026-05-08
+updated: 2026-05-09
 ---
 
 # Milestone Roadmap
@@ -103,7 +103,7 @@ Note: runtime ADRs are alignment references until corresponding KB ADR, ontology
 
 ## M1: Runtime Scaffold And Developer Environment
 
-**Status:** Planned
+**Status:** Done
 
 **Semantic Intent:** Establish a reproducible implementation environment before runtime domain code begins.
 
@@ -134,6 +134,10 @@ Note: runtime ADRs are alignment references until corresponding KB ADR, ontology
 - Runtime environment decisions are acknowledged as implementation alignment, not semantic authority.
 - Tooling does not define event semantics, lifecycle rules, persona meaning, workspace behavior, replay rules, or AI authority.
 - Domain implementation can rely on repeatable local development commands.
+
+**Completion Note:** Runtime M1 scaffold and developer environment issues
+TF-0002 through TF-0007 are complete. Tooling remains implementation support and
+does not define TradeForge semantics.
 
 ---
 
@@ -216,6 +220,10 @@ Note: runtime ADRs are alignment references until corresponding KB ADR, ontology
 - Event semantics align with [[EVENT_TAXONOMY]].
 - Events remain facts, not interpretations.
 - The Event Ledger is preserved as canonical truth.
+
+**Progress Note:** TF-0008 is complete and establishes the runtime event
+envelope plus canonical domains. M2 remains planned until TF-0009 and TF-0010
+complete the append-only event store interface and initial adapter.
 
 ---
 
