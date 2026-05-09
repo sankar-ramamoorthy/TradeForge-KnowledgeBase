@@ -7,6 +7,7 @@ created: 2026-05-09
 updated: 2026-05-09
 aliases: [Decision Lifecycle State, Lifecycle State]
 related:
+  - "[[LifecycleTransitionValidator]]"
   - "[[LifecycleEvent]]"
   - "[[EventLedger]]"
   - "[[ReplaySession]]"
@@ -78,6 +79,9 @@ event sequence was legal.
 Invalid transition rejection belongs to lifecycle transition validation, not
 the state derivation object itself.
 
+See [[LifecycleTransitionValidator]] for deterministic validation of requested
+next lifecycle stages.
+
 ## Replay And Review Relevance
 
 Replay sessions use DecisionLifecycleState to reconstruct historical workflow
@@ -87,6 +91,7 @@ compare intended workflow progression against actual event history.
 ## Related Concepts
 
 - [[LifecycleEvent]]
+- [[LifecycleTransitionValidator]]
 - [[EventLedger]]
 - [[ReplaySession]]
 - [[TradeIdea]]

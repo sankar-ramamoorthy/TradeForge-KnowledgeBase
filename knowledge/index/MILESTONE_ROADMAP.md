@@ -229,7 +229,7 @@ complete the append-only event store interface and initial adapter.
 
 ## M3: Decision Lifecycle Engine
 
-**Status:** Planned
+**Status:** In Progress
 
 **Semantic Intent:** Stabilize the workflow authority for decision progression.
 
@@ -238,6 +238,8 @@ complete the append-only event store interface and initial adapter.
 **Canonical Concepts:**
 
 - [[Decision Lifecycle Engine]]
+- [[DecisionLifecycleState]]
+- [[LifecycleTransitionValidator]]
 - [[Decision]]
 - [[Trade Idea]]
 - [[Thesis]]
@@ -247,8 +249,8 @@ complete the append-only event store interface and initial adapter.
 
 **Linked Runtime Issues:**
 
-- TF-0011: Define lifecycle state model
-- TF-0012: Implement lifecycle transition validator
+- TF-0011: Define lifecycle state model (**Done**)
+- TF-0012: Implement lifecycle transition validator (**Done**)
 - TF-0013: Implement lifecycle orchestration service
 
 **Linked ADRs:**

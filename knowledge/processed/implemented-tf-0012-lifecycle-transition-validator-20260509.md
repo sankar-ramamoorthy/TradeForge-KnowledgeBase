@@ -6,6 +6,7 @@ tags: [TradeForge, runtime, TF-0012, decision-lifecycle, validation, replayabili
 created: 2026-05-09
 updated: 2026-05-09
 related:
+  - "[[LifecycleTransitionValidator]]"
   - "[[DecisionLifecycleState]]"
   - "[[LifecycleEvent]]"
   - "[[EventLedger]]"
@@ -20,6 +21,9 @@ source_history:
 ## Status
 
 Processed implementation synthesis for TF-0012.
+
+This note was reprocessed on 2026-05-09 because it had been marked processed
+but had not fully promoted its stable ontology and index references.
 
 TF-0012 is implemented in the runtime repository on branch:
 
@@ -72,6 +76,12 @@ Runtime planning documents were synchronized:
 - `DOCS/ISSUE_REGISTER.md` marks TF-0012 done.
 - `DOCS/MILESTONE_ROADMAP.md` marks TF-0012 done under M3.
 
+KB mirror indexes were synchronized during reprocessing:
+
+- `knowledge/index/ISSUE_REGISTER.md` marks TF-0012 done.
+- `knowledge/index/MILESTONE_ROADMAP.md` marks TF-0012 done under M3.
+- `knowledge/index/README.md` links the processed TF-0012 artifacts.
+
 ## Validation
 
 Runtime validation completed successfully:
@@ -83,6 +93,19 @@ Runtime validation completed successfully:
 ## Follow-On Work
 
 TF-0013 should use this validator from the lifecycle orchestration service before appending accepted lifecycle events through the event store port.
+
+## Ontology Promotion
+
+Stable semantic content from this implementation capture is promoted to
+[[LifecycleTransitionValidator]].
+
+The promoted boundary is:
+
+- validator evaluates allowed next stage.
+- validator does not append lifecycle events.
+- validator does not own persistence, service orchestration, UI, broker, or AI
+  behavior.
+- invalid transition rejection is deterministic and replay-compatible.
 
 ## Contradictions
 

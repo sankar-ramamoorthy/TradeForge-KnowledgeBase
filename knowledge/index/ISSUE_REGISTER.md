@@ -55,8 +55,8 @@ Runtime implementation issue tracking lives in:
 | TF-0008 | Done | M2 | Event envelope and canonical event domains |
 | TF-0009 | Planned | M2 | Append-only Event Ledger interface |
 | TF-0010 | Planned | M2 | Early event store adapter without semantic drift |
-| TF-0011 | Planned | M3 | Canonical lifecycle state model |
-| TF-0012 | Planned | M3 | Deterministic lifecycle transition validation |
+| TF-0011 | Done | M3 | Canonical lifecycle state model |
+| TF-0012 | Done | M3 | Deterministic lifecycle transition validation |
 | TF-0013 | Planned | M3 | Lifecycle orchestration without state ownership drift |
 | TF-0014 | Planned | M4 | Replay projector foundation |
 | TF-0015 | Planned | M4/M5 | Persona Workspace projection read model |
@@ -268,7 +268,7 @@ orchestration scope. See [[TF-0006 Through TF-0008 Runtime Alignment]].
 
 ## TF-0009: Define Append-Only Event Store Interface
 
-**Status:** Planned
+**Status:** Done
 
 **Milestone:** M2
 
@@ -284,7 +284,7 @@ orchestration scope. See [[TF-0006 Through TF-0008 Runtime Alignment]].
 
 ## TF-0010: Implement In-Memory Event Store Adapter
 
-**Status:** Planned
+**Status:** Done
 
 **Milestone:** M2
 
@@ -298,7 +298,7 @@ orchestration scope. See [[TF-0006 Through TF-0008 Runtime Alignment]].
 
 ## TF-0011: Define Lifecycle State Model
 
-**Status:** Planned
+**Status:** Done
 
 **Milestone:** M3
 
@@ -314,7 +314,7 @@ orchestration scope. See [[TF-0006 Through TF-0008 Runtime Alignment]].
 
 ## TF-0012: Implement Lifecycle Transition Validator
 
-**Status:** Planned
+**Status:** Done
 
 **Milestone:** M3
 
@@ -323,6 +323,8 @@ orchestration scope. See [[TF-0006 Through TF-0008 Runtime Alignment]].
 **Linked ADRs:** [ADR 0002](../../../../TradeForge/DOCS/adr/0002-decision-lifecycle-engine.md), [ADR 0003](../../../../TradeForge/DOCS/adr/0003-canonical-event-taxonomy.md)
 
 **KB Acceptance Meaning:** Invalid shortcuts do not create canonical facts.
+
+**Processed Knowledge:** [[TF-0012 Lifecycle Transition Validator]], [[Implemented TF-0012 Lifecycle Transition Validator]], [[LifecycleTransitionValidator]]
 
 ---
 
