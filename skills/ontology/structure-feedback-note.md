@@ -1,6 +1,6 @@
 ---
 name: structure-feedback-note
-description: Convert messy user feedback notes, self-observed workflow friction, or pasted feedback into a structured raw feedback Markdown note for this knowledge base. Use when the user asks to structure, capture, convert, or normalize feedback notes into the feedback template, especially notes from knowledge/raw/ that should become clearer design input before any topic, ADR, or code change.
+description: Convert messy user feedback notes, self-observed workflow friction, pasted feedback, or unstructured raw captures into a structured raw feedback Markdown note for this knowledge base. Use when the user asks to structure, capture, convert, or normalize feedback notes into the feedback template, especially notes from knowledge/raw/ that should become clearer design input before any topic, ADR, code change, or kb-processing promotion.
 ---
 
 # Structure Feedback Note
@@ -26,10 +26,14 @@ Turn unstructured user feedback into a raw, non-canonical feedback note that can
    - Lightly clean obvious copy/paste or encoding artifacts only when they obscure meaning.
    - Keep uncertainty, contradictions, rough language, and early solution ideas visible.
 6. Organize the note into the required template below.
-7. After successful conversion, move the original source note to `knowledge/processed/`.
-   - Preserve the original filename when moving it.
-   - If the destination filename already exists, ask before overwriting or renaming.
-8. Stop after creating the structured feedback note and moving the original unless the user separately asks for analysis, promotion, issues, ADRs, or implementation.
+7. Record source traceability in the structured note.
+   - Include the original source path or title in front matter when available.
+   - Preserve the original text under `Raw Input`.
+8. Do not move the original messy note to `knowledge/processed/`.
+   - `knowledge/processed/` is for stabilized syntheses, not raw originals.
+   - When this skill is used from `prompts/workflow/kb-processing.md`, the KB processing workflow owns final deletion of successfully processed raw notes.
+   - If this skill is used standalone, leave the original source note in place unless the user explicitly asks to replace or remove it.
+9. Stop after creating the structured feedback note unless the user separately asks for analysis, promotion, issues, ADRs, implementation, or the caller is continuing a KB processing workflow.
 
 ## Required Note Shape
 
@@ -39,8 +43,9 @@ title: Example Feedback Title
 type: feedback
 status: raw
 source: self
+source_note: path-or-title-of-original-note
 context: Example context
-tags: [trading-system, feedback, short-topic]
+tags: [TradeForge, feedback, short-topic]
 created: YYYY-MM-DD
 ---
 
@@ -76,6 +81,7 @@ The user's original note, pasted output, or rough feedback.
 ## Classification Guidance
 
 - Treat feedback as evidence of friction, not as an immediate requirement.
+- Treat structured feedback as raw input, not processed synthesis.
 - Keep solution ideas in `Possible Directions`; do not present them as decisions.
 - Use `Hypothesis` for the suspected underlying problem, such as input friction, cognitive mismatch, missing feedback loop, or workflow overhead.
 - Prefer `source: self` when the user is reporting their own experience.
@@ -87,10 +93,11 @@ The user's original note, pasted output, or rough feedback.
 - Do not update index pages, topic pages, entity pages, `PROJECT.md`, ADRs, or application repo files.
 - Do not create GitHub issues, implementation plans, or design decisions unless the user explicitly asks.
 - Do not over-resolve the feedback. Preserve the difference between observed friction, inferred problem, and possible solution.
+- Do not move messy raw originals into `knowledge/processed/`; use source traceability and let KB processing decide final deletion after successful promotion.
 
 ## Defaults
 
 - Prefer ASCII Markdown.
 - Prefer `knowledge/raw/` rather than adding a feedback subdirectory.
-- Prefer `knowledge/processed/` for moved originals.
+- Prefer source traceability over moving originals.
 - Use wikilinks only when an obvious existing page is named by the user or visible in the current context.

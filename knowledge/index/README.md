@@ -56,6 +56,8 @@ It links durable architecture doctrine, runtime alignment references, milestone 
 ## Operating Guidance
 
 - [[Codex Operating Boundaries]]
+- [[Processed Development Workflow Formalization]]
+- [[Development Replayability]]
 
 ---
 

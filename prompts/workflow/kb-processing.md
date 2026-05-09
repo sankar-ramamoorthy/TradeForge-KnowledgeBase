@@ -10,7 +10,7 @@ tags:
   - replayability
   - workflow
 created: 2026-05-08
-updated: 2026-05-08
+updated: 2026-05-09
 prompt_scope: knowledge-base-processing
 related:
   - [[Runtime ↔ KB Development Loop]]
@@ -104,6 +104,27 @@ STOP.
 # Processing Responsibilities
 
 When processing a raw knowledge capture, perform ALL applicable analysis.
+
+---
+
+# 0. Normalize Messy Notes When Needed
+
+If the raw capture is messy, unstructured, pasted from chat, or primarily feedback/friction rather than already structured architecture knowledge, Codex MAY first use the local skill:
+
+```text
+skills/ontology/structure-feedback-note.md
+```
+
+Use this skill to convert the messy input into a structured raw feedback note before semantic promotion.
+
+Rules:
+- preserve the original thinking under a raw input or source section
+- do not treat structured feedback as canonical knowledge
+- do not promote directly from a messy note if important context would be lost
+- after structuring, continue KB processing from the structured note when promotion is still requested
+- if the skill moves or preserves the original source, record that source relationship in the processing output
+
+This step is a normalization aid, not a replacement for semantic analysis.
 
 ---
 
@@ -298,6 +319,34 @@ Replayability is foundational.
 
 ---
 
+# 11. Delete Successfully Processed Raw Capture
+
+At the end of a successful processing pass, delete the source raw note from:
+
+```text
+knowledge/raw/
+```
+
+Deletion is allowed ONLY when all of the following are true:
+
+- stable content has been promoted to the appropriate processed, topic, entity, workflow, playbook, prompt, skill, or index location
+- the promoted artifact records the source raw note path or title
+- unresolved questions, rejected alternatives, contradictions, and operational findings have been preserved in the promoted artifact or explicitly deferred
+- no required semantic, ontology, workflow, playbook, ADR, or operational synchronization action remains incomplete
+- the processing result can be reconstructed from the promoted artifacts and git history
+
+If processing is incomplete, ambiguous, blocked, or only partially successful, do NOT delete the raw note.
+
+Rules:
+- raw note deletion must be explicit, not silent
+- never delete raw notes before promotion and traceability are complete
+- never delete raw notes to hide uncertainty, contradictions, or unresolved architectural concerns
+- mention the deleted raw note in the processing result
+
+This rule prevents passive raw-note accumulation while preserving replayability through stabilized artifacts.
+
+---
+
 # Mutation Policy
 
 ## Automatically Allowed
@@ -305,6 +354,7 @@ Replayability is foundational.
 Codex MAY:
 - refine terminology
 - create processed syntheses
+- delete successfully processed raw notes after traceable promotion
 - update topic pages
 - update workflow docs
 - update playbooks
@@ -331,6 +381,7 @@ Codex should be conservative when:
 
 Codex MUST NOT:
 - silently delete historical reasoning
+- delete unprocessed or partially processed raw notes
 - silently replace ontology definitions
 - bypass invariants
 - rewrite architectural doctrine without justification
@@ -342,6 +393,7 @@ Codex MUST NOT:
 
 Processing should ideally produce:
 
+- note normalization result, when `structure-feedback-note` was used
 - semantic synthesis
 - ontology observations
 - stabilization recommendations
@@ -350,6 +402,7 @@ Processing should ideally produce:
 - ADR implications
 - operational synchronization findings
 - suggested promotions
+- deleted raw note path, when processing completed successfully
 - identified contradictions
 
 ---
