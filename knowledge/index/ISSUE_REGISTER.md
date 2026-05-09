@@ -214,6 +214,9 @@ Runtime `TF-0005` added pytest dev dependency/config in `pyproject.toml` and a b
 
 **KB Acceptance Meaning:** Tool commands remain subordinate to doctrine, ADRs, and canonical entity definitions.
 
+**Completion Note:**
+
+Runtime `TF-0006` added lint and type-check command conventions through `ruff`, `mypy`, and `uv` project configuration.
 **Completion Note:** Runtime command conventions were implemented with pytest,
 ruff, and mypy through `uv`. See [[TF-0006 Through TF-0008 Runtime Alignment]].
 
@@ -231,6 +234,9 @@ ruff, and mypy through `uv`. See [[TF-0006 Through TF-0008 Runtime Alignment]].
 
 **KB Acceptance Meaning:** Runtime README setup should point implementers back to ADR and issue discipline before code changes.
 
+**Completion Note:**
+
+Runtime `TF-0007` updated `README.md` with local setup, Docker Compose usage, and development command conventions while preserving the tooling/domain boundary.
 **Completion Note:** Runtime README developer setup now documents local `uv` and
 Docker Compose commands and preserves the tooling/domain boundary. See
 [[TF-0006 Through TF-0008 Runtime Alignment]].
@@ -251,6 +257,9 @@ Docker Compose commands and preserves the tooling/domain boundary. See
 
 **KB Acceptance Meaning:** Event meaning is not defined by persistence infrastructure or runtime scaffolding.
 
+**Completion Note:**
+
+Runtime `TF-0008` added the framework-free event envelope and canonical event domain identifiers under `src/domain/events/`. Event store persistence remains out of scope for TF-0009 and TF-0010.
 **Completion Note:** Runtime domain code now defines the event envelope and
 canonical event domains without persistence, adapter, broker, API, or lifecycle
 orchestration scope. See [[TF-0006 Through TF-0008 Runtime Alignment]].
