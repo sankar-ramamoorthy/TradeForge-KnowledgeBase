@@ -5,6 +5,8 @@ status: processed
 created: 2026-05-10
 source:
   - knowledge/raw/20260510-implemented-tf-0015-workspace-state-contracts.md
+archived_source:
+  - knowledge/raw/archived/20260510-implemented-tf-0015-workspace-state-contracts.md
 related:
   - TF-0015
   - Workspace
@@ -45,3 +47,30 @@ They are not:
 ## Follow-Up
 
 M5 replay/projector foundation should use these contracts as read-model targets while preserving projection discardability and replay determinism.
+
+## Ontology Implications
+
+The implementation strengthens, but does not yet canonize, `Workspace State Contract` as a semantic object.
+
+Promotion to `knowledge/entities/` should wait until M5 demonstrates the contract's replay/projector role. Premature promotion would risk locking an implementation boundary before the projection model validates it.
+
+## Workflow And Playbook Implications
+
+M4 runtime architecture is now complete:
+
+- TF-0014: workspace entrypoint/routing boundary
+- TF-0015: workspace state contract boundary
+
+The next disciplined step is TF-0016. M5 should not add Postgres, FastAPI, React, AI, market context automation, or scenario discovery.
+
+## ADR Implications
+
+No new ADR is required.
+
+ADR 0012 covers workspace architecture and ADR 0013 covers derived operational attention. TF-0015 stayed within those decisions by remaining declarative and non-authoritative.
+
+## Operational Synchronization
+
+Runtime issue state is synchronized for TF-0015.
+
+The only drift identified during KB processing was milestone-level status: Roadmap v2 still labeled M4 as Planned even though both linked runtime issues are Done. That should be corrected to mark M4 Done.

@@ -48,7 +48,7 @@ Do not mirror the full runtime issue register here.
 | ID | Status | Semantic Concern |
 |---|---|---|
 | TF-0014 | Done | Workspace routes must be bounded entrypoints, not workspace truth |
-| TF-0015 | Planned | Workspace state contracts must distinguish canonical, derived, inferred, advisory, and route context |
+| TF-0015 | Done | Workspace state contracts must distinguish canonical, derived, inferred, advisory, and route context |
 
 ## TF-0014 Processing Result
 
@@ -66,18 +66,35 @@ Relevant processed notes:
 - [[TF-0014 Workspace Routing Model Planning Synthesis]]
 - [[Implemented TF-0014 Workspace Routing Model]]
 
-## TF-0015 Boundary
+## TF-0015 Processing Result
 
-TF-0015 should consume the routing boundary without expanding it.
+TF-0015 created immutable workspace state contracts for the ADR 0012 workspace set.
 
-The next semantic concern is workspace state shape:
+Semantic conclusion:
 
-- what a workspace needs to know
-- what fields are canonical vs derived vs inferred
-- what lifecycle-aware actions may be surfaced
-- what replay requirements each workspace state contract must preserve
+- contracts define required derived read-model shape
+- each state field must carry authority classification
+- canonical fields are source references only, not workspace-owned truth
+- allowed lifecycle-aware actions are declarations, not execution authority
+- replay requirements are explicit contract obligations
 
-TF-0015 should not implement React, Postgres, FastAPI, replay projector infrastructure, market intelligence, AI, or behavioral scoring.
+Relevant processed notes:
+
+- [[TF-0015 Workspace State Contracts Planning Synthesis]]
+- [[Implemented TF-0015 Workspace State Contracts]]
+
+## M5 Boundary
+
+TF-0016 should consume the routing and state-contract boundaries without expanding them.
+
+The next semantic concern is replay projector foundation:
+
+- ordered event history must project into derived workspace state
+- projections must remain discardable and rebuildable
+- replay must remain deterministic
+- contracts are targets, not truth
+
+TF-0016 should not implement React, Postgres, FastAPI, market intelligence, AI, or behavioral scoring.
 
 ## MVP Discipline
 

@@ -5,6 +5,8 @@ status: processed
 created: 2026-05-10
 source:
   - knowledge/raw/20260510-tf-0015-workspace-state-contracts-plan.md
+archived_source:
+  - knowledge/raw/archived/20260510-tf-0015-workspace-state-contracts-plan.md
 related:
   - TF-0015
   - Workspace
@@ -39,3 +41,32 @@ Domain event and lifecycle types may be referenced only as stable identifiers if
 ## ADR Evaluation
 
 No new ADR is required if implementation remains declarative and subordinate to ADR 0012 and ADR 0013.
+
+## Ontology Implications
+
+No new canonical entity should be promoted yet.
+
+`Workspace State Contract` is a strong candidate concept, but it is still implementation-facing until M5 proves how replay/projector infrastructure consumes it. For now it should remain a processed runtime learning rather than a glossary or entity addition.
+
+The important semantic distinction is stable:
+
+- `Workspace` is a persona-scoped operational cognition environment.
+- `Workspace Route` is an entrypoint.
+- `Workspace State Contract` is a derived read-model contract.
+- Canonical truth remains in event-backed lifecycle and ledger facts.
+
+## Workflow And Playbook Implications
+
+TF-0015 completes the lean M4 runtime shape when paired with TF-0014:
+
+- routes define where workspace cognition is entered
+- contracts define what derived state a workspace expects
+- neither routes nor contracts own truth
+
+No new playbook is required, but M5 planning should explicitly consume TF-0015 contracts as projector targets.
+
+## Operational Synchronization
+
+The runtime issue register marks TF-0015 done.
+
+Because TF-0014 and TF-0015 are both done, M4 should be considered complete once the runtime roadmap milestone status is updated from Planned to Done.

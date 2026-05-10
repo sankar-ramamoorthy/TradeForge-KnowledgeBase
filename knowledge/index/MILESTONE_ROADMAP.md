@@ -67,28 +67,30 @@ It should not prove autonomous trading, broker replacement, charting platform so
 | M1A | Done | Canonical entity definitions |
 | M2 | Done | Event Ledger and canonical event model |
 | M3 | Done | Decision Lifecycle Engine |
-| M4 | In Progress | Workspace and cognitive architecture |
+| M4 | Done | Workspace and cognitive architecture |
 | M5 | Planned | Replay and projection foundation |
 | M6 | Planned | Persona Workspace projection layer |
 | M7 | Planned | MVP runtime infrastructure |
 | M8 | Planned | First operational MVP vertical slice |
 | M9+ | Deferred | Market/scenario/AI/adaptive layers after MVP path checkpoint |
 
-## Current M4 State
+## M4 Closeout
 
 M4 is intentionally narrow:
 
 - TF-0014: Create workspace routing model (**Done**)
-- TF-0015: Define workspace state contracts (**Planned**)
+- TF-0015: Define workspace state contracts (**Done**)
 
 TF-0014 established bounded runtime entrypoints for the ADR 0012 workspace set without making routes into workspace truth.
 
-TF-0015 should define workspace state contracts while preserving the distinction between:
+TF-0015 defined workspace state contracts while preserving the distinction between:
 
 - canonical event-backed state
 - derived workspace state
 - inferred/advisory context
 - route entry context
+
+M4 is now complete. The next runtime issue is TF-0016 under M5.
 
 ## Fast MVP Path
 
@@ -124,6 +126,8 @@ Relevant KB artifacts:
 - [[Roadmap v2 Alignment And Processing Notes]]
 - [[TF-0014 Workspace Routing Model Planning Synthesis]]
 - [[Implemented TF-0014 Workspace Routing Model]]
+- [[TF-0015 Workspace State Contracts Planning Synthesis]]
+- [[Implemented TF-0015 Workspace State Contracts]]
 
 Root design layer:
 
