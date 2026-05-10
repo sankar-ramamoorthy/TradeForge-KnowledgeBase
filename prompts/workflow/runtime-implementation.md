@@ -356,7 +356,7 @@ Documentation drift is architectural drift.
 Before implementation is considered complete:
 
 Verify:
-- `DOCS/MILESTONE_ROADMAP.md`
+- `DOCS/Milestone_Roadmap_v2.md`
 - `DOCS/ISSUE_REGISTER.md`
 
 Ensure:

@@ -5,6 +5,8 @@ status: processed
 created: 2026-05-10
 source:
   - knowledge/raw/20260510-tf-0014-workspace-routing-model-plan.md
+archived_source:
+  - knowledge/raw/archived/20260510-tf-0014-workspace-routing-model-plan.md
 related:
   - TF-0014
   - Workspace
@@ -37,3 +39,28 @@ Future issues may add event-backed workspace context updates or projection read 
 ## ADR Evaluation
 
 No new ADR is required for TF-0014 if the implementation remains within ADR 0012. Introducing new workspace semantics, persisted route state, or route-driven lifecycle behavior would require a separate ADR checkpoint.
+
+## Ontology Implications
+
+No new canonical ontology term is introduced.
+
+The planning note reinforces an existing distinction:
+
+- `Workspace` is an operational cognition environment.
+- `WorkspaceRoute` is a runtime entrypoint contract.
+
+`WorkspaceRoute` should remain a runtime implementation concept unless it recurs as a stable semantic object across workspace state contracts, replay reconstruction, and frontend runtime work.
+
+## Workflow And Playbook Implications
+
+TF-0014 validates the lean M4 discipline:
+
+- define workspace boundaries before UI implementation
+- prevent route/navigation code from becoming domain truth
+- defer projection/read-model contracts to TF-0015
+
+No new workflow or playbook is required, but future M4 work should preserve this sequencing.
+
+## Operational Synchronization
+
+Runtime Roadmap v2 and the runtime issue register now identify TF-0014 as the first M4 runtime issue. KB index pages must align to that Roadmap v2 sequence and must not retain the old replay-projector TF-0014 meaning.

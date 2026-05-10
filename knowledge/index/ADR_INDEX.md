@@ -4,7 +4,7 @@ type: index
 status: canonical
 tags: [TradeForge, ADR, architecture, index]
 created: 2026-05-08
-updated: 2026-05-08
+updated: 2026-05-10
 ---
 
 # ADR Index
@@ -88,6 +88,7 @@ Note: ADR 0011 is infrastructure-scoped. It defines repeatable runtime tooling a
 - [ADR 0008: Replay System Design](../../../../TradeForge/DOCS/adr/0008-replay-system-design.md)
 - [ADR 0009: Persona Interpretation Model](../../../../TradeForge/DOCS/adr/0009-persona-interpretation-model.md)
 - [ADR 0010: Market Intelligence Interpretation Layer](../../../../TradeForge/DOCS/adr/0010-market-intelligence-interpretation-layer.md)
+- [ADR 0014: Replay-Centric UX Model](../../../../TradeForge/DOCS/adr/0014-replay-centric-ux-model.md)
 
 Related concepts:
 
@@ -99,6 +100,24 @@ Related concepts:
 
 ---
 
+## Workspace And MVP Architecture Layer
+
+- [ADR 0012: Workspace Architecture Model](../../../../TradeForge/DOCS/adr/0012-workspace-architecture-model.md)
+- [ADR 0013: Operational Attention Model](../../../../TradeForge/DOCS/adr/0013-operational-attention-model.md)
+- [ADR 0023: MVP Vertical Slice Definition](../../../../TradeForge/DOCS/adr/0023-mvp-vertical-slice-definition.md)
+
+Related concepts:
+
+- [[Workspace]]
+- [[Persona Workspace]]
+- [[Decision Queue]]
+- [[Replay Session]]
+- [[Review Artifact]]
+
+Note: ADR 0012 governs the TF-0014 workspace routing boundary. Routes are runtime entrypoints only; they do not own workspace truth, lifecycle state, or projection state.
+
+---
+
 ## Numbering Note
 
-The source raw note grouped ADRs by semantic layer but used shortened labels such as `ADR-001`. This index preserves the runtime repository's four-digit ADR numbering: `ADR 0001` through `ADR 0011`.
+The source raw note grouped ADRs by semantic layer but used shortened labels such as `ADR-001`. This index preserves the runtime repository's four-digit ADR numbering.

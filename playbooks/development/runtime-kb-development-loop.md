@@ -154,7 +154,7 @@ Required runtime documents:
 
 - `TradeForge/DOCS/`
 - `TradeForge/DOCS/adr/`
-- `TradeForge/DOCS/MILESTONE_ROADMAP.md`
+- `TradeForge/DOCS/Milestone_Roadmap_v2.md`
 - `TradeForge/DOCS/ISSUE_REGISTER.md`
 
 If semantic initialization has not occurred:
@@ -405,7 +405,7 @@ In Runtime Mode:
 
 1. Identify current milestone
 2. Review:
-   - `MILESTONE_ROADMAP.md`
+   - `Milestone_Roadmap_v2.md`
    - `ISSUE_REGISTER.md`
    - relevant ADRs
    - relevant KB doctrine
@@ -668,7 +668,7 @@ Implementation is NOT complete until operational state is synchronized.
 
 Mandatory updates:
 
-- `MILESTONE_ROADMAP.md`
+- `Milestone_Roadmap_v2.md`
 - `ISSUE_REGISTER.md`
 
 Required checks:
@@ -776,7 +776,7 @@ Before considering work complete:
 - [ ] Planning knowledge processed
 - [ ] Implementation capture created
 - [ ] Implementation knowledge processed
-- [ ] MILESTONE_ROADMAP updated
+- [ ] Milestone_Roadmap_v2 updated
 - [ ] ISSUE_REGISTER updated
 - [ ] Runtime repository committed
 - [ ] KB repository committed
