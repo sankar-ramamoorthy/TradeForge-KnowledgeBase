@@ -46,6 +46,7 @@ It links durable architecture doctrine, runtime alignment references, milestone 
 - [[InMemoryEventStoreAdapter]]
 - [[DecisionLifecycleState]]
 - [[LifecycleTransitionValidator]]
+- [[LifecycleOrchestrationService]]
 - [[TradeIdea]]
 - [[TradeThesis]]
 - [[TradePlan]]
@@ -88,6 +89,8 @@ It links durable architecture doctrine, runtime alignment references, milestone 
 - [[TF-0011 Lifecycle State Model]]
 - [[TF-0012 Lifecycle Transition Validator]]
 - [[Implemented TF-0012 Lifecycle Transition Validator]]
+- [[TF-0013 Lifecycle Orchestration Service]]
+- [[Implemented TF-0013 Lifecycle Orchestration Service]]
 
 ---
 
