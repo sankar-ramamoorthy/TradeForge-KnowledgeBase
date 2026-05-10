@@ -90,7 +90,7 @@ Inspect:
 
 - current git branch
 - recent git history
-- `DOCS/MILESTONE_ROADMAP.md`
+- `DOCS/Milestone_Roadmap_v2.md`
 - `DOCS/ISSUE_REGISTER.md`
 - relevant ADRs
 - current implementation state
