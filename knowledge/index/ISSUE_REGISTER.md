@@ -57,7 +57,7 @@ Runtime implementation issue tracking lives in:
 | TF-0010 | Planned | M2 | Early event store adapter without semantic drift |
 | TF-0011 | Done | M3 | Canonical lifecycle state model |
 | TF-0012 | Done | M3 | Deterministic lifecycle transition validation |
-| TF-0013 | Planned | M3 | Lifecycle orchestration without state ownership drift |
+| TF-0013 | Done | M3 | Lifecycle orchestration without state ownership drift |
 | TF-0014 | Planned | M4 | Replay projector foundation |
 | TF-0015 | Planned | M4/M5 | Persona Workspace projection read model |
 | TF-0016 | Planned | M5 | Persona context model |
@@ -330,7 +330,7 @@ orchestration scope. See [[TF-0006 Through TF-0008 Runtime Alignment]].
 
 ## TF-0013: Implement Lifecycle Orchestration Service
 
-**Status:** Planned
+**Status:** Done
 
 **Milestone:** M3
 
@@ -339,6 +339,8 @@ orchestration scope. See [[TF-0006 Through TF-0008 Runtime Alignment]].
 **Linked ADRs:** [ADR 0001](../../../../TradeForge/DOCS/adr/0001-event-sourcing-core-model.md), [ADR 0002](../../../../TradeForge/DOCS/adr/0002-decision-lifecycle-engine.md), [ADR 0003](../../../../TradeForge/DOCS/adr/0003-canonical-event-taxonomy.md)
 
 **KB Acceptance Meaning:** Services orchestrate requests without becoming workflow truth.
+
+**Processed Knowledge:** [[TF-0013 Lifecycle Orchestration Service]], [[Implemented TF-0013 Lifecycle Orchestration Service]], [[LifecycleOrchestrationService]]
 
 ---
 

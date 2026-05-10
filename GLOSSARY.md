@@ -160,6 +160,22 @@ It prevents invalid lifecycle shortcuts from becoming accepted workflow transiti
 
 ---
 
+## Lifecycle Orchestration Service
+
+A **Lifecycle Orchestration Service** is a services-layer coordinator that derives current lifecycle state, invokes deterministic transition validation, and appends lifecycle events through the Event Store Port only when the transition is valid.
+
+It is NOT:
+- lifecycle rule authority
+- event taxonomy authority
+- infrastructure persistence
+- UI workflow state
+- broker execution
+- AI judgment
+
+It coordinates workflow mechanics without redefining lifecycle semantics.
+
+---
+
 ## Event Ledger
 
 The **Event Ledger** is the canonical, immutable record of all system events.
