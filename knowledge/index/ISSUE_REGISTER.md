@@ -43,12 +43,16 @@ Do not mirror the full runtime issue register here.
 | TF-0035 to TF-0041 | M8 | First operational MVP vertical slice |
 | TF-0042+ | M9+ | Deferred post-MVP market/scenario/AI/adaptive layers |
 
-## Current M4 Issues
+## Recent M4 And Current M5 Issues
 
 | ID | Status | Semantic Concern |
 |---|---|---|
 | TF-0014 | Done | Workspace routes must be bounded entrypoints, not workspace truth |
-| TF-0015 | Planned | Workspace state contracts must distinguish canonical, derived, inferred, advisory, and route context |
+| TF-0015 | Done | Workspace state contracts must distinguish canonical, derived, inferred, advisory, and route context |
+| TF-0016 | Done | Replay projection must derive deterministic, discardable state from ordered Event Ledger history |
+| TF-0017 | Planned | Projection rebuild pipeline must preserve projection discardability and event authority |
+| TF-0018 | Planned | Replay timeline must reconstruct cognition without depending on live APIs or current AI output |
+| TF-0019 | Planned | Historical reconstruction must preserve replay determinism and source traceability |
 
 ## TF-0014 Processing Result
 
@@ -68,16 +72,38 @@ Relevant processed notes:
 
 ## TF-0015 Boundary
 
-TF-0015 should consume the routing boundary without expanding it.
+TF-0015 consumed the routing boundary without expanding it.
 
-The next semantic concern is workspace state shape:
+The stabilized semantic concern was workspace state shape:
 
 - what a workspace needs to know
 - what fields are canonical vs derived vs inferred
 - what lifecycle-aware actions may be surfaced
 - what replay requirements each workspace state contract must preserve
 
-TF-0015 should not implement React, Postgres, FastAPI, replay projector infrastructure, market intelligence, AI, or behavioral scoring.
+TF-0015 did not implement React, Postgres, FastAPI, replay projector infrastructure, market intelligence, AI, or behavioral scoring.
+
+## TF-0016 Processing Result
+
+TF-0016 created the runtime replay projector foundation.
+
+Semantic conclusion:
+
+- replay projection is deterministic reconstruction from ordered event history
+- projection output is immutable, derived, and discardable
+- replay projection may derive current lifecycle state but does not validate or advance lifecycle transitions
+- service orchestration may read through the Event Store port without changing Event Ledger authority
+- `ReplayProjector` remains implementation vocabulary; [[Projection]] is the stable KB concept
+
+Relevant processed notes:
+
+- [[TF-0016 Replay Projector Foundation]]
+- [[Implemented TF-0016 Replay Projector Foundation]]
+
+Numbering note:
+
+- older processed notes may reference replay projector work under the previous TF-0014 assignment.
+- Runtime Roadmap v2 supersedes that mapping: TF-0014 is workspace routing, TF-0015 is workspace state contracts, and TF-0016 is replay projector foundation.
 
 ## MVP Discipline
 

@@ -11,11 +11,12 @@ tags:
   - replay
   - projection
 source:
-  - knowledge/raw/20260510-tf-0016-replay-projector-foundation-plan.md
+  - knowledge/raw/archived/20260510-tf-0016-replay-projector-foundation-plan.md
 related:
   - "[[Runtime KB Development Loop]]"
   - "[[Replay System]]"
   - "[[Event Ledger]]"
+  - "[[Projection]]"
 ---
 
 # TF-0016 Replay Projector Foundation
@@ -71,3 +72,34 @@ The design preserves:
 - Replay: no live APIs or mutable projections are used as truth
 - Event Integrity: no event mutation or new event semantics are introduced
 - Layer Separation: domain remains pure; services orchestrate through ports
+
+## KB Processing Result
+
+This note is a processed planning synthesis, not canonical doctrine by itself.
+
+Stable knowledge promoted from this note:
+
+- replay projection is deterministic derived state
+- replay projection is descriptive, not lifecycle-authoritative
+- replay projection reads ordered Event Ledger history and produces discardable output
+- service orchestration may wrap projection through the Event Store port without changing the domain boundary
+
+Ontology impact:
+
+- [[Projection]] is stable enough to define as a KB entity because runtime ADRs and M5 planning now depend on the term.
+- `ReplayProjector` remains implementation vocabulary and should not be promoted as a canonical entity unless later issues reveal a durable semantic boundary.
+
+Workflow impact:
+
+- TF-0016 starts M5 replay/projection work after M4 workspace contracts.
+- TF-0017 through TF-0019 should extend projection and replay without changing the TF-0016 authority boundary.
+
+ADR impact:
+
+- no new ADR is required because TF-0016 implements ADR 0001, ADR 0003, ADR 0008, and ADR 0014.
+
+Operational synchronization:
+
+- source raw note has been archived, not deleted from history.
+- KB issue and roadmap indexes should show M4 as Done, M5 as In Progress, and TF-0016 as Done.
+- older processed notes may reference replay projector work under the previous TF-0014 numbering; Roadmap v2 supersedes that mapping and identifies TF-0016 as the replay projector foundation issue.

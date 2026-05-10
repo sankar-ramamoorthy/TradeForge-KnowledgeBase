@@ -11,11 +11,12 @@ tags:
   - replay
   - projection
 source:
-  - knowledge/raw/20260510-implemented-tf-0016-replay-projector-foundation.md
+  - knowledge/raw/archived/20260510-implemented-tf-0016-replay-projector-foundation.md
 related:
   - "[[Runtime KB Development Loop]]"
   - "[[Replay System]]"
   - "[[Event Ledger]]"
+  - "[[Projection]]"
 ---
 
 # Implemented TF-0016 Replay Projector Foundation
@@ -72,3 +73,37 @@ Runtime validation completed:
 TF-0016 intentionally does not implement projection persistence, replay timelines, historical reconstruction, replay APIs, AI narration, or frontend replay workspace behavior.
 
 Those remain bounded to later M5/M7/M8 issues.
+
+## KB Processing Result
+
+This note is a processed implementation synthesis.
+
+Stable knowledge promoted from this note:
+
+- replay projection is now implemented as a pure domain reconstruction component plus a services-layer wrapper.
+- projection output is immutable, derived, and discardable.
+- replay projection derives lifecycle state but does not validate, approve, advance, or persist lifecycle transitions.
+- the service boundary depends on the Event Store port and does not bypass the Event Ledger.
+
+Ontology impact:
+
+- [[Projection]] should be treated as a stable derived-state concept.
+- `ReplayProjector` should remain runtime implementation vocabulary for now.
+- No new lifecycle, event, AI, or workspace authority concept was introduced.
+
+Workflow and playbook impact:
+
+- TF-0016 confirms that M5 work should proceed from deterministic replay foundations before timelines, historical reconstruction, APIs, or UI surfaces.
+- No playbook change is required.
+
+ADR impact:
+
+- no new ADR is required.
+- accepted replay and projection doctrine remains sufficient.
+
+Operational synchronization:
+
+- runtime issue TF-0016 is Done.
+- runtime roadmap marks M4 Done and M5 In Progress.
+- source raw note has been archived, preserving traceability while avoiding raw-note accumulation.
+- older processed notes may retain historical references to replay projector work as TF-0014; current runtime authority assigns replay projector foundation to TF-0016.

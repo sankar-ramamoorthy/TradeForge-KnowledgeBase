@@ -67,28 +67,37 @@ It should not prove autonomous trading, broker replacement, charting platform so
 | M1A | Done | Canonical entity definitions |
 | M2 | Done | Event Ledger and canonical event model |
 | M3 | Done | Decision Lifecycle Engine |
-| M4 | In Progress | Workspace and cognitive architecture |
-| M5 | Planned | Replay and projection foundation |
+| M4 | Done | Workspace and cognitive architecture |
+| M5 | In Progress | Replay and projection foundation |
 | M6 | Planned | Persona Workspace projection layer |
 | M7 | Planned | MVP runtime infrastructure |
 | M8 | Planned | First operational MVP vertical slice |
 | M9+ | Deferred | Market/scenario/AI/adaptive layers after MVP path checkpoint |
 
-## Current M4 State
+## Current M5 State
 
-M4 is intentionally narrow:
+M4 is complete:
 
 - TF-0014: Create workspace routing model (**Done**)
-- TF-0015: Define workspace state contracts (**Planned**)
+- TF-0015: Define workspace state contracts (**Done**)
 
 TF-0014 established bounded runtime entrypoints for the ADR 0012 workspace set without making routes into workspace truth.
 
-TF-0015 should define workspace state contracts while preserving the distinction between:
+TF-0015 defined workspace state contracts while preserving the distinction between:
 
 - canonical event-backed state
 - derived workspace state
 - inferred/advisory context
 - route entry context
+
+M5 is now in progress:
+
+- TF-0016: Implement replay projector foundation (**Done**)
+- TF-0017: Implement projection rebuild pipeline (**Planned**)
+- TF-0018: Implement replay timeline engine (**Planned**)
+- TF-0019: Implement historical reconstruction pipeline (**Planned**)
+
+TF-0016 established deterministic replay projection over ordered event history. It did not introduce projection persistence, replay timelines, historical reconstruction, replay APIs, AI narration, or frontend replay workspace behavior.
 
 ## Fast MVP Path
 
@@ -100,11 +109,11 @@ M7: Postgres + API + React runtime infrastructure
 M8: usable operational MVP workflow
 ```
 
-## Lean M4 Boundary
+## M4 Boundary Result
 
-M4 should not include React implementation, Postgres, full workspace UI, Market Intelligence automation, Scenario Discovery, AI advisory, behavioral scoring, simulation, or RL.
+M4 did not include React implementation, Postgres, full workspace UI, Market Intelligence automation, Scenario Discovery, AI advisory, behavioral scoring, simulation, or RL.
 
-If those appear before TF-0015 is closed, that is scope drift.
+Those remain outside the completed M4 boundary unless a later runtime issue or ADR explicitly pulls them forward.
 
 ## Runtime ADR Alignment
 
@@ -124,6 +133,8 @@ Relevant KB artifacts:
 - [[Roadmap v2 Alignment And Processing Notes]]
 - [[TF-0014 Workspace Routing Model Planning Synthesis]]
 - [[Implemented TF-0014 Workspace Routing Model]]
+- [[TF-0016 Replay Projector Foundation]]
+- [[Implemented TF-0016 Replay Projector Foundation]]
 
 Root design layer:
 
