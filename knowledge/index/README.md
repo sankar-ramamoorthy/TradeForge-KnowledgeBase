@@ -118,6 +118,10 @@ It links durable architecture doctrine, runtime alignment references, milestone 
 - [[Plan - TF-0026 Postgres Event Ledger]]
 - [[Implemented - TF-0026 Postgres Event Ledger]]
 - [[Implemented - TF-0027 FastAPI Runtime Boundary]]
+- [[Plan - TF-0028 Lifecycle API Endpoints]]
+- [[Implemented - TF-0028 Lifecycle API Endpoints]]
+- [[Plan - TF-0029 Replay API Endpoints]]
+- [[Implemented - TF-0029 Replay API Endpoints]]
 
 ---
 

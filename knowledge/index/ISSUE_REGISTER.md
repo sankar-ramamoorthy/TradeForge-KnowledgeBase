@@ -61,6 +61,8 @@ Do not mirror the full runtime issue register here.
 | TF-0025 | Done | Migration tooling must remain infrastructure only and prevent projection storage from becoming canonical truth |
 | TF-0026 | Done | Durable Postgres Event Ledger persistence must preserve append-only event facts, deterministic ordering, and Event Store port discipline |
 | TF-0027 | Done | FastAPI must remain an app-layer HTTP boundary and must not own lifecycle, replay, workspace, or persistence authority |
+| TF-0028 | Done | Lifecycle API endpoints must remain HTTP adapters over lifecycle orchestration and explicit event-backed transitions |
+| TF-0029 | Done | Replay API endpoints must remain derived read adapters over deterministic replay services and shared Event Ledger history |
 
 ## TF-0014 Processing Result
 
@@ -316,6 +318,40 @@ Semantic conclusion:
 Relevant processed notes:
 
 - [[Implemented - TF-0027 FastAPI Runtime Boundary]]
+
+## TF-0028 Processing Result
+
+TF-0028 established the first lifecycle workflow API endpoint for M7.
+
+Semantic conclusion:
+
+- lifecycle transition endpoints are app-layer adapters, not lifecycle authority.
+- [[LifecycleOrchestrationService]] remains responsible for current-state derivation and transition validation.
+- accepted transitions still append explicit lifecycle events through the [[Event Store Port]].
+- invalid transitions should return explicit conflict behavior rather than silently mutating workflow state.
+- no replay, workspace projection, or direct persistence authority was introduced into HTTP handlers.
+
+Relevant processed notes:
+
+- [[Plan - TF-0028 Lifecycle API Endpoints]]
+- [[Implemented - TF-0028 Lifecycle API Endpoints]]
+
+## TF-0029 Processing Result
+
+TF-0029 established the first replay workflow API endpoints for M7.
+
+Semantic conclusion:
+
+- replay API endpoints are derived read adapters, not replay authority.
+- [[HistoricalReconstruction]] and [[ReplayTimeline]] remain the stable replay concepts exposed through HTTP.
+- replay routes must read the same Event Ledger history visible to lifecycle endpoints within the same app runtime.
+- replay output remains deterministic, non-authoritative, and separate from canonical truth.
+- no live API enrichment, AI narration, or route-level replay logic was introduced.
+
+Relevant processed notes:
+
+- [[Plan - TF-0029 Replay API Endpoints]]
+- [[Implemented - TF-0029 Replay API Endpoints]]
 
 ## M6 Processing Result
 

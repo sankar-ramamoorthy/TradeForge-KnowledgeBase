@@ -128,6 +128,8 @@ M7 has now started:
 - TF-0025: Add Alembic migration infrastructure (**Done**)
 - TF-0026: Persist canonical event ledger (**Done**)
 - TF-0027: Add FastAPI application runtime (**Done**)
+- TF-0028: Add lifecycle API endpoints (**Done**)
+- TF-0029: Add replay API endpoints (**Done**)
 
 TF-0024 established local Postgres availability and infrastructure-scoped connection settings while preserving [[Event Ledger]] authority, [[Event Store Port]] boundaries, replay determinism, and projection discardability.
 
@@ -144,6 +146,14 @@ TF-0026 did not implement event streaming infrastructure, projection persistence
 TF-0027 established FastAPI as the shared HTTP runtime boundary while keeping lifecycle, replay, workspace, and persistence authority outside route handlers.
 
 TF-0027 did not implement lifecycle APIs, replay APIs, workspace projection APIs, frontend runtime behavior, or direct persistence ownership in HTTP code.
+
+TF-0028 established `POST /lifecycle/transitions` as an app-layer adapter over lifecycle orchestration. Transition validation and event appends remain service-layer responsibilities, and invalid transitions return explicit conflict responses rather than mutating workflow state implicitly.
+
+TF-0028 did not introduce replay APIs, workspace projection APIs, direct database access from route handlers, or route-owned lifecycle semantics.
+
+TF-0029 established replay HTTP reads for [[HistoricalReconstruction]] and [[ReplayTimeline]] while keeping replay derivation in deterministic replay services over shared Event Ledger history.
+
+TF-0029 did not introduce replay workspace UI behavior, live API enrichment, AI replay narration, direct database access from route handlers, or replay authority in HTTP code.
 
 ## Fast MVP Path
 
@@ -205,6 +215,10 @@ Relevant KB artifacts:
 - [[Plan - TF-0026 Postgres Event Ledger]]
 - [[Implemented - TF-0026 Postgres Event Ledger]]
 - [[Implemented - TF-0027 FastAPI Runtime Boundary]]
+- [[Plan - TF-0028 Lifecycle API Endpoints]]
+- [[Implemented - TF-0028 Lifecycle API Endpoints]]
+- [[Plan - TF-0029 Replay API Endpoints]]
+- [[Implemented - TF-0029 Replay API Endpoints]]
 - [[Persona Workspace Projection Layer]]
 
 Root design layer:
