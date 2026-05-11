@@ -94,6 +94,8 @@ It links durable architecture doctrine, runtime alignment references, milestone 
 - [[Implemented TF-0013 Lifecycle Orchestration Service]]
 - [[TF-0016 Replay Projector Foundation]]
 - [[Implemented TF-0016 Replay Projector Foundation]]
+- [[TF-0017 Projection Rebuild Pipeline]]
+- [[Implemented TF-0017 Projection Rebuild Pipeline]]
 
 ---
 
