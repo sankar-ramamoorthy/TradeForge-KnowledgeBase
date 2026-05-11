@@ -125,10 +125,15 @@ M6 completed the [[Persona Workspace Projection Layer]] and did not introduce pr
 M7 has now started:
 
 - TF-0024: Add Postgres persistence layer (**Done**)
+- TF-0025: Add Alembic migration infrastructure (**Done**)
 
 TF-0024 established local Postgres availability and infrastructure-scoped connection settings while preserving [[Event Ledger]] authority, [[Event Store Port]] boundaries, replay determinism, and projection discardability.
 
 TF-0024 did not implement Alembic migrations, a Postgres event ledger adapter, projection persistence, API endpoints, React UI, or new runtime semantics.
+
+TF-0025 established deterministic migration tooling and runtime ADR 0019 while preserving [[Event Ledger]] authority, replay determinism, and projection non-authority.
+
+TF-0025 did not implement event-ledger tables, a Postgres event ledger adapter, projection tables, API endpoints, React UI, or new runtime semantics.
 
 ## Fast MVP Path
 
@@ -152,6 +157,7 @@ Those remain outside the completed M4 boundary unless a later runtime issue or A
 - [ADR 0013: Operational Attention Model](../../../../TradeForge/DOCS/adr/0013-operational-attention-model.md)
 - [ADR 0014: Replay-Centric UX Model](../../../../TradeForge/DOCS/adr/0014-replay-centric-ux-model.md)
 - [ADR 0018: Postgres Event Store Persistence](../../../../TradeForge/DOCS/adr/0018-postgres-event-store-persistence.md)
+- [ADR 0019: Projection Persistence Architecture](../../../../TradeForge/DOCS/adr/0019-projection-persistence-architecture.md)
 - [ADR 0023: MVP Vertical Slice Definition](../../../../TradeForge/DOCS/adr/0023-mvp-vertical-slice-definition.md)
 
 ## KB Alignment
@@ -183,6 +189,8 @@ Relevant KB artifacts:
 - [[Implemented - TF-0023 Context-Aware Workspace Summaries]]
 - [[Plan - TF-0024 Postgres Persistence Layer]]
 - [[Implemented - TF-0024 Postgres Persistence Layer]]
+- [[Plan - TF-0025 Alembic Migration Infrastructure]]
+- [[Implemented - TF-0025 Alembic Migration Infrastructure]]
 - [[Persona Workspace Projection Layer]]
 
 Root design layer:

@@ -58,6 +58,7 @@ Do not mirror the full runtime issue register here.
 | TF-0022 | Done | Operational attention queues must explain required human attention without becoming lifecycle authority |
 | TF-0023 | Done | Workspace summaries must remain deterministic, source-linked, persona-shaped, and non-AI |
 | TF-0024 | Done | Postgres must remain infrastructure only and preserve Event Store port, replay, and Event Ledger boundaries |
+| TF-0025 | Done | Migration tooling must remain infrastructure only and prevent projection storage from becoming canonical truth |
 
 ## TF-0014 Processing Result
 
@@ -265,6 +266,22 @@ Relevant processed notes:
 
 - [[Plan - TF-0024 Postgres Persistence Layer]]
 - [[Implemented - TF-0024 Postgres Persistence Layer]]
+
+## TF-0025 Processing Result
+
+TF-0025 established deterministic migration infrastructure as the second completed M7 runtime infrastructure capability.
+
+Semantic conclusion:
+
+- Alembic is infrastructure tooling, not semantic authority.
+- migration schema does not redefine [[Event Ledger]] truth, replay rules, or lifecycle authority.
+- ADR 0019 now exists in the runtime repo and constrains future persisted [[Projection]] storage to rebuildable, non-authoritative use.
+- TF-0025 intentionally stops before event-ledger tables, projection tables, or a Postgres Event Store adapter.
+
+Relevant processed notes:
+
+- [[Plan - TF-0025 Alembic Migration Infrastructure]]
+- [[Implemented - TF-0025 Alembic Migration Infrastructure]]
 
 ## M6 Processing Result
 

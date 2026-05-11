@@ -113,6 +113,8 @@ It links durable architecture doctrine, runtime alignment references, milestone 
 - [[Implemented - TF-0023 Context-Aware Workspace Summaries]]
 - [[Plan - TF-0024 Postgres Persistence Layer]]
 - [[Implemented - TF-0024 Postgres Persistence Layer]]
+- [[Plan - TF-0025 Alembic Migration Infrastructure]]
+- [[Implemented - TF-0025 Alembic Migration Infrastructure]]
 
 ---
 
