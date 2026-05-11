@@ -4,7 +4,7 @@ type: index
 status: canonical
 tags: [TradeForge, roadmap, milestones, architecture, MVP]
 created: 2026-05-08
-updated: 2026-05-10
+updated: 2026-05-11
 runtime_authority: ../../../../TradeForge/DOCS/Milestone_Roadmap_v2.md
 ---
 
@@ -69,7 +69,7 @@ It should not prove autonomous trading, broker replacement, charting platform so
 | M3 | Done | Decision Lifecycle Engine |
 | M4 | Done | Workspace and cognitive architecture |
 | M5 | Done | Replay and projection foundation |
-| M6 | Planned | Persona Workspace projection layer |
+| M6 | Done | Persona Workspace projection layer |
 | M7 | Planned | MVP runtime infrastructure |
 | M8 | Planned | First operational MVP vertical slice |
 | M9+ | Deferred | Market/scenario/AI/adaptive layers after MVP path checkpoint |
@@ -105,6 +105,36 @@ TF-0018 established deterministic replay timeline reconstruction over ordered ev
 
 TF-0019 established deterministic historical reconstruction composition over replay facts, projection state, timeline state, and an explicitly bounded inferred-state layer. It did not introduce replay APIs, frontend replay workspace behavior, persistent reconstruction authority, live API enrichment, or AI narration.
 
+M6 is complete:
+
+- TF-0020: Define persona context model (**Done**)
+- TF-0021: Implement workspace projection read models (**Done**)
+- TF-0022: Implement operational attention queues (**Done**)
+- TF-0023: Implement context-aware workspace summaries (**Done**)
+
+TF-0020 established versioned persona context as bounded interpretive input for later workspace projection and attention work. It did not introduce user identity semantics, workspace projections, attention queues, summaries, persistence, or AI persona generation.
+
+TF-0021 established immutable persona/workspace-scoped workspace projection read models over ordered Event Ledger history.
+
+TF-0022 established deterministic [[OperationalAttentionQueue|Operational Attention Queue]] output as derived responsibility state. Queue items explain why human attention is required without authorizing execution or lifecycle transitions.
+
+TF-0023 established deterministic [[WorkspaceSummary|Workspace Summary]] output over workspace projections and attention queues. Summaries remain source-linked, persona-shaped, replay-compatible, and non-AI.
+
+M6 completed the [[Persona Workspace Projection Layer]] and did not introduce projection persistence, API endpoints, React UI, broker execution, AI prioritization, or new event taxonomy.
+
+M7 has now started:
+
+- TF-0024: Add Postgres persistence layer (**Done**)
+- TF-0025: Add Alembic migration infrastructure (**Done**)
+
+TF-0024 established local Postgres availability and infrastructure-scoped connection settings while preserving [[Event Ledger]] authority, [[Event Store Port]] boundaries, replay determinism, and projection discardability.
+
+TF-0024 did not implement Alembic migrations, a Postgres event ledger adapter, projection persistence, API endpoints, React UI, or new runtime semantics.
+
+TF-0025 established deterministic migration tooling and runtime ADR 0019 while preserving [[Event Ledger]] authority, replay determinism, and projection non-authority.
+
+TF-0025 did not implement event-ledger tables, a Postgres event ledger adapter, projection tables, API endpoints, React UI, or new runtime semantics.
+
 ## Fast MVP Path
 
 ```text
@@ -126,6 +156,8 @@ Those remain outside the completed M4 boundary unless a later runtime issue or A
 - [ADR 0012: Workspace Architecture Model](../../../../TradeForge/DOCS/adr/0012-workspace-architecture-model.md)
 - [ADR 0013: Operational Attention Model](../../../../TradeForge/DOCS/adr/0013-operational-attention-model.md)
 - [ADR 0014: Replay-Centric UX Model](../../../../TradeForge/DOCS/adr/0014-replay-centric-ux-model.md)
+- [ADR 0018: Postgres Event Store Persistence](../../../../TradeForge/DOCS/adr/0018-postgres-event-store-persistence.md)
+- [ADR 0019: Projection Persistence Architecture](../../../../TradeForge/DOCS/adr/0019-projection-persistence-architecture.md)
 - [ADR 0023: MVP Vertical Slice Definition](../../../../TradeForge/DOCS/adr/0023-mvp-vertical-slice-definition.md)
 
 ## KB Alignment
@@ -147,6 +179,19 @@ Relevant KB artifacts:
 - [[Implemented TF-0018 Replay Timeline Engine]]
 - [[TF-0019 Historical Reconstruction Pipeline]]
 - [[Implemented TF-0019 Historical Reconstruction Pipeline]]
+- [[TF-0020 Persona Context Model]]
+- [[Implemented TF-0020 Persona Context Model]]
+- [[Plan - TF-0021 Workspace Projection Read Models]]
+- [[Implemented - TF-0021 Workspace Projection Read Models]]
+- [[Plan - TF-0022 Operational Attention Queues]]
+- [[Implemented - TF-0022 Operational Attention Queues]]
+- [[Plan - TF-0023 Context-Aware Workspace Summaries]]
+- [[Implemented - TF-0023 Context-Aware Workspace Summaries]]
+- [[Plan - TF-0024 Postgres Persistence Layer]]
+- [[Implemented - TF-0024 Postgres Persistence Layer]]
+- [[Plan - TF-0025 Alembic Migration Infrastructure]]
+- [[Implemented - TF-0025 Alembic Migration Infrastructure]]
+- [[Persona Workspace Projection Layer]]
 
 Root design layer:
 

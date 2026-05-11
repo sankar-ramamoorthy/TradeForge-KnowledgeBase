@@ -4,7 +4,7 @@ type: entity
 status: canonical
 tags: [TradeForge, entity, projection, derived-state, replayability]
 created: 2026-05-10
-updated: 2026-05-10
+updated: 2026-05-11
 aliases: [Read Model, Derived Projection]
 related:
   - "[[Derived State]]"
@@ -25,6 +25,8 @@ It is discardable derived state, not canonical truth.
 ## Semantic Role
 
 Projections make event-backed history usable for workspace surfaces, replay reconstruction, decision queues, exposure views, and operational summaries.
+
+M6 extends this concept into the [[Persona Workspace Projection Layer]], where workspace projections, [[OperationalAttentionQueue|Operational Attention Queue]] output, and [[WorkspaceSummary|Workspace Summary]] output remain deterministic derived read models.
 
 ## Authority Boundary
 
@@ -57,3 +59,5 @@ Projection persistence may be introduced for performance, but persisted projecti
 - [[ReplaySession]]
 - [[Workspace]]
 - [[DecisionLifecycleState]]
+- [[OperationalAttentionQueue|Operational Attention Queue]]
+- [[WorkspaceSummary|Workspace Summary]]

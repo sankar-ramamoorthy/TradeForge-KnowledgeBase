@@ -4,7 +4,7 @@ type: index
 status: canonical
 tags: [TradeForge, issues, architecture, roadmap, MVP]
 created: 2026-05-08
-updated: 2026-05-10
+updated: 2026-05-11
 runtime_authority: ../../../../TradeForge/DOCS/ISSUE_REGISTER.md
 ---
 
@@ -43,7 +43,7 @@ Do not mirror the full runtime issue register here.
 | TF-0035 to TF-0041 | M8 | First operational MVP vertical slice |
 | TF-0042+ | M9+ | Deferred post-MVP market/scenario/AI/adaptive layers |
 
-## Recent M4 And Current M5 Issues
+## Recent M4 Through Current M7 Issues
 
 | ID | Status | Semantic Concern |
 |---|---|---|
@@ -53,6 +53,12 @@ Do not mirror the full runtime issue register here.
 | TF-0017 | Done | Projection rebuild pipeline must preserve projection discardability and event authority |
 | TF-0018 | Done | Replay timeline must reconstruct cognition without depending on live APIs or current AI output |
 | TF-0019 | Done | Historical reconstruction must preserve replay determinism and source traceability |
+| TF-0020 | Done | Persona context must remain versioned, replay-safe, and bounded to interpretive influence |
+| TF-0021 | Done | Workspace projection read models must remain persona/workspace-scoped, rebuildable, and non-authoritative |
+| TF-0022 | Done | Operational attention queues must explain required human attention without becoming lifecycle authority |
+| TF-0023 | Done | Workspace summaries must remain deterministic, source-linked, persona-shaped, and non-AI |
+| TF-0024 | Done | Postgres must remain infrastructure only and preserve Event Store port, replay, and Event Ledger boundaries |
+| TF-0025 | Done | Migration tooling must remain infrastructure only and prevent projection storage from becoming canonical truth |
 
 ## TF-0014 Processing Result
 
@@ -176,6 +182,119 @@ Relevant processed notes:
 
 - [[TF-0019 Historical Reconstruction Pipeline]]
 - [[Implemented TF-0019 Historical Reconstruction Pipeline]]
+
+## TF-0020 Processing Result
+
+TF-0020 created the first runtime persona context foundation for M6.
+
+Semantic conclusion:
+
+- existing [[Persona]] semantics remain sufficient as the canonical KB concept.
+- persona context must preserve explicit version identity for replay-safe interpretation.
+- persona influence is bounded interpretive scope, not canonical state mutation, lifecycle authority, or execution authority.
+- workspace, workflow, and decision references may be associated with persona context without making persona context a state owner.
+
+Relevant processed notes:
+
+- [[TF-0020 Persona Context Model]]
+- [[Implemented TF-0020 Persona Context Model]]
+
+## TF-0021 Processing Result
+
+TF-0021 created executable workspace projection read models for the ADR 0012 workspace set.
+
+Semantic conclusion:
+
+- workspace projections are immutable derived read models over ordered Event Ledger history
+- projections are explicitly persona/workspace scoped
+- projections expose lifecycle context without owning lifecycle authority
+- projection output preserves source event references and remains rebuildable
+- no persistence, API, UI, AI summary behavior, or new event taxonomy was introduced
+
+Relevant processed notes:
+
+- [[Plan - TF-0021 Workspace Projection Read Models]]
+- [[Implemented - TF-0021 Workspace Projection Read Models]]
+
+## TF-0022 Processing Result
+
+TF-0022 created deterministic [[OperationalAttentionQueue|Operational Attention Queue]] output as derived responsibility state.
+
+Semantic conclusion:
+
+- attention queues explain why human attention is required
+- queue items preserve source references, lifecycle context, and workspace route targets
+- persona context may shape deterministic ordering, but this influence is interpretive only
+- queue output does not approve plans, authorize execution, or mutate lifecycle state
+- AI prioritization remains out of scope
+
+Relevant processed notes:
+
+- [[Plan - TF-0022 Operational Attention Queues]]
+- [[Implemented - TF-0022 Operational Attention Queues]]
+
+## TF-0023 Processing Result
+
+TF-0023 created deterministic [[WorkspaceSummary|Workspace Summary]] output over workspace projections and attention queues.
+
+Semantic conclusion:
+
+- workspace summaries are derived state and non-authoritative
+- summaries preserve source inputs, source event references, and attention item references
+- persona context may shape emphasis without mutating facts
+- summaries are replay-compatible for the same event history and persona context
+- AI-generated summaries remain out of scope
+
+Relevant processed notes:
+
+- [[Plan - TF-0023 Context-Aware Workspace Summaries]]
+- [[Implemented - TF-0023 Context-Aware Workspace Summaries]]
+
+## TF-0024 Processing Result
+
+TF-0024 established the first completed M7 runtime infrastructure capability.
+
+Semantic conclusion:
+
+- Postgres is infrastructure, not semantic authority.
+- [[Event Ledger]] remains canonical truth independent of persistence technology.
+- [[Event Store Port]] remains the adapter boundary for later durable ledger work.
+- replay behavior, lifecycle authority, workspace semantics, and projection authority are unchanged.
+- ADR 0018 now exists in the runtime repo and captures the accepted persistence boundary.
+
+Relevant processed notes:
+
+- [[Plan - TF-0024 Postgres Persistence Layer]]
+- [[Implemented - TF-0024 Postgres Persistence Layer]]
+
+## TF-0025 Processing Result
+
+TF-0025 established deterministic migration infrastructure as the second completed M7 runtime infrastructure capability.
+
+Semantic conclusion:
+
+- Alembic is infrastructure tooling, not semantic authority.
+- migration schema does not redefine [[Event Ledger]] truth, replay rules, or lifecycle authority.
+- ADR 0019 now exists in the runtime repo and constrains future persisted [[Projection]] storage to rebuildable, non-authoritative use.
+- TF-0025 intentionally stops before event-ledger tables, projection tables, or a Postgres Event Store adapter.
+
+Relevant processed notes:
+
+- [[Plan - TF-0025 Alembic Migration Infrastructure]]
+- [[Implemented - TF-0025 Alembic Migration Infrastructure]]
+
+## M6 Processing Result
+
+TF-0021 through TF-0023 complete the [[Persona Workspace Projection Layer]].
+
+No contradiction was found with [[INVARIANTS]], [[ARCHITECTURE]], [[UX_DOCTRINE]], [[GLOSSARY]], or [[EVENT_TAXONOMY]].
+
+Operational synchronization result:
+
+- runtime issue register marks TF-0021, TF-0022, and TF-0023 Done
+- runtime roadmap marks M6 Done
+- KB milestone and issue indexes were updated during this processing pass
+- raw source notes are archived under `knowledge/raw/archived/`
 
 ## MVP Discipline
 

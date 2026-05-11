@@ -4,7 +4,7 @@ type: index
 status: canonical
 tags: [TradeForge, ADR, architecture, index]
 created: 2026-05-08
-updated: 2026-05-10
+updated: 2026-05-11
 ---
 
 # ADR Index
@@ -71,15 +71,19 @@ Related concepts:
 ## Runtime Environment Layer
 
 - [ADR 0011: Runtime Development Environment](../../../../TradeForge/DOCS/adr/0011-runtime-development-environment.md)
+- [ADR 0018: Postgres Event Store Persistence](../../../../TradeForge/DOCS/adr/0018-postgres-event-store-persistence.md)
+- [ADR 0019: Projection Persistence Architecture](../../../../TradeForge/DOCS/adr/0019-projection-persistence-architecture.md)
 
 Related concepts:
 
 - [[Semantic Truth Layer]]
 - [[Architectural Memory]]
 - [[Event Ledger]]
+- [[Event Store Port]]
+- [[Projection]]
 - [[Decision Lifecycle Engine]]
 
-Note: ADR 0011 is infrastructure-scoped. It defines repeatable runtime tooling and does not define domain semantics.
+Note: ADR 0011, ADR 0018, and ADR 0019 are infrastructure-scoped. They define repeatable runtime environment, persistence, and projection-storage boundaries without redefining domain semantics.
 
 ---
 
@@ -97,6 +101,7 @@ Related concepts:
 - [[ReplayTimeline]]
 - [[HistoricalReconstruction]]
 - [[Persona]]
+- [[Workspace]]
 - [[Market Intelligence Layer]]
 - [[Inferred State]]
 
@@ -113,6 +118,8 @@ Related concepts:
 - [[Workspace]]
 - [[Persona Workspace]]
 - [[Decision Queue]]
+- [[OperationalAttentionQueue|Operational Attention Queue]]
+- [[WorkspaceSummary|Workspace Summary]]
 - [[Replay Session]]
 - [[Review Artifact]]
 

@@ -4,7 +4,7 @@ type: index
 status: active
 tags: [TradeForge, index, navigation]
 created: 2026-05-08
-updated: 2026-05-09
+updated: 2026-05-11
 ---
 
 # Knowledge Index
@@ -45,6 +45,8 @@ It links durable architecture doctrine, runtime alignment references, milestone 
 - [[EventStorePort]]
 - [[InMemoryEventStoreAdapter]]
 - [[Projection]]
+- [[OperationalAttentionQueue|Operational Attention Queue]]
+- [[WorkspaceSummary|Workspace Summary]]
 - [[DecisionLifecycleState]]
 - [[LifecycleTransitionValidator]]
 - [[LifecycleOrchestrationService]]
@@ -78,6 +80,7 @@ It links durable architecture doctrine, runtime alignment references, milestone 
 
 - [[Canonical Readiness]]
 - [[Behavioral And Experiential Architecture]]
+- [[Persona Workspace Projection Layer]]
 - [[Runtime KB Development Loop]]
 
 ---
@@ -96,6 +99,22 @@ It links durable architecture doctrine, runtime alignment references, milestone 
 - [[Implemented TF-0016 Replay Projector Foundation]]
 - [[TF-0017 Projection Rebuild Pipeline]]
 - [[Implemented TF-0017 Projection Rebuild Pipeline]]
+- [[TF-0018 Replay Timeline Engine]]
+- [[Implemented TF-0018 Replay Timeline Engine]]
+- [[TF-0019 Historical Reconstruction Pipeline]]
+- [[Implemented TF-0019 Historical Reconstruction Pipeline]]
+- [[TF-0020 Persona Context Model]]
+- [[Implemented TF-0020 Persona Context Model]]
+- [[Plan - TF-0021 Workspace Projection Read Models]]
+- [[Implemented - TF-0021 Workspace Projection Read Models]]
+- [[Plan - TF-0022 Operational Attention Queues]]
+- [[Implemented - TF-0022 Operational Attention Queues]]
+- [[Plan - TF-0023 Context-Aware Workspace Summaries]]
+- [[Implemented - TF-0023 Context-Aware Workspace Summaries]]
+- [[Plan - TF-0024 Postgres Persistence Layer]]
+- [[Implemented - TF-0024 Postgres Persistence Layer]]
+- [[Plan - TF-0025 Alembic Migration Infrastructure]]
+- [[Implemented - TF-0025 Alembic Migration Infrastructure]]
 
 ---
 
