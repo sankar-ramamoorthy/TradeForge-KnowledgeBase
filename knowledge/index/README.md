@@ -117,6 +117,7 @@ It links durable architecture doctrine, runtime alignment references, milestone 
 - [[Implemented - TF-0025 Alembic Migration Infrastructure]]
 - [[Plan - TF-0026 Postgres Event Ledger]]
 - [[Implemented - TF-0026 Postgres Event Ledger]]
+- [[Implemented - TF-0027 FastAPI Runtime Boundary]]
 
 ---
 

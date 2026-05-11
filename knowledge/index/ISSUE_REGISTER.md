@@ -60,6 +60,7 @@ Do not mirror the full runtime issue register here.
 | TF-0024 | Done | Postgres must remain infrastructure only and preserve Event Store port, replay, and Event Ledger boundaries |
 | TF-0025 | Done | Migration tooling must remain infrastructure only and prevent projection storage from becoming canonical truth |
 | TF-0026 | Done | Durable Postgres Event Ledger persistence must preserve append-only event facts, deterministic ordering, and Event Store port discipline |
+| TF-0027 | Done | FastAPI must remain an app-layer HTTP boundary and must not own lifecycle, replay, workspace, or persistence authority |
 
 ## TF-0014 Processing Result
 
@@ -300,6 +301,21 @@ Relevant processed notes:
 
 - [[Plan - TF-0026 Postgres Event Ledger]]
 - [[Implemented - TF-0026 Postgres Event Ledger]]
+
+## TF-0027 Processing Result
+
+TF-0027 established the first completed M7 API-layer runtime capability by introducing FastAPI as the shared HTTP application boundary.
+
+Semantic conclusion:
+
+- FastAPI is an app-layer boundary, not workflow authority.
+- HTTP handlers may expose health/runtime metadata directly but must delegate workflow behavior to services.
+- lifecycle, replay, workspace, persistence, and AI authority remain outside route handlers.
+- ADR 0020 now exists in the runtime repo and constrains later endpoint-specific issues.
+
+Relevant processed notes:
+
+- [[Implemented - TF-0027 FastAPI Runtime Boundary]]
 
 ## M6 Processing Result
 
