@@ -231,6 +231,20 @@ Replay enables:
 
 ---
 
+## Replay Timeline
+
+A **Replay Timeline** is a deterministic, derived reconstruction that orders replay-relevant events into immutable timeline entries for replay and review.
+
+It is NOT:
+- canonical truth
+- lifecycle authority
+- an event writer
+- a UI state store
+
+Canonical truth remains in Event Ledger history.
+
+---
+
 ## Decision
 
 A **Decision** is a human-approved commitment within a workflow.
