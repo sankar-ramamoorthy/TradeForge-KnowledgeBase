@@ -11,10 +11,11 @@ tags:
   - replay
   - timeline
 source:
-  - knowledge/raw/20260510-tf-0018-replay-timeline-engine-plan.md
+  - knowledge/raw/archived/20260510-tf-0018-replay-timeline-engine-plan.md
 related:
   - "[[Runtime KB Development Loop]]"
   - "[[Replay System]]"
+  - "[[ReplayTimeline]]"
   - "[[Event Ledger]]"
 ---
 
@@ -71,3 +72,35 @@ The design preserves:
 - Event Integrity: source events remain immutable and are not rewritten
 - Historical Integrity: entries preserve event references and provenance
 - Layer Separation: domain constructs; services orchestrate through ports
+
+## KB Processing Result
+
+This note is a processed planning synthesis.
+
+Stable knowledge promoted from this note:
+
+- replay timeline is a valid stable KB concept distinct from `ReplayTimelineBuilder` and other runtime implementation names.
+- replay timeline is derived reconstruction only and does not create lifecycle, event, or persistence authority.
+- deterministic ordering by event timestamp plus source event sequence is part of the replay-timeline boundary.
+- replay timeline must preserve source event context and provenance for replay and review use.
+
+Ontology impact:
+
+- [[ReplayTimeline]] should be treated as the canonical KB concept.
+- runtime names such as `ReplayTimelineBuilder`, `ReplayTimelineEntry`, and `ReplayTimelineService` remain implementation vocabulary.
+- no new event taxonomy, lifecycle state, AI authority, or workspace truth concept is introduced.
+
+Workflow and playbook impact:
+
+- TF-0018 continues the M5 replay path after projection and rebuild foundations.
+- no playbook change is required.
+
+ADR impact:
+
+- no new ADR is required.
+- accepted replay doctrine from ADR 0008 remains sufficient.
+
+Operational synchronization:
+
+- the source raw note has been archived.
+- runtime tracking now marks TF-0018 Done, so KB indexes must be synchronized.

@@ -11,10 +11,11 @@ tags:
   - replay
   - timeline
 source:
-  - knowledge/raw/20260510-implemented-tf-0018-replay-timeline-engine.md
+  - knowledge/raw/archived/20260510-implemented-tf-0018-replay-timeline-engine.md
 related:
   - "[[Runtime KB Development Loop]]"
   - "[[Replay System]]"
+  - "[[ReplayTimeline]]"
   - "[[Event Ledger]]"
 ---
 
@@ -88,3 +89,36 @@ Runtime validation completed:
 ## Deferred Boundaries
 
 Interactive frontend timeline, persisted timeline storage, historical reconstruction composition, AI narration, and API exposure remain deferred to later issues.
+
+## KB Processing Result
+
+This note is a processed implementation synthesis.
+
+Stable knowledge promoted from this note:
+
+- replay timeline is now implemented as deterministic derived reconstruction over ordered event history.
+- timeline output is immutable and preserves source context needed for replay and review.
+- timeline ordering depends on event timestamp plus source event sequence.
+- replay timeline does not append events, persist authoritative state, or create lifecycle authority.
+
+Ontology impact:
+
+- [[ReplayTimeline]] is the stable KB concept for this capability.
+- `ReplayTimelineBuilder`, `ReplayTimeline`, `ReplayTimelineEntry`, `ReplayTimelineEntryKind`, and `ReplayTimelineService` remain runtime implementation vocabulary.
+- no new event, lifecycle, AI, or workspace authority concept was introduced.
+
+Workflow and playbook impact:
+
+- TF-0018 confirms that M5 should keep replay timeline generation separate from historical reconstruction composition, API exposure, UI replay workspace behavior, and AI narration.
+- no playbook change is required.
+
+ADR impact:
+
+- no new ADR is required.
+- accepted replay doctrine from ADR 0008 and replay-centric UX direction from ADR 0014 remain sufficient.
+
+Operational synchronization:
+
+- runtime issue TF-0018 is Done.
+- runtime roadmap keeps M5 In Progress with TF-0019 still pending.
+- source raw note has been archived, preserving traceability while avoiding raw-note accumulation.

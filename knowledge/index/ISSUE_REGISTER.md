@@ -51,7 +51,7 @@ Do not mirror the full runtime issue register here.
 | TF-0015 | Done | Workspace state contracts must distinguish canonical, derived, inferred, advisory, and route context |
 | TF-0016 | Done | Replay projection must derive deterministic, discardable state from ordered Event Ledger history |
 | TF-0017 | Done | Projection rebuild pipeline must preserve projection discardability and event authority |
-| TF-0018 | Planned | Replay timeline must reconstruct cognition without depending on live APIs or current AI output |
+| TF-0018 | Done | Replay timeline must reconstruct cognition without depending on live APIs or current AI output |
 | TF-0019 | Planned | Historical reconstruction must preserve replay determinism and source traceability |
 
 ## TF-0014 Processing Result
@@ -143,6 +143,23 @@ Relevant processed notes:
 
 - [[TF-0017 Projection Rebuild Pipeline]]
 - [[Implemented TF-0017 Projection Rebuild Pipeline]]
+
+## TF-0018 Processing Result
+
+TF-0018 created deterministic replay timeline reconstruction.
+
+Semantic conclusion:
+
+- [[ReplayTimeline]] is a stable derived replay concept.
+- replay timeline reconstructs lifecycle, execution, review, and relevant system facts without becoming canonical truth.
+- deterministic replay ordering depends on event timestamp plus source event sequence.
+- timeline entries preserve source references and provenance needed for replay and review surfaces.
+- timeline construction does not append events, persist authoritative state, call live APIs, use current AI output, or create lifecycle authority.
+
+Relevant processed notes:
+
+- [[TF-0018 Replay Timeline Engine]]
+- [[Implemented TF-0018 Replay Timeline Engine]]
 
 ## MVP Discipline
 

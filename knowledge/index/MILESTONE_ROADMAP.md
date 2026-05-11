@@ -94,12 +94,14 @@ M5 is now in progress:
 
 - TF-0016: Implement replay projector foundation (**Done**)
 - TF-0017: Implement projection rebuild pipeline (**Done**)
-- TF-0018: Implement replay timeline engine (**Planned**)
+- TF-0018: Implement replay timeline engine (**Done**)
 - TF-0019: Implement historical reconstruction pipeline (**Planned**)
 
 TF-0016 established deterministic replay projection over ordered event history. It did not introduce projection persistence, replay timelines, historical reconstruction, replay APIs, AI narration, or frontend replay workspace behavior.
 
 TF-0017 established deterministic projection rebuild orchestration. It did not introduce projection persistence, rebuild observability events, replay timelines, historical reconstruction, or API exposure.
+
+TF-0018 established deterministic replay timeline reconstruction over ordered event history. It did not introduce historical reconstruction composition, API exposure, AI narration, persisted timeline authority, or frontend replay workspace behavior.
 
 ## Fast MVP Path
 
@@ -139,6 +141,8 @@ Relevant KB artifacts:
 - [[Implemented TF-0016 Replay Projector Foundation]]
 - [[TF-0017 Projection Rebuild Pipeline]]
 - [[Implemented TF-0017 Projection Rebuild Pipeline]]
+- [[TF-0018 Replay Timeline Engine]]
+- [[Implemented TF-0018 Replay Timeline Engine]]
 
 Root design layer:
 

@@ -4,7 +4,7 @@ type: entity
 status: canonical
 tags: [TradeForge, entity, replay]
 created: 2026-05-08
-updated: 2026-05-08
+updated: 2026-05-10
 aliases: [Replay Session]
 ---
 
@@ -34,10 +34,12 @@ ReplaySession consumes events from persona, workspace, market, scenario, decisio
 
 ReplaySession is the primary object used to inspect what was known, visible, approved, executed, and reviewed at a point in time.
 
+A ReplaySession may include a [[ReplayTimeline]] as one derived view over replay-relevant event history.
+
 ## Related Concepts
 
 - [[Event Ledger]]
+- [[ReplayTimeline]]
 - [[LifecycleEvent]]
 - [[Workspace]]
 - [[ReviewArtifact]]
-
