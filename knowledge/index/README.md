@@ -44,6 +44,7 @@ It links durable architecture doctrine, runtime alignment references, milestone 
 - [[EventLedger]]
 - [[EventStorePort]]
 - [[InMemoryEventStoreAdapter]]
+- [[Projection]]
 - [[DecisionLifecycleState]]
 - [[LifecycleTransitionValidator]]
 - [[LifecycleOrchestrationService]]
@@ -91,6 +92,8 @@ It links durable architecture doctrine, runtime alignment references, milestone 
 - [[Implemented TF-0012 Lifecycle Transition Validator]]
 - [[TF-0013 Lifecycle Orchestration Service]]
 - [[Implemented TF-0013 Lifecycle Orchestration Service]]
+- [[TF-0016 Replay Projector Foundation]]
+- [[Implemented TF-0016 Replay Projector Foundation]]
 
 ---
 

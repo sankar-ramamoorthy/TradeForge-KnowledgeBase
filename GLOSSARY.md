@@ -362,6 +362,22 @@ Derived state is NOT authoritative.
 
 ---
 
+## Projection
+
+A **Projection** is a rebuildable derived read model produced from ordered Event Ledger history and deterministic projection rules.
+
+Projections may support workspace surfaces, replay reconstruction, decision queues, exposure summaries, and operational views.
+
+Projections are NOT:
+- canonical truth
+- lifecycle authority
+- event authors
+- execution authority
+
+Persisted projections may exist for performance, but they remain discardable and rebuildable from canonical events.
+
+---
+
 ## Inferred State
 
 **Inferred State** is probabilistic interpretation of system or market conditions.
