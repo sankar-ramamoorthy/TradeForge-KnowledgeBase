@@ -11,11 +11,12 @@ tags:
   - replay
   - historical-reconstruction
 source:
-  - knowledge/raw/20260510-implemented-tf-0019-historical-reconstruction-pipeline.md
+  - knowledge/raw/archived/20260510-implemented-tf-0019-historical-reconstruction-pipeline.md
 related:
   - "[[Runtime KB Development Loop]]"
   - "[[Replay System]]"
   - "[[Replay Timeline]]"
+  - "[[HistoricalReconstruction]]"
   - "[[Event Ledger]]"
 ---
 
@@ -83,3 +84,36 @@ Runtime validation completed:
 ## Deferred Boundaries
 
 AI narration, live API context enrichment, reconstruction persistence, replay API endpoints, frontend replay workspace behavior, and inferred-state generation remain deferred to later issues.
+
+## KB Processing Result
+
+This note is a processed implementation synthesis.
+
+Stable knowledge promoted from this note:
+
+- historical reconstruction is now implemented as deterministic service-level replay composition over ordered event history.
+- reconstruction output preserves explicit fact, derived-state, and inferred-state boundaries.
+- source-linked artifacts preserve provenance instead of becoming new canonical facts.
+- historical reconstruction does not append events, persist authoritative state, or create lifecycle authority.
+
+Ontology impact:
+
+- [[HistoricalReconstruction]] is the stable KB concept for this capability.
+- `HistoricalReconstructionPipeline`, `HistoricalReconstruction`, `HistoricalFact`, `HistoricalDerivedState`, `HistoricalInferredState`, `SourceLinkedArtifact`, and `ReconstructionStateAuthority` remain runtime implementation vocabulary.
+- no new event, lifecycle, AI, or workspace authority concept was introduced.
+
+Workflow and playbook impact:
+
+- TF-0019 confirms that historical reconstruction should remain separate from replay APIs, frontend replay workspace behavior, AI narration, persistent replay storage, and inferred-state generation.
+- no playbook change is required.
+
+ADR impact:
+
+- no new ADR is required.
+- accepted replay doctrine from ADR 0008 and replay-centric UX direction from ADR 0014 remain sufficient.
+
+Operational synchronization:
+
+- runtime issue TF-0019 is Done.
+- runtime roadmap marks M5 Done.
+- source raw note has been archived, preserving traceability while avoiding raw-note accumulation.

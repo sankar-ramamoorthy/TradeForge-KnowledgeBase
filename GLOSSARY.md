@@ -247,6 +247,20 @@ Canonical truth remains in Event Ledger history.
 
 ---
 
+## Historical Reconstruction
+
+A **Historical Reconstruction** is a deterministic, derived replay output that composes source facts, replay projection state, replay timeline state, and an explicitly bounded inferred-state layer.
+
+It is NOT:
+- canonical truth
+- lifecycle authority
+- an event writer
+- AI-authored historical fact
+
+Historical Reconstruction must preserve the distinction between facts, derived state, and inferred state.
+
+---
+
 ## Decision
 
 A **Decision** is a human-approved commitment within a workflow.

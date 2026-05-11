@@ -36,9 +36,12 @@ ReplaySession is the primary object used to inspect what was known, visible, app
 
 A ReplaySession may include a [[ReplayTimeline]] as one derived view over replay-relevant event history.
 
+A ReplaySession may also include a [[HistoricalReconstruction]] when replay requires explicit composition of facts, derived state, and bounded inferred state.
+
 ## Related Concepts
 
 - [[Event Ledger]]
+- [[HistoricalReconstruction]]
 - [[ReplayTimeline]]
 - [[LifecycleEvent]]
 - [[Workspace]]

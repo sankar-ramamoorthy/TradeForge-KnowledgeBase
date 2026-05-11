@@ -95,6 +95,7 @@ Related concepts:
 - [[Replay System]]
 - [[Replay Session]]
 - [[ReplayTimeline]]
+- [[HistoricalReconstruction]]
 - [[Persona]]
 - [[Workspace]]
 - [[Market Intelligence Layer]]
