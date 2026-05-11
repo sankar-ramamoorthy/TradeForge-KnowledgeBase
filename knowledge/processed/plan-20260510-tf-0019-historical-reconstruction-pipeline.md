@@ -11,11 +11,12 @@ tags:
   - replay
   - historical-reconstruction
 source:
-  - knowledge/raw/20260510-tf-0019-historical-reconstruction-pipeline-plan.md
+  - knowledge/raw/archived/20260510-tf-0019-historical-reconstruction-pipeline-plan.md
 related:
   - "[[Runtime KB Development Loop]]"
   - "[[Replay System]]"
   - "[[Replay Timeline]]"
+  - "[[HistoricalReconstruction]]"
   - "[[Event Ledger]]"
 ---
 
@@ -73,3 +74,35 @@ The design preserves:
 - Historical Integrity: source facts and provenance remain visible
 - Layer Separation: services compose; domain reconstructs; infrastructure stays behind ports
 - Derived State Distinction: reconstruction output is non-authoritative
+
+## KB Processing Result
+
+This note is a processed planning synthesis.
+
+Stable knowledge promoted from this note:
+
+- historical reconstruction is a valid stable KB concept distinct from runtime type names.
+- historical reconstruction is a derived replay composition, not canonical truth.
+- reconstruction must preserve explicit separation between source facts, derived state, and inferred state.
+- notes and review artifacts must remain source-linked rather than becoming detached historical facts.
+
+Ontology impact:
+
+- [[HistoricalReconstruction]] should be treated as the canonical KB concept.
+- runtime names such as `HistoricalReconstructionPipeline`, `HistoricalFact`, `HistoricalDerivedState`, `HistoricalInferredState`, and `SourceLinkedArtifact` remain implementation vocabulary.
+- no new event taxonomy, lifecycle authority, or AI truth concept is introduced.
+
+Workflow and playbook impact:
+
+- TF-0019 completes the M5 replay foundation path by composing projection and timeline outputs into one reconstruction service.
+- no playbook change is required.
+
+ADR impact:
+
+- no new ADR is required.
+- accepted replay doctrine from ADR 0008 remains sufficient.
+
+Operational synchronization:
+
+- the source raw note has been archived.
+- runtime tracking now marks TF-0019 Done and M5 Done, so KB indexes must be synchronized.
