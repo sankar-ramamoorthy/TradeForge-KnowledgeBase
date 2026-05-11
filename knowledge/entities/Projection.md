@@ -38,6 +38,12 @@ Replay may consume projection logic when the projection can be rebuilt determini
 
 Replay must not depend on mutable current projections as historical truth.
 
+## Rebuild Relationship
+
+Projection rebuild is deterministic orchestration that rereads ordered Event Ledger history and regenerates derived projection outputs.
+
+Rebuild reports are operational artifacts. They may describe rebuild results, but they do not create canonical truth or lifecycle authority.
+
 ## Workspace Relationship
 
 Workspace surfaces may display projections, but the surfaces remain derived views.

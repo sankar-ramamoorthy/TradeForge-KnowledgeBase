@@ -11,7 +11,7 @@ tags:
   - projection
   - replay
 source:
-  - knowledge/raw/20260510-tf-0017-projection-rebuild-pipeline-plan.md
+  - knowledge/raw/archived/20260510-tf-0017-projection-rebuild-pipeline-plan.md
 related:
   - "[[Runtime KB Development Loop]]"
   - "[[Projection]]"
@@ -70,3 +70,33 @@ The design preserves:
 - Replay: projections are reconstructed from deterministic rules
 - Layer Separation: services orchestrate; infrastructure remains behind ports
 - Derived State Distinction: rebuild reports are non-authoritative
+
+## KB Processing Result
+
+This note is a processed planning synthesis, not canonical doctrine by itself.
+
+Stable knowledge promoted from this note:
+
+- projection rebuild is deterministic services-layer orchestration over ordered Event Ledger history.
+- projection rebuild reports are derived artifacts and do not become canonical truth.
+- projection rebuild must preserve explicit target ordering and reject duplicate target names.
+- rebuild orchestration may use the Event Store port without changing Event Ledger authority.
+
+Ontology impact:
+
+- [[Projection]] remains the stable canonical concept.
+- `ProjectionRebuildPipeline`, `ProjectionRebuildTarget`, and rebuild report/result names remain runtime implementation vocabulary unless later issues reveal durable semantic boundaries.
+
+Workflow impact:
+
+- TF-0017 extends TF-0016 by making deterministic projection rebuild orchestration explicit.
+- TF-0018 and TF-0019 should consume this rebuild boundary without introducing projection authority, persistence-as-truth, or lifecycle mutation.
+
+ADR impact:
+
+- no new ADR is required because TF-0017 implements existing event-sourcing, workspace projection, replay, and replay-centric UX doctrine from ADR 0001, ADR 0004, ADR 0008, and ADR 0014.
+
+Operational synchronization:
+
+- source raw note has been archived, not deleted from history.
+- KB issue and roadmap indexes should show TF-0017 as Done while M5 remains In Progress.

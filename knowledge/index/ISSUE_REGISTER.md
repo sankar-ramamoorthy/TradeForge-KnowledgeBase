@@ -50,7 +50,7 @@ Do not mirror the full runtime issue register here.
 | TF-0014 | Done | Workspace routes must be bounded entrypoints, not workspace truth |
 | TF-0015 | Done | Workspace state contracts must distinguish canonical, derived, inferred, advisory, and route context |
 | TF-0016 | Done | Replay projection must derive deterministic, discardable state from ordered Event Ledger history |
-| TF-0017 | Planned | Projection rebuild pipeline must preserve projection discardability and event authority |
+| TF-0017 | Done | Projection rebuild pipeline must preserve projection discardability and event authority |
 | TF-0018 | Planned | Replay timeline must reconstruct cognition without depending on live APIs or current AI output |
 | TF-0019 | Planned | Historical reconstruction must preserve replay determinism and source traceability |
 
@@ -104,6 +104,24 @@ Numbering note:
 
 - older processed notes may reference replay projector work under the previous TF-0014 assignment.
 - Runtime Roadmap v2 supersedes that mapping: TF-0014 is workspace routing, TF-0015 is workspace state contracts, and TF-0016 is replay projector foundation.
+
+## TF-0017 Processing Result
+
+TF-0017 created deterministic projection rebuild orchestration.
+
+Semantic conclusion:
+
+- projection rebuild is services-layer orchestration over ordered Event Ledger history
+- rebuild targets consume the same ordered event tuple
+- target ordering and duplicate target-name rejection preserve deterministic rebuild behavior
+- rebuild reports are immutable, derived, and discardable
+- rebuild orchestration does not append events, persist projection state, or create lifecycle authority
+- [[Projection]] remains the stable KB concept; `ProjectionRebuildPipeline` remains implementation vocabulary
+
+Relevant processed notes:
+
+- [[TF-0017 Projection Rebuild Pipeline]]
+- [[Implemented TF-0017 Projection Rebuild Pipeline]]
 
 ## MVP Discipline
 

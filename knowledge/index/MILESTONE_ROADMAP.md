@@ -93,11 +93,13 @@ TF-0015 defined workspace state contracts while preserving the distinction betwe
 M5 is now in progress:
 
 - TF-0016: Implement replay projector foundation (**Done**)
-- TF-0017: Implement projection rebuild pipeline (**Planned**)
+- TF-0017: Implement projection rebuild pipeline (**Done**)
 - TF-0018: Implement replay timeline engine (**Planned**)
 - TF-0019: Implement historical reconstruction pipeline (**Planned**)
 
 TF-0016 established deterministic replay projection over ordered event history. It did not introduce projection persistence, replay timelines, historical reconstruction, replay APIs, AI narration, or frontend replay workspace behavior.
+
+TF-0017 established deterministic projection rebuild orchestration. It did not introduce projection persistence, rebuild observability events, replay timelines, historical reconstruction, or API exposure.
 
 ## Fast MVP Path
 
@@ -135,6 +137,8 @@ Relevant KB artifacts:
 - [[Implemented TF-0014 Workspace Routing Model]]
 - [[TF-0016 Replay Projector Foundation]]
 - [[Implemented TF-0016 Replay Projector Foundation]]
+- [[TF-0017 Projection Rebuild Pipeline]]
+- [[Implemented TF-0017 Projection Rebuild Pipeline]]
 
 Root design layer:
 
