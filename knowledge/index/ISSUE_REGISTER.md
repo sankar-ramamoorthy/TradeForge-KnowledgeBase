@@ -43,7 +43,7 @@ Do not mirror the full runtime issue register here.
 | TF-0035 to TF-0041 | M8 | First operational MVP vertical slice |
 | TF-0042+ | M9+ | Deferred post-MVP market/scenario/AI/adaptive layers |
 
-## Recent M4 Through Current M6 Issues
+## Recent M4 Through Current M7 Issues
 
 | ID | Status | Semantic Concern |
 |---|---|---|
@@ -57,6 +57,7 @@ Do not mirror the full runtime issue register here.
 | TF-0021 | Done | Workspace projection read models must remain persona/workspace-scoped, rebuildable, and non-authoritative |
 | TF-0022 | Done | Operational attention queues must explain required human attention without becoming lifecycle authority |
 | TF-0023 | Done | Workspace summaries must remain deterministic, source-linked, persona-shaped, and non-AI |
+| TF-0024 | Done | Postgres must remain infrastructure only and preserve Event Store port, replay, and Event Ledger boundaries |
 
 ## TF-0014 Processing Result
 
@@ -247,6 +248,23 @@ Relevant processed notes:
 
 - [[Plan - TF-0023 Context-Aware Workspace Summaries]]
 - [[Implemented - TF-0023 Context-Aware Workspace Summaries]]
+
+## TF-0024 Processing Result
+
+TF-0024 established the first completed M7 runtime infrastructure capability.
+
+Semantic conclusion:
+
+- Postgres is infrastructure, not semantic authority.
+- [[Event Ledger]] remains canonical truth independent of persistence technology.
+- [[Event Store Port]] remains the adapter boundary for later durable ledger work.
+- replay behavior, lifecycle authority, workspace semantics, and projection authority are unchanged.
+- ADR 0018 now exists in the runtime repo and captures the accepted persistence boundary.
+
+Relevant processed notes:
+
+- [[Plan - TF-0024 Postgres Persistence Layer]]
+- [[Implemented - TF-0024 Postgres Persistence Layer]]
 
 ## M6 Processing Result
 

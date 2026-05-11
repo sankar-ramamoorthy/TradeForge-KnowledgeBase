@@ -111,6 +111,8 @@ It links durable architecture doctrine, runtime alignment references, milestone 
 - [[Implemented - TF-0022 Operational Attention Queues]]
 - [[Plan - TF-0023 Context-Aware Workspace Summaries]]
 - [[Implemented - TF-0023 Context-Aware Workspace Summaries]]
+- [[Plan - TF-0024 Postgres Persistence Layer]]
+- [[Implemented - TF-0024 Postgres Persistence Layer]]
 
 ---
 

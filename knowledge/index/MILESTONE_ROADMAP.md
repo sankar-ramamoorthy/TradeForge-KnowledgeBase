@@ -122,6 +122,14 @@ TF-0023 established deterministic [[WorkspaceSummary|Workspace Summary]] output 
 
 M6 completed the [[Persona Workspace Projection Layer]] and did not introduce projection persistence, API endpoints, React UI, broker execution, AI prioritization, or new event taxonomy.
 
+M7 has now started:
+
+- TF-0024: Add Postgres persistence layer (**Done**)
+
+TF-0024 established local Postgres availability and infrastructure-scoped connection settings while preserving [[Event Ledger]] authority, [[Event Store Port]] boundaries, replay determinism, and projection discardability.
+
+TF-0024 did not implement Alembic migrations, a Postgres event ledger adapter, projection persistence, API endpoints, React UI, or new runtime semantics.
+
 ## Fast MVP Path
 
 ```text
@@ -143,6 +151,7 @@ Those remain outside the completed M4 boundary unless a later runtime issue or A
 - [ADR 0012: Workspace Architecture Model](../../../../TradeForge/DOCS/adr/0012-workspace-architecture-model.md)
 - [ADR 0013: Operational Attention Model](../../../../TradeForge/DOCS/adr/0013-operational-attention-model.md)
 - [ADR 0014: Replay-Centric UX Model](../../../../TradeForge/DOCS/adr/0014-replay-centric-ux-model.md)
+- [ADR 0018: Postgres Event Store Persistence](../../../../TradeForge/DOCS/adr/0018-postgres-event-store-persistence.md)
 - [ADR 0023: MVP Vertical Slice Definition](../../../../TradeForge/DOCS/adr/0023-mvp-vertical-slice-definition.md)
 
 ## KB Alignment
@@ -172,6 +181,8 @@ Relevant KB artifacts:
 - [[Implemented - TF-0022 Operational Attention Queues]]
 - [[Plan - TF-0023 Context-Aware Workspace Summaries]]
 - [[Implemented - TF-0023 Context-Aware Workspace Summaries]]
+- [[Plan - TF-0024 Postgres Persistence Layer]]
+- [[Implemented - TF-0024 Postgres Persistence Layer]]
 - [[Persona Workspace Projection Layer]]
 
 Root design layer:

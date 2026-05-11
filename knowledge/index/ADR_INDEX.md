@@ -71,15 +71,17 @@ Related concepts:
 ## Runtime Environment Layer
 
 - [ADR 0011: Runtime Development Environment](../../../../TradeForge/DOCS/adr/0011-runtime-development-environment.md)
+- [ADR 0018: Postgres Event Store Persistence](../../../../TradeForge/DOCS/adr/0018-postgres-event-store-persistence.md)
 
 Related concepts:
 
 - [[Semantic Truth Layer]]
 - [[Architectural Memory]]
 - [[Event Ledger]]
+- [[Event Store Port]]
 - [[Decision Lifecycle Engine]]
 
-Note: ADR 0011 is infrastructure-scoped. It defines repeatable runtime tooling and does not define domain semantics.
+Note: ADR 0011 and ADR 0018 are infrastructure-scoped. They define repeatable runtime environment and persistence boundaries without redefining domain semantics.
 
 ---
 
