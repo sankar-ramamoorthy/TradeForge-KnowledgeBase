@@ -59,6 +59,7 @@ Do not mirror the full runtime issue register here.
 | TF-0023 | Done | Workspace summaries must remain deterministic, source-linked, persona-shaped, and non-AI |
 | TF-0024 | Done | Postgres must remain infrastructure only and preserve Event Store port, replay, and Event Ledger boundaries |
 | TF-0025 | Done | Migration tooling must remain infrastructure only and prevent projection storage from becoming canonical truth |
+| TF-0026 | Done | Durable Postgres Event Ledger persistence must preserve append-only event facts, deterministic ordering, and Event Store port discipline |
 
 ## TF-0014 Processing Result
 
@@ -282,6 +283,23 @@ Relevant processed notes:
 
 - [[Plan - TF-0025 Alembic Migration Infrastructure]]
 - [[Implemented - TF-0025 Alembic Migration Infrastructure]]
+
+## TF-0026 Processing Result
+
+TF-0026 established durable Postgres persistence for the canonical Event Ledger as the third completed M7 runtime infrastructure capability.
+
+Semantic conclusion:
+
+- canonical event history is now durably persisted in Postgres without changing event meaning.
+- [[Event Store Port]] remains the only runtime boundary for appending and reading canonical events.
+- deterministic replay ordering is preserved through immutable ledger sequence ordering.
+- database-level update/delete guards appropriately reinforce append-only event history as an invariant.
+- projection persistence remains separate and non-authoritative.
+
+Relevant processed notes:
+
+- [[Plan - TF-0026 Postgres Event Ledger]]
+- [[Implemented - TF-0026 Postgres Event Ledger]]
 
 ## M6 Processing Result
 

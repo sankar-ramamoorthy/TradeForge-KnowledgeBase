@@ -126,6 +126,7 @@ M7 has now started:
 
 - TF-0024: Add Postgres persistence layer (**Done**)
 - TF-0025: Add Alembic migration infrastructure (**Done**)
+- TF-0026: Persist canonical event ledger (**Done**)
 
 TF-0024 established local Postgres availability and infrastructure-scoped connection settings while preserving [[Event Ledger]] authority, [[Event Store Port]] boundaries, replay determinism, and projection discardability.
 
@@ -134,6 +135,10 @@ TF-0024 did not implement Alembic migrations, a Postgres event ledger adapter, p
 TF-0025 established deterministic migration tooling and runtime ADR 0019 while preserving [[Event Ledger]] authority, replay determinism, and projection non-authority.
 
 TF-0025 did not implement event-ledger tables, a Postgres event ledger adapter, projection tables, API endpoints, React UI, or new runtime semantics.
+
+TF-0026 established durable canonical event persistence through a Postgres adapter behind [[Event Store Port]] and reinforced append-only Event Ledger history with database-level mutation guards.
+
+TF-0026 did not implement event streaming infrastructure, projection persistence, API endpoints, React UI, or new runtime semantics.
 
 ## Fast MVP Path
 
@@ -191,6 +196,8 @@ Relevant KB artifacts:
 - [[Implemented - TF-0024 Postgres Persistence Layer]]
 - [[Plan - TF-0025 Alembic Migration Infrastructure]]
 - [[Implemented - TF-0025 Alembic Migration Infrastructure]]
+- [[Plan - TF-0026 Postgres Event Ledger]]
+- [[Implemented - TF-0026 Postgres Event Ledger]]
 - [[Persona Workspace Projection Layer]]
 
 Root design layer:
