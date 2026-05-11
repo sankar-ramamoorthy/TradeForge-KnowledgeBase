@@ -4,7 +4,7 @@ type: index
 status: canonical
 tags: [TradeForge, roadmap, milestones, architecture, MVP]
 created: 2026-05-08
-updated: 2026-05-10
+updated: 2026-05-11
 runtime_authority: ../../../../TradeForge/DOCS/Milestone_Roadmap_v2.md
 ---
 
@@ -68,7 +68,7 @@ It should not prove autonomous trading, broker replacement, charting platform so
 | M2 | Done | Event Ledger and canonical event model |
 | M3 | Done | Decision Lifecycle Engine |
 | M4 | Done | Workspace and cognitive architecture |
-| M5 | In Progress | Replay and projection foundation |
+| M5 | Done | Replay and projection foundation |
 | M6 | Planned | Persona Workspace projection layer |
 | M7 | Planned | MVP runtime infrastructure |
 | M8 | Planned | First operational MVP vertical slice |
@@ -90,12 +90,12 @@ TF-0015 defined workspace state contracts while preserving the distinction betwe
 - inferred/advisory context
 - route entry context
 
-M5 is now in progress:
+M5 is now complete:
 
 - TF-0016: Implement replay projector foundation (**Done**)
 - TF-0017: Implement projection rebuild pipeline (**Done**)
 - TF-0018: Implement replay timeline engine (**Done**)
-- TF-0019: Implement historical reconstruction pipeline (**Planned**)
+- TF-0019: Implement historical reconstruction pipeline (**Done**)
 
 TF-0016 established deterministic replay projection over ordered event history. It did not introduce projection persistence, replay timelines, historical reconstruction, replay APIs, AI narration, or frontend replay workspace behavior.
 
@@ -103,6 +103,16 @@ TF-0017 established deterministic projection rebuild orchestration. It did not i
 
 TF-0018 established deterministic replay timeline reconstruction over ordered event history. It did not introduce historical reconstruction composition, API exposure, AI narration, persisted timeline authority, or frontend replay workspace behavior.
 
+TF-0019 established deterministic historical reconstruction composition over replay facts, projection state, timeline state, and an explicitly bounded inferred-state layer. It did not introduce replay APIs, frontend replay workspace behavior, persistent reconstruction authority, live API enrichment, or AI narration.
+
+M6 has started:
+
+- TF-0020: Define persona context model (**Done**)
+- TF-0021: Implement workspace projection read models (**Planned**)
+- TF-0022: Implement operational attention queues (**Planned**)
+- TF-0023: Implement context-aware workspace summaries (**Planned**)
+
+TF-0020 established versioned persona context as bounded interpretive input for later workspace projection and attention work. It did not introduce user identity semantics, workspace projections, attention queues, summaries, persistence, or AI persona generation.
 ## Fast MVP Path
 
 ```text
@@ -143,6 +153,10 @@ Relevant KB artifacts:
 - [[Implemented TF-0017 Projection Rebuild Pipeline]]
 - [[TF-0018 Replay Timeline Engine]]
 - [[Implemented TF-0018 Replay Timeline Engine]]
+- [[TF-0019 Historical Reconstruction Pipeline]]
+- [[Implemented TF-0019 Historical Reconstruction Pipeline]]
+- [[TF-0020 Persona Context Model]]
+- [[Implemented TF-0020 Persona Context Model]]
 
 Root design layer:
 

@@ -49,6 +49,8 @@ A persona defines:
 - playbook relevance
 - interpretation bias
 
+Persona context must remain versioned and replay-safe so historical workflows are interpreted through the persona state that existed at the time, not through a later revision.
+
 ---
 
 ## Persona Workspace

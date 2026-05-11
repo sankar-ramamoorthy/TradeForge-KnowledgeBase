@@ -4,7 +4,7 @@ type: index
 status: canonical
 tags: [TradeForge, issues, architecture, roadmap, MVP]
 created: 2026-05-08
-updated: 2026-05-10
+updated: 2026-05-11
 runtime_authority: ../../../../TradeForge/DOCS/ISSUE_REGISTER.md
 ---
 
@@ -43,7 +43,7 @@ Do not mirror the full runtime issue register here.
 | TF-0035 to TF-0041 | M8 | First operational MVP vertical slice |
 | TF-0042+ | M9+ | Deferred post-MVP market/scenario/AI/adaptive layers |
 
-## Recent M4 And Current M5 Issues
+## Recent M4 Through Current M6 Issues
 
 | ID | Status | Semantic Concern |
 |---|---|---|
@@ -52,7 +52,8 @@ Do not mirror the full runtime issue register here.
 | TF-0016 | Done | Replay projection must derive deterministic, discardable state from ordered Event Ledger history |
 | TF-0017 | Done | Projection rebuild pipeline must preserve projection discardability and event authority |
 | TF-0018 | Done | Replay timeline must reconstruct cognition without depending on live APIs or current AI output |
-| TF-0019 | Planned | Historical reconstruction must preserve replay determinism and source traceability |
+| TF-0019 | Done | Historical reconstruction must preserve replay determinism and source traceability |
+| TF-0020 | Done | Persona context must remain versioned, replay-safe, and bounded to interpretive influence |
 
 ## TF-0014 Processing Result
 
@@ -161,6 +162,37 @@ Relevant processed notes:
 - [[TF-0018 Replay Timeline Engine]]
 - [[Implemented TF-0018 Replay Timeline Engine]]
 
+## TF-0019 Processing Result
+
+TF-0019 created deterministic historical reconstruction composition.
+
+Semantic conclusion:
+
+- [[HistoricalReconstruction]] is a stable derived replay concept.
+- historical reconstruction composes source facts, replay projection state, replay timeline state, and an explicitly bounded inferred-state layer without becoming canonical truth.
+- notes and review artifacts remain source-linked to originating events.
+- historical reconstruction does not append events, persist authoritative replay state, call live APIs, or create lifecycle authority.
+
+Relevant processed notes:
+
+- [[TF-0019 Historical Reconstruction Pipeline]]
+- [[Implemented TF-0019 Historical Reconstruction Pipeline]]
+
+## TF-0020 Processing Result
+
+TF-0020 created the first runtime persona context foundation for M6.
+
+Semantic conclusion:
+
+- existing [[Persona]] semantics remain sufficient as the canonical KB concept.
+- persona context must preserve explicit version identity for replay-safe interpretation.
+- persona influence is bounded interpretive scope, not canonical state mutation, lifecycle authority, or execution authority.
+- workspace, workflow, and decision references may be associated with persona context without making persona context a state owner.
+
+Relevant processed notes:
+
+- [[TF-0020 Persona Context Model]]
+- [[Implemented TF-0020 Persona Context Model]]
 ## MVP Discipline
 
 The fast path remains:

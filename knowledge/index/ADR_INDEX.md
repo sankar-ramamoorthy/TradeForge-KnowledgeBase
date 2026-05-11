@@ -4,7 +4,7 @@ type: index
 status: canonical
 tags: [TradeForge, ADR, architecture, index]
 created: 2026-05-08
-updated: 2026-05-10
+updated: 2026-05-11
 ---
 
 # ADR Index
@@ -96,6 +96,7 @@ Related concepts:
 - [[Replay Session]]
 - [[ReplayTimeline]]
 - [[Persona]]
+- [[Workspace]]
 - [[Market Intelligence Layer]]
 - [[Inferred State]]
 
