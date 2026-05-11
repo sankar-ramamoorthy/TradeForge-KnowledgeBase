@@ -74,7 +74,7 @@ It should not prove autonomous trading, broker replacement, charting platform so
 | M8 | Planned | First operational MVP vertical slice |
 | M9+ | Deferred | Market/scenario/AI/adaptive layers after MVP path checkpoint |
 
-## Current M5 State
+## M4 Closeout
 
 M4 is complete:
 
