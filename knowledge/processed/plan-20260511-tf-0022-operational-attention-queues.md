@@ -3,7 +3,7 @@ title: Plan - TF-0022 Operational Attention Queues
 type: processed-planning
 status: processed
 created: 2026-05-11
-source: knowledge/raw/20260511-tf-0022-operational-attention-queues-plan.md
+source: knowledge/raw/archived/20260511-tf-0022-operational-attention-queues-plan.md
 issue: TF-0022
 milestone: M6
 branch: feature/tf-0022-operational-attention-queues

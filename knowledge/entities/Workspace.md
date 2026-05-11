@@ -4,7 +4,7 @@ type: entity
 status: canonical
 tags: [TradeForge, entity, workspace, UX]
 created: 2026-05-08
-updated: 2026-05-08
+updated: 2026-05-11
 aliases: [Persona Workspace, Operational Workspace]
 ---
 
@@ -28,6 +28,18 @@ Workspace surfaces are projections. They do not own canonical state, approve dec
 
 Workspace exposes lifecycle context and pending decisions, but lifecycle progression remains owned by the [[Decision Lifecycle Engine]].
 
+## Projection Relationship
+
+Workspace state is expressed through rebuildable [[Projection]] output.
+
+The M6 Persona Workspace projection layer stabilizes three derived workspace read-model forms:
+
+- workspace projection read models
+- [[OperationalAttentionQueue|Operational Attention Queue]]
+- [[WorkspaceSummary|Workspace Summary]]
+
+These forms support operational cognition without becoming workspace-owned truth.
+
 ## Event Relationships
 
 Related event examples:
@@ -46,7 +58,9 @@ Replay should reconstruct the workspace context visible during decision-making f
 ## Related Concepts
 
 - [[Persona]]
+- [[Projection]]
+- [[OperationalAttentionQueue|Operational Attention Queue]]
+- [[WorkspaceSummary|Workspace Summary]]
 - [[ReplaySession]]
 - [[ReviewArtifact]]
 - [[MarketContext]]
-

@@ -3,7 +3,7 @@ title: Plan - TF-0023 Context-Aware Workspace Summaries
 type: processed-planning
 status: processed
 created: 2026-05-11
-source: knowledge/raw/20260511-tf-0023-context-aware-workspace-summaries-plan.md
+source: knowledge/raw/archived/20260511-tf-0023-context-aware-workspace-summaries-plan.md
 issue: TF-0023
 milestone: M6
 branch: feature/tf-0023-context-aware-workspace-summaries

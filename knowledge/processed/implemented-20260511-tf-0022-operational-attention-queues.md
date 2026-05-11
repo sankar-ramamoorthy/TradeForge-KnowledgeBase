@@ -3,7 +3,7 @@ title: Implemented - TF-0022 Operational Attention Queues
 type: processed-implementation
 status: processed
 created: 2026-05-11
-source: knowledge/raw/20260511-implemented-tf-0022-operational-attention-queues.md
+source: knowledge/raw/archived/20260511-implemented-tf-0022-operational-attention-queues.md
 issue: TF-0022
 milestone: M6
 branch: feature/tf-0022-operational-attention-queues

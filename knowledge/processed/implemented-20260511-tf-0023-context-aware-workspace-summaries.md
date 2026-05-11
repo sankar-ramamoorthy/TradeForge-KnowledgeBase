@@ -3,7 +3,7 @@ title: Implemented - TF-0023 Context-Aware Workspace Summaries
 type: processed-implementation
 status: processed
 created: 2026-05-11
-source: knowledge/raw/20260511-implemented-tf-0023-context-aware-workspace-summaries.md
+source: knowledge/raw/archived/20260511-implemented-tf-0023-context-aware-workspace-summaries.md
 issue: TF-0023
 milestone: M6
 branch: feature/tf-0023-context-aware-workspace-summaries

@@ -3,7 +3,7 @@ title: Implemented - TF-0021 Workspace Projection Read Models
 type: processed-implementation
 status: processed
 created: 2026-05-11
-source: knowledge/raw/20260511-implemented-tf-0021-workspace-projection-read-models.md
+source: knowledge/raw/archived/20260511-implemented-tf-0021-workspace-projection-read-models.md
 issue: TF-0021
 milestone: M6
 branch: feature/tf-0021-workspace-projection-read-models

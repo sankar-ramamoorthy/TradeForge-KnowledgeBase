@@ -113,6 +113,8 @@ Related concepts:
 - [[Workspace]]
 - [[Persona Workspace]]
 - [[Decision Queue]]
+- [[OperationalAttentionQueue|Operational Attention Queue]]
+- [[WorkspaceSummary|Workspace Summary]]
 - [[Replay Session]]
 - [[Review Artifact]]
 

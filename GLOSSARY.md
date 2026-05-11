@@ -394,6 +394,44 @@ Persisted projections may exist for performance, but they remain discardable and
 
 ---
 
+## Operational Attention Queue
+
+An **Operational Attention Queue** is a deterministic derived read model that identifies what requires human attention within a Persona Workspace.
+
+It may include:
+- pending lifecycle decisions
+- review obligations
+- active exposure concerns
+- stale or changed thesis context
+- risk or rule concerns
+- relevant workspace context changes
+
+It is NOT:
+- canonical truth
+- lifecycle authority
+- execution permission
+- AI prioritization
+- a replacement for human approval
+
+Queue items should preserve why attention is required and link back to source events, derived inputs, or deterministic rule evaluations.
+
+---
+
+## Workspace Summary
+
+A **Workspace Summary** is a deterministic, non-authoritative derived read model that condenses workspace projection state and operational attention into concise workspace context.
+
+It is NOT:
+- canonical truth
+- lifecycle authority
+- execution permission
+- AI-generated interpretation
+- a substitute for source event history
+
+Persona context may shape summary emphasis, but it must not mutate facts or hide source traceability.
+
+---
+
 ## Inferred State
 
 **Inferred State** is probabilistic interpretation of system or market conditions.
