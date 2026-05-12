@@ -1,10 +1,10 @@
----
+﻿---
 title: Issue Register Index
 type: index
 status: canonical
 tags: [TradeForge, issues, architecture, roadmap, MVP]
 created: 2026-05-08
-updated: 2026-05-11
+updated: 2026-05-12
 runtime_authority: ../../../../TradeForge/DOCS/ISSUE_REGISTER.md
 ---
 
@@ -63,6 +63,42 @@ Do not mirror the full runtime issue register here.
 | TF-0027 | Done | FastAPI must remain an app-layer HTTP boundary and must not own lifecycle, replay, workspace, or persistence authority |
 | TF-0028 | Done | Lifecycle API endpoints must remain HTTP adapters over lifecycle orchestration and explicit event-backed transitions |
 | TF-0029 | Done | Replay API endpoints must remain derived read adapters over deterministic replay services and shared Event Ledger history |
+| TF-0030 | Done | Workspace projection APIs must expose derived persona/workspace read models without creating HTTP-owned workspace truth |
+| TF-0031 | Done | React runtime must remain a frontend/API boundary and not import runtime internals or own workspace semantics |
+| TF-0032 | Done | Frontend workspace routes must preserve context without becoming workspace, lifecycle, replay, or event authority |
+| TF-0033 | Done | Shared layout primitives and frontend/DESIGN.md must translate UX doctrine without becoming semantic authority |
+
+
+## TF-0032 Processing Result
+
+TF-0032 established the first frontend workspace routing system for the six core MVP workspaces.
+
+Semantic conclusion:
+
+- React workspace routes are navigation entrypoints, not workspace truth.
+- Route URLs preserve persona, selected workflow, and decision context.
+- Frontend routing improves workflow continuity without adding lifecycle authority.
+- Canonical state remains event/projection backed and reachable only through runtime API boundaries.
+
+Relevant processed notes:
+
+- [[Implemented - TF-0032 Workspace Routing System]]
+
+
+## TF-0033 Processing Result
+
+TF-0033 established the shared frontend operational layout layer and introduced `frontend/DESIGN.md` as a runtime design translation artifact.
+
+Semantic conclusion:
+
+- shared layout primitives support workspace continuity without owning workspace truth.
+- `frontend/DESIGN.md` records frontend tokens and layout rationale, not ontology.
+- anti-dashboard UX remains governed by KB doctrine and runtime ADRs.
+- full workspace workflows remain deferred to M8 workspace issues.
+
+Relevant processed notes:
+
+- [[Implemented - TF-0033 Shared Operational Layout System]]
 
 ## TF-0014 Processing Result
 
@@ -377,3 +413,9 @@ M4 -> M5 -> M6 -> M7 -> M8
 Postgres, Alembic, FastAPI, and React belong to M7, not M4.
 
 Market Context, Scenario Discovery, AI advisory, behavioral intelligence, simulation, and RL remain post-MVP unless a future ADR deliberately changes the roadmap.
+
+
+
+
+
+
