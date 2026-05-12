@@ -1,10 +1,10 @@
----
+﻿---
 title: Milestone Roadmap Index
 type: index
 status: canonical
 tags: [TradeForge, roadmap, milestones, architecture, MVP]
 created: 2026-05-08
-updated: 2026-05-11
+updated: 2026-05-12
 runtime_authority: ../../../../TradeForge/DOCS/Milestone_Roadmap_v2.md
 ---
 
@@ -130,6 +130,9 @@ M7 has now started:
 - TF-0027: Add FastAPI application runtime (**Done**)
 - TF-0028: Add lifecycle API endpoints (**Done**)
 - TF-0029: Add replay API endpoints (**Done**)
+- TF-0030: Add workspace projection APIs (**Done**)
+- TF-0031: Create React frontend scaffold (**Done**)
+- TF-0032: Add workspace routing system (**Done**)
 
 TF-0024 established local Postgres availability and infrastructure-scoped connection settings while preserving [[Event Ledger]] authority, [[Event Store Port]] boundaries, replay determinism, and projection discardability.
 
@@ -155,6 +158,12 @@ TF-0029 established replay HTTP reads for [[HistoricalReconstruction]] and [[Rep
 
 TF-0029 did not introduce replay workspace UI behavior, live API enrichment, AI replay narration, direct database access from route handlers, or replay authority in HTTP code.
 
+TF-0030 established read-only workspace projection APIs over persona/workspace-scoped derived read models.
+
+TF-0031 established the React workspace runtime boundary without full routing, session semantics, or full workspace implementation.
+
+TF-0032 established typed React workspace routes for the six core MVP workspaces while preserving explicit persona/workflow/decision context and keeping routes as presentation entrypoints only.
+
 ## Fast MVP Path
 
 ```text
@@ -179,6 +188,7 @@ Those remain outside the completed M4 boundary unless a later runtime issue or A
 - [ADR 0018: Postgres Event Store Persistence](../../../../TradeForge/DOCS/adr/0018-postgres-event-store-persistence.md)
 - [ADR 0019: Projection Persistence Architecture](../../../../TradeForge/DOCS/adr/0019-projection-persistence-architecture.md)
 - [ADR 0020: FastAPI Runtime Boundary](../../../../TradeForge/DOCS/adr/0020-fastapi-runtime-boundary.md)
+- [ADR 0021: React Workspace Runtime](../../../../TradeForge/DOCS/adr/0021-react-workspace-runtime.md)
 - [ADR 0023: MVP Vertical Slice Definition](../../../../TradeForge/DOCS/adr/0023-mvp-vertical-slice-definition.md)
 
 ## KB Alignment
@@ -219,6 +229,7 @@ Relevant KB artifacts:
 - [[Implemented - TF-0028 Lifecycle API Endpoints]]
 - [[Plan - TF-0029 Replay API Endpoints]]
 - [[Implemented - TF-0029 Replay API Endpoints]]
+- [[Implemented - TF-0032 Workspace Routing System]]
 - [[Persona Workspace Projection Layer]]
 
 Root design layer:
@@ -236,3 +247,5 @@ draft design architecture, not canonical DESIGN.md
 ## Synchronization Rule
 
 If runtime roadmap and this KB index diverge, treat the runtime roadmap as operational planning authority and update this KB index as a semantic summary.
+
+
