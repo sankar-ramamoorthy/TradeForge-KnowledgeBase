@@ -87,6 +87,21 @@ Note: ADR 0011, ADR 0018, and ADR 0019 are infrastructure-scoped. They define re
 
 ---
 
+## Application Boundary Layer
+
+- [ADR 0020: FastAPI Runtime Boundary](../../../../TradeForge/DOCS/adr/0020-fastapi-runtime-boundary.md)
+
+Related concepts:
+
+- [[Decision Lifecycle Engine]]
+- [[Replay System]]
+- [[Projection]]
+- [[Event Store Port]]
+
+Note: ADR 0020 defines the HTTP application boundary. It keeps route handlers in the app layer and prevents HTTP code from owning workflow, replay, or persistence authority.
+
+---
+
 ## Replay And Interpretation Layer
 
 - [ADR 0008: Replay System Design](../../../../TradeForge/DOCS/adr/0008-replay-system-design.md)

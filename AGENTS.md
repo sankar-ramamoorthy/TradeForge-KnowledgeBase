@@ -32,42 +32,98 @@ This repository exists to preserve:
 ---
 # Mandatory Semantic Boot Sequence
 
-Before performing design or implementation work, Codex MUST initialize semantic context in this order:
+Before performing design or implementation work, Codex MUST initialize semantic context in this order.
 
-## 1. Semantic Truth Layer
+The goal is semantic alignment with bounded runtime cognition.
 
-Read:
+Canonical knowledge is authoritative when relevant.
+
+Canonical knowledge is NOT globally active by default.
+
+---
+
+## 1. Global Semantic Foundations
+
+Always read:
 
 - knowledge-base/TradeForge/SEMANTIC_BOOTSTRAP.md
-- knowledge-base/TradeForge/SEMANTIC_GOVERNANCE.md
 - knowledge-base/TradeForge/INVARIANTS.md
-- knowledge-base/TradeForge/ARCHITECTURE.md
-- knowledge-base/TradeForge/UX_DOCTRINE.md
-- knowledge-base/TradeForge/GLOSSARY.md
-- knowledge-base/TradeForge/EVENT_TAXONOMY.md
+- knowledge-base/TradeForge/knowledge/index/runtime-context-map.md
 
-Optional depending on task:
-- PERSONAS.md
-- WORKSPACES.md
-- EXECUTION_CONTRACT.md
+These define:
 
-## 2. Runtime Documentation Layer
+- global architectural constraints
+- semantic operating rules
+- invariant boundaries
+- runtime semantic activation discipline
 
-Read:
-- TradeForge/DOCS/
-- TradeForge/DOCS/adr/
+---
 
-## 3. Runtime Implementation Layer
+## 2. Determine Dominant Task Category
+
+Identify the primary category of work.
+
+Examples:
+
+- lifecycle transitions
+- replay systems
+- workspace cognition
+- deterministic rules
+- persistence infrastructure
+- API boundaries
+- ontology evolution
+- KB processing
+- AI advisory systems
+
+---
+
+## 3. Load Only Relevant Context Bundles
+
+Consult:
+
+- `knowledge/index/runtime-context-map.md`
+
+Load only the semantic domains relevant to the current task.
+
+Examples:
+
+- lifecycle work should load lifecycle doctrine
+- replay work should load replay doctrine
+- persistence work should load infrastructure doctrine
+
+Avoid loading unrelated semantic domains unless required.
+
+Do NOT treat all canonical doctrine as globally active.
+
+---
+
+## 4. Runtime Documentation Layer
+
+Load only the runtime documentation relevant to the active task.
+
+Examples:
+
+- relevant ADRs
+- relevant DOCS sections
+- relevant domain models
+- affected architecture boundaries
+
+Avoid broad runtime documentation loading unless necessary.
+
+---
+
+## 5. Runtime Implementation Layer
 
 Only after semantic initialization:
-- inspect src/
-- evaluate implementation impact
-- generate design reasoning
-- produce code
 
-If semantic initialization has not occurred:
+- inspect implementation boundaries
+- evaluate architecture impact
+- generate explicit reasoning
+- produce implementation changes
+
+If semantic alignment has not occurred:
+
 STOP.
-
 # Canonical Truth Hierarchy
 
 When contradictions exist, resolve authority in this order:
@@ -249,6 +305,9 @@ Replay systems must NOT depend on live external APIs.
 
 - `SEMANTIC_GOVERNANCE.md`
   Canonical semantic governance, canonical readiness, ontology stabilization, and KB processing discipline.
+  
+- `knowledge/index/runtime-context-map.md`
+  Defines semantic activation boundaries and task-scoped runtime context loading.  
 
 - `ARCHITECTURE.md`
   System architecture doctrine and layer ownership.
@@ -418,6 +477,44 @@ updated: YYYY-MM-DD
 ---
 ```
 ---
+
+# Runtime Semantic Activation Doctrine
+
+TradeForge separates:
+
+- semantic preservation
+- semantic activation
+
+The knowledge base preserves the complete semantic worldview of the system.
+
+Runtime cognition should activate only the semantic domains relevant to the current task.
+
+Agents should prefer:
+
+- bounded cognition
+- minimal viable semantic loading
+- task-scoped doctrine activation
+- progressive context escalation
+
+Avoid:
+
+- loading all canonical doctrine by default
+- broad context pollution
+- unrelated semantic activation
+- treating all architecture as simultaneously relevant
+
+The runtime context map is authoritative for semantic activation behavior:
+
+```text
+knowledge/index/runtime-context-map.md
+```
+
+Canonical does not mean globally active.
+
+Canonical means authoritative when relevant.
+
+---
+
 # Progressive Discovery Rules
 
 TradeForge follows a progressive discovery knowledge model.
