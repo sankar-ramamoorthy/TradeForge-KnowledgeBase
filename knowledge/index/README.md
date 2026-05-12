@@ -1,10 +1,59 @@
 ---
 title: Knowledge Index
-type: index
-status: active
-tags: [TradeForge, index, navigation]
+
+type: semantic-index
+status: canonical
+
 created: 2026-05-08
 updated: 2026-05-11
+
+tags:
+  - TradeForge
+  - knowledge-base
+  - semantic-navigation
+  - ontology
+  - doctrine
+  - runtime-activation
+  - context-loading
+  - cognition
+  - index
+
+purpose: >
+  Canonical semantic navigation entrypoint for the TradeForge
+  knowledge base. Defines high-level navigation structure,
+  doctrine discovery, runtime activation references,
+  ontology access paths, and semantic operating guidance.
+
+audience:
+  - codex
+  - claude
+  - ai-agents
+  - architects
+  - developers
+
+navigation_role:
+  - doctrine discovery
+  - semantic routing
+  - ontology traversal
+  - runtime activation entrypoint
+  - canonical reference navigation
+
+activation:
+  consult_before:
+    - broad context loading
+    - ontology traversal
+    - implementation work
+    - KB processing
+    - architectural reasoning
+
+related:
+  - SEMANTIC_BOOTSTRAP.md
+  - SEMANTIC_GOVERNANCE.md
+  - knowledge/index/runtime-context-map.md
+
+authoritative_statement: >
+  This directory provides semantic navigation and runtime cognition
+  entrypoints for the TradeForge knowledge system.
 ---
 
 # Knowledge Index
@@ -17,6 +66,27 @@ It links durable architecture doctrine, runtime alignment references, milestone 
 
 ---
 
+## Runtime Context Activation
+
+Before loading broad canonical doctrine:
+
+Consult:
+
+- [[runtime-context-map]]
+
+The runtime context map defines:
+
+- semantic activation boundaries
+- task-scoped context bundles
+- bounded cognition rules
+- context escalation rules
+- runtime semantic loading discipline
+
+Canonical knowledge should NOT be treated as globally active at all times.
+
+Load only the semantic domains relevant to the current task.
+---
+
 ## Core Doctrine
 
 - [[INVARIANTS]]
@@ -25,6 +95,7 @@ It links durable architecture doctrine, runtime alignment references, milestone 
 - [[EVENT_TAXONOMY]]
 - [[UX_DOCTRINE]]
 - [[SEMANTIC_BOOTSTRAP]]
+- [[runtime-context-map]]
 - [[SEMANTIC_GOVERNANCE]]
 
 ---
