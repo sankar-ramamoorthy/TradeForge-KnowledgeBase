@@ -391,6 +391,40 @@ Relevant processed notes:
 - [[Plan - TF-0029 Replay API Endpoints]]
 - [[Implemented - TF-0029 Replay API Endpoints]]
 
+## TF-0030 Processing Result
+
+TF-0030 established read-only workspace projection APIs as the final M7 API-layer runtime capability.
+
+Semantic conclusion:
+
+- workspace projection APIs are HTTP read adapters, not workspace authority.
+- persona and workspace context must be explicit at the API boundary.
+- workspace projections remain derived, source-linked, and non-authoritative.
+- lifecycle state in projection responses is event-derived state only, not lifecycle authority.
+- no new event taxonomy, projection persistence, lifecycle mutation, or workspace truth was introduced.
+
+Relevant processed notes:
+
+- [[TF-0030 Workspace Projection API Synthesis]]
+- [[TF-0030 Workspace Projection API Implementation Synthesis]]
+
+## TF-0031 Processing Result
+
+TF-0031 established the React workspace runtime boundary for M7.
+
+Semantic conclusion:
+
+- the React frontend is a presentation and interaction boundary over FastAPI contracts.
+- browser state is operational and temporary, not canonical workspace truth.
+- workspace semantics remain governed by KB doctrine and runtime ADRs.
+- ADR 0021 now exists in the runtime repo and defines the React workspace runtime boundary.
+- full workspace routing, layout primitives, session identity, and lifecycle workflows remain deferred to TF-0032, TF-0033, TF-0034, and M8.
+
+Relevant processed notes:
+
+- [[TF-0031 React Frontend Runtime Boundary Planning Synthesis]]
+- [[TF-0031 React Frontend Scaffold Implementation Synthesis]]
+
 ## M6 Processing Result
 
 TF-0021 through TF-0023 complete the [[Persona Workspace Projection Layer]].
