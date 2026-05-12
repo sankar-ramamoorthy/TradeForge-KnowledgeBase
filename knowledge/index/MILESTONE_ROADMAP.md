@@ -133,6 +133,7 @@ M7 has now started:
 - TF-0030: Add workspace projection APIs (**Done**)
 - TF-0031: Create React frontend scaffold (**Done**)
 - TF-0032: Add workspace routing system (**Done**)
+- TF-0033: Add shared operational layout system (**Done**)
 
 TF-0024 established local Postgres availability and infrastructure-scoped connection settings while preserving [[Event Ledger]] authority, [[Event Store Port]] boundaries, replay determinism, and projection discardability.
 
@@ -163,6 +164,8 @@ TF-0030 established read-only workspace projection APIs over persona/workspace-s
 TF-0031 established the React workspace runtime boundary without full routing, session semantics, or full workspace implementation.
 
 TF-0032 established typed React workspace routes for the six core MVP workspaces while preserving explicit persona/workflow/decision context and keeping routes as presentation entrypoints only.
+
+TF-0033 established shared React operational layout primitives and `frontend/DESIGN.md` as a runtime translation artifact for frontend tokens and layout rationale.
 
 ## Fast MVP Path
 
@@ -230,6 +233,7 @@ Relevant KB artifacts:
 - [[Plan - TF-0029 Replay API Endpoints]]
 - [[Implemented - TF-0029 Replay API Endpoints]]
 - [[Implemented - TF-0032 Workspace Routing System]]
+- [[Implemented - TF-0033 Shared Operational Layout System]]
 - [[Persona Workspace Projection Layer]]
 
 Root design layer:
@@ -247,5 +251,7 @@ draft design architecture, not canonical DESIGN.md
 ## Synchronization Rule
 
 If runtime roadmap and this KB index diverge, treat the runtime roadmap as operational planning authority and update this KB index as a semantic summary.
+
+
 
 
