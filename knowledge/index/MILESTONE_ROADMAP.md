@@ -227,6 +227,8 @@ Relevant KB artifacts:
 - [[Implemented - TF-0025 Alembic Migration Infrastructure]]
 - [[Plan - TF-0026 Postgres Event Ledger]]
 - [[Implemented - TF-0026 Postgres Event Ledger]]
+- [[TF-0027 FastAPI Runtime Planning Synthesis]]
+- [[TF-0027 FastAPI Runtime Implementation Synthesis]]
 - [[Implemented - TF-0027 FastAPI Runtime Boundary]]
 - [[Plan - TF-0028 Lifecycle API Endpoints]]
 - [[Implemented - TF-0028 Lifecycle API Endpoints]]

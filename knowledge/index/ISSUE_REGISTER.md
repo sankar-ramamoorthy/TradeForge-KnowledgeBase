@@ -353,6 +353,8 @@ Semantic conclusion:
 
 Relevant processed notes:
 
+- [[TF-0027 FastAPI Runtime Planning Synthesis]]
+- [[TF-0027 FastAPI Runtime Implementation Synthesis]]
 - [[Implemented - TF-0027 FastAPI Runtime Boundary]]
 
 ## TF-0028 Processing Result
