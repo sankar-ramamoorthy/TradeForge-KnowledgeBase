@@ -67,6 +67,7 @@ Do not mirror the full runtime issue register here.
 | TF-0031 | Done | React runtime must remain a frontend/API boundary and not import runtime internals or own workspace semantics |
 | TF-0032 | Done | Frontend workspace routes must preserve context without becoming workspace, lifecycle, replay, or event authority |
 | TF-0033 | Done | Shared layout primitives and frontend/DESIGN.md must translate UX doctrine without becoming semantic authority |
+| TF-0034 | Done | Session identity must remain separate from Persona while supporting explicit workspace continuity |
 
 
 ## TF-0032 Processing Result
@@ -99,6 +100,22 @@ Semantic conclusion:
 Relevant processed notes:
 
 - [[Implemented - TF-0033 Shared Operational Layout System]]
+
+## TF-0034 Processing Result
+
+TF-0034 established the first runtime session boundary for the MVP frontend/API path.
+
+Semantic conclusion:
+
+- user identity, runtime session identity, and Persona are distinct concepts.
+- session context may supply current workspace defaults without becoming canonical truth.
+- active persona/workspace context remains explicit in the session model.
+- session reads do not append events, mutate lifecycle state, or authorize decisions.
+- full multi-user authorization remains out of scope.
+
+Relevant processed notes:
+
+- [[Implemented - TF-0034 Authentication And Session Model]]
 
 ## TF-0014 Processing Result
 

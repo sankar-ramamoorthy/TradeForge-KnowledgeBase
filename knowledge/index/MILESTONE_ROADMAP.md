@@ -70,7 +70,7 @@ It should not prove autonomous trading, broker replacement, charting platform so
 | M4 | Done | Workspace and cognitive architecture |
 | M5 | Done | Replay and projection foundation |
 | M6 | Done | Persona Workspace projection layer |
-| M7 | Planned | MVP runtime infrastructure |
+| M7 | Done | MVP runtime infrastructure |
 | M8 | Planned | First operational MVP vertical slice |
 | M9+ | Deferred | Market/scenario/AI/adaptive layers after MVP path checkpoint |
 
@@ -122,7 +122,7 @@ TF-0023 established deterministic [[WorkspaceSummary|Workspace Summary]] output 
 
 M6 completed the [[Persona Workspace Projection Layer]] and did not introduce projection persistence, API endpoints, React UI, broker execution, AI prioritization, or new event taxonomy.
 
-M7 has now started:
+M7 is complete:
 
 - TF-0024: Add Postgres persistence layer (**Done**)
 - TF-0025: Add Alembic migration infrastructure (**Done**)
@@ -134,6 +134,7 @@ M7 has now started:
 - TF-0031: Create React frontend scaffold (**Done**)
 - TF-0032: Add workspace routing system (**Done**)
 - TF-0033: Add shared operational layout system (**Done**)
+- TF-0034: Add authentication/session model (**Done**)
 
 TF-0024 established local Postgres availability and infrastructure-scoped connection settings while preserving [[Event Ledger]] authority, [[Event Store Port]] boundaries, replay determinism, and projection discardability.
 
@@ -167,6 +168,8 @@ TF-0032 established typed React workspace routes for the six core MVP workspaces
 
 TF-0033 established shared React operational layout primitives and `frontend/DESIGN.md` as a runtime translation artifact for frontend tokens and layout rationale.
 
+TF-0034 established a minimal runtime session boundary that separates user identity, runtime session identity, and active persona/workspace context.
+
 ## Fast MVP Path
 
 ```text
@@ -192,6 +195,7 @@ Those remain outside the completed M4 boundary unless a later runtime issue or A
 - [ADR 0019: Projection Persistence Architecture](../../../../TradeForge/DOCS/adr/0019-projection-persistence-architecture.md)
 - [ADR 0020: FastAPI Runtime Boundary](../../../../TradeForge/DOCS/adr/0020-fastapi-runtime-boundary.md)
 - [ADR 0021: React Workspace Runtime](../../../../TradeForge/DOCS/adr/0021-react-workspace-runtime.md)
+- [ADR 0022: Authentication And Operational Identity](../../../../TradeForge/DOCS/adr/0022-authentication-and-operational-identity.md)
 - [ADR 0023: MVP Vertical Slice Definition](../../../../TradeForge/DOCS/adr/0023-mvp-vertical-slice-definition.md)
 
 ## KB Alignment
@@ -234,6 +238,7 @@ Relevant KB artifacts:
 - [[Implemented - TF-0029 Replay API Endpoints]]
 - [[Implemented - TF-0032 Workspace Routing System]]
 - [[Implemented - TF-0033 Shared Operational Layout System]]
+- [[Implemented - TF-0034 Authentication And Session Model]]
 - [[Persona Workspace Projection Layer]]
 
 Root design layer:
