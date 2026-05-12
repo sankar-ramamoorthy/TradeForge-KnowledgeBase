@@ -67,6 +67,7 @@ Do not mirror the full runtime issue register here.
 | TF-0031 | Done | React runtime must remain a frontend/API boundary and not import runtime internals or own workspace semantics |
 | TF-0032 | Done | Frontend workspace routes must preserve context without becoming workspace, lifecycle, replay, or event authority |
 | TF-0033 | Done | Shared layout primitives and frontend/DESIGN.md must translate UX doctrine without becoming semantic authority |
+| TF-0034 | Done | Session identity, runtime session, and active workspace context must remain three distinct concepts; Persona activation must not be inferred from user identity |
 
 
 ## TF-0032 Processing Result
@@ -99,6 +100,27 @@ Semantic conclusion:
 Relevant processed notes:
 
 - [[Implemented - TF-0033 Shared Operational Layout System]]
+
+## TF-0034 Processing Result
+
+TF-0034 established the authentication/session boundary for M7 as the final M7 runtime infrastructure issue.
+
+Semantic conclusion:
+
+- user identity, runtime session, and active workspace context are three distinct concepts and must not be collapsed.
+- [[Persona]] remains a decision behavior model; persona activation remains explicit inside workspace context and is not inferred from user identity.
+- session context may provide workspace continuity defaults but does not own workspace truth, projection authority, or lifecycle authority.
+- `GET /session` is read-only; it does not append events, transition lifecycle state, or authorize workflow decisions.
+- replay remains event-backed; historical decisions preserve the persona context that shaped interpretation at the time, independently of mutable session state.
+- full multi-user authorization, credential handling, and role-based policy remain deferred beyond M7.
+- ADR 0022 now exists in the runtime repo and defines the authentication and operational identity boundary.
+
+Note: no raw KB notes were captured during TF-0034 development; KB synthesis was performed retrospectively from runtime sources.
+
+Relevant processed notes:
+
+- [[Plan - TF-0034 Authentication/Session Model]]
+- [[Implemented - TF-0034 Authentication/Session Model]]
 
 ## TF-0014 Processing Result
 

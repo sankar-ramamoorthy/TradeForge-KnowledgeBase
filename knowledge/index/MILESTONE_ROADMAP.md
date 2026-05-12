@@ -70,7 +70,7 @@ It should not prove autonomous trading, broker replacement, charting platform so
 | M4 | Done | Workspace and cognitive architecture |
 | M5 | Done | Replay and projection foundation |
 | M6 | Done | Persona Workspace projection layer |
-| M7 | Planned | MVP runtime infrastructure |
+| M7 | Done | MVP runtime infrastructure |
 | M8 | Planned | First operational MVP vertical slice |
 | M9+ | Deferred | Market/scenario/AI/adaptive layers after MVP path checkpoint |
 
@@ -134,6 +134,7 @@ M7 has now started:
 - TF-0031: Create React frontend scaffold (**Done**)
 - TF-0032: Add workspace routing system (**Done**)
 - TF-0033: Add shared operational layout system (**Done**)
+- TF-0034: Add authentication/session model (**Done**)
 
 TF-0024 established local Postgres availability and infrastructure-scoped connection settings while preserving [[Event Ledger]] authority, [[Event Store Port]] boundaries, replay determinism, and projection discardability.
 
@@ -166,6 +167,10 @@ TF-0031 established the React workspace runtime boundary without full routing, s
 TF-0032 established typed React workspace routes for the six core MVP workspaces while preserving explicit persona/workflow/decision context and keeping routes as presentation entrypoints only.
 
 TF-0033 established shared React operational layout primitives and `frontend/DESIGN.md` as a runtime translation artifact for frontend tokens and layout rationale.
+
+TF-0034 established the authentication/session boundary for M7, introducing three distinct identity concepts — user identity, runtime session, and active workspace context — to prevent session identity from collapsing into [[Persona]] and to preserve replay integrity.
+
+TF-0034 did not introduce full multi-user authorization, credential storage, OAuth, role-based policy, persona activation from user identity, or session-backed event writes.
 
 ## Fast MVP Path
 
@@ -240,6 +245,8 @@ Relevant KB artifacts:
 - [[TF-0031 React Frontend Scaffold Implementation Synthesis]]
 - [[Implemented - TF-0032 Workspace Routing System]]
 - [[Implemented - TF-0033 Shared Operational Layout System]]
+- [[Plan - TF-0034 Authentication/Session Model]]
+- [[Implemented - TF-0034 Authentication/Session Model]]
 - [[Persona Workspace Projection Layer]]
 
 Root design layer:
