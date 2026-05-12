@@ -74,6 +74,9 @@ Examples:
 - ontology evolution
 - KB processing
 - AI advisory systems
+- design architecture
+- workspace interaction systems
+- operational surfaces
 
 ---
 

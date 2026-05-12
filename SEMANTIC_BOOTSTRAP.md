@@ -122,6 +122,7 @@ Defines:
 - skills (Codex behavioral rules)
 - architectural doctrine
 - workflow semantics
+- design architecture (how cognition becomes interaction systems)
 
 This layer defines semantic truth.
 

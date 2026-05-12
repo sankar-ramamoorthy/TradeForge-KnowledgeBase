@@ -16,6 +16,9 @@ This repository preserves:
 - AI governance
 - semantic truth
 - durable project memory
+- design architecture
+- workspace interaction systems
+- operational surfaces
 
 This repository is NOT the runtime implementation repository.
 
