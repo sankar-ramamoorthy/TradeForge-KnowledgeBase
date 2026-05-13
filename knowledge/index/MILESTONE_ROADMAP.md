@@ -185,6 +185,7 @@ M8 is now complete:
 M8 established the first full operational MVP workflow across all six core workspaces and verified
 the full Idea -> Thesis -> Plan -> Approval -> Execution -> Position -> Review chain as an
 event-backed, replay-compatible path.
+TF-0034 established a minimal runtime session boundary that separates user identity, runtime session identity, and active persona/workspace context.
 
 ## Fast MVP Path
 
@@ -211,6 +212,7 @@ Those remain outside the completed M4 boundary unless a later runtime issue or A
 - [ADR 0019: Projection Persistence Architecture](../../../../TradeForge/DOCS/adr/0019-projection-persistence-architecture.md)
 - [ADR 0020: FastAPI Runtime Boundary](../../../../TradeForge/DOCS/adr/0020-fastapi-runtime-boundary.md)
 - [ADR 0021: React Workspace Runtime](../../../../TradeForge/DOCS/adr/0021-react-workspace-runtime.md)
+- [ADR 0022: Authentication And Operational Identity](../../../../TradeForge/DOCS/adr/0022-authentication-and-operational-identity.md)
 - [ADR 0023: MVP Vertical Slice Definition](../../../../TradeForge/DOCS/adr/0023-mvp-vertical-slice-definition.md)
 
 ## KB Alignment
