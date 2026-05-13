@@ -4,7 +4,7 @@ type: index
 status: canonical
 tags: [TradeForge, issues, architecture, roadmap, MVP]
 created: 2026-05-08
-updated: 2026-05-12
+updated: 2026-05-13
 runtime_authority: ../../../../TradeForge/DOCS/ISSUE_REGISTER.md
 ---
 
@@ -121,6 +121,27 @@ Relevant processed notes:
 
 - [[Plan - TF-0034 Authentication/Session Model]]
 - [[Implemented - TF-0034 Authentication/Session Model]]
+
+## M8 Processing Result
+
+TF-0035 through TF-0041 complete the first operational MVP vertical slice.
+
+Semantic conclusion:
+
+- all six core MVP workspaces are now operational rather than placeholder surfaces
+- user-facing lifecycle progression remains routed through the lifecycle API and domain validation
+- replay now participates directly in the same operational experience rather than remaining only a backend capability
+- review completion is reachable through the same event-backed workflow chain
+- M8 validated that the M4 through M7 route, projection, API, and runtime boundaries were sufficient for an end-to-end operational slice
+
+Relevant processed notes:
+
+- [[Plan - TF-0035 Operating Workspace]]
+- [[Implemented - TF-0035 Operating Workspace]]
+- [[Plan - TF-0036 Opportunity Workspace]]
+- [[Implemented - TF-0036 Opportunity Workspace]]
+- [[Implemented - TF-0037 Through TF-0041 M8 Operational MVP Vertical Slice]]
+- [[First Operational MVP Vertical Slice]]
 
 ## TF-0014 Processing Result
 

@@ -3,6 +3,9 @@ title: TF-0035 Operating Workspace Planning
 type: processed
 status: processed
 created: 2026-05-12
+updated: 2026-05-13
+source:
+  - knowledge/raw/20260512-tf-0035-operating-workspace-planning.md
 issue: TF-0035
 milestone: M8
 tags:

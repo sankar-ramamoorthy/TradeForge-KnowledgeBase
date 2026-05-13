@@ -96,16 +96,14 @@ The architecture is intentionally:
 
 Current design focus areas:
 
-1. Persona-driven workspace architecture
-2. Decision lifecycle modeling
-3. Event taxonomy and replay semantics
-4. Market intelligence layer boundaries
-5. Scenario discovery system design
-6. UX doctrine and decision surfaces
-7. Canonical ontology and terminology
-8. Knowledge-base structure and retrieval quality
+1. M8 knowledge processing and milestone closeout
+2. Persona workspace doctrine refinement after full runtime validation
+3. Replay and review semantics now that the first operational slice is complete
+4. Post-MVP roadmap checkpoint discipline for M9+ work
+5. Canonical ontology and terminology stability
+6. Knowledge-base structure and retrieval quality
 
-The current phase is architecture and system design, not feature implementation.
+The current phase is post-M8 knowledge synchronization and roadmap checkpointing after the first operational MVP vertical slice.
 
 ---
 

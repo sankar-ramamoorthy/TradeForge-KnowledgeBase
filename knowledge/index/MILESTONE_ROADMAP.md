@@ -4,7 +4,7 @@ type: index
 status: canonical
 tags: [TradeForge, roadmap, milestones, architecture, MVP]
 created: 2026-05-08
-updated: 2026-05-12
+updated: 2026-05-13
 runtime_authority: ../../../../TradeForge/DOCS/Milestone_Roadmap_v2.md
 ---
 
@@ -71,7 +71,7 @@ It should not prove autonomous trading, broker replacement, charting platform so
 | M5 | Done | Replay and projection foundation |
 | M6 | Done | Persona Workspace projection layer |
 | M7 | Done | MVP runtime infrastructure |
-| M8 | Planned | First operational MVP vertical slice |
+| M8 | Done | First operational MVP vertical slice |
 | M9+ | Deferred | Market/scenario/AI/adaptive layers after MVP path checkpoint |
 
 ## M4 Closeout
@@ -122,7 +122,7 @@ TF-0023 established deterministic [[WorkspaceSummary|Workspace Summary]] output 
 
 M6 completed the [[Persona Workspace Projection Layer]] and did not introduce projection persistence, API endpoints, React UI, broker execution, AI prioritization, or new event taxonomy.
 
-M7 has now started:
+M7 is complete:
 
 - TF-0024: Add Postgres persistence layer (**Done**)
 - TF-0025: Add Alembic migration infrastructure (**Done**)
@@ -171,6 +171,20 @@ TF-0033 established shared React operational layout primitives and `frontend/DES
 TF-0034 established the authentication/session boundary for M7, introducing three distinct identity concepts — user identity, runtime session, and active workspace context — to prevent session identity from collapsing into [[Persona]] and to preserve replay integrity.
 
 TF-0034 did not introduce full multi-user authorization, credential storage, OAuth, role-based policy, persona activation from user identity, or session-backed event writes.
+
+M8 is now complete:
+
+- TF-0035: Implement Operating Workspace (**Done**)
+- TF-0036: Implement Opportunity Workspace (**Done**)
+- TF-0037: Implement Plan Review Workspace (**Done**)
+- TF-0038: Implement Active Position Workspace (**Done**)
+- TF-0039: Implement Replay Workspace (**Done**)
+- TF-0040: Implement Review Workspace (**Done**)
+- TF-0041: Implement first replayable lifecycle flow (**Done**)
+
+M8 established the first full operational MVP workflow across all six core workspaces and verified
+the full Idea -> Thesis -> Plan -> Approval -> Execution -> Position -> Review chain as an
+event-backed, replay-compatible path.
 
 ## Fast MVP Path
 
@@ -247,6 +261,8 @@ Relevant KB artifacts:
 - [[Implemented - TF-0033 Shared Operational Layout System]]
 - [[Plan - TF-0034 Authentication/Session Model]]
 - [[Implemented - TF-0034 Authentication/Session Model]]
+- [[Implemented - TF-0037 Through TF-0041 M8 Operational MVP Vertical Slice]]
+- [[First Operational MVP Vertical Slice]]
 - [[Persona Workspace Projection Layer]]
 
 Root design layer:
