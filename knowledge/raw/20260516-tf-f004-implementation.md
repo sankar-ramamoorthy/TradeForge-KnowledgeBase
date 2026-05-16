@@ -43,4 +43,4 @@ milestone: M10C
 ## Observations
 
 - ADR-0037 was already accepted before implementation, so TF-F004 became a bounded realization issue rather than an architectural discovery issue.
-- `STARTUP.md` remains absent from the KB path referenced by bootstrap/runtime loading guidance.
+- `SEMANTIC_BOOTSTRAP.md` is the active semantic initialization document replacing the former `STARTUP.md` reference.
