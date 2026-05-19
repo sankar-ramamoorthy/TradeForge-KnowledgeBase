@@ -319,6 +319,78 @@ The goal is:
 
 ---
 
+# Trader-Language Boundary
+
+TradeForge distinguishes between:
+
+- canonical internal semantics
+- operator-facing language
+
+Canonical semantics remain authoritative in:
+
+- domain models
+- events
+- glossary definitions
+- architecture docs
+- replay and provenance systems
+
+Operator-facing UX should translate those semantics into trader-native language
+when the user primarily needs to think, decide, interpret, or act.
+
+Examples:
+
+- `ScenarioBranch` may appear to the operator as `bull case`, `bear case`, or
+  `alternate path`.
+- `OpportunityCandidate` may appear as `opportunity`, `setup`, or `developing
+  trade` when that better matches the task.
+- canonical / derived / inferred / advisory distinctions should usually support
+  the surface as badges or metadata rather than dominate the main cognitive
+  structure.
+
+This translation is not semantic drift.
+
+It is the UX layer performing its proper role:
+
+```text
+canonical semantics
+    -> operator interpretation
+    -> clearer cognition
+```
+
+See `design/trader-language-doctrine.md` for the canonical design rule.
+
+---
+
+# Recovery-Oriented Missing Information
+
+TradeForge must expose uncertainty without abandoning the operator inside a
+dead-end state.
+
+When information is missing, the interface should explain:
+
+1. what is missing
+2. why it is missing when known
+3. why it matters in the current workflow
+4. whether the operator can continue
+5. what the next available action is
+
+Different states must remain distinct:
+
+- not requested yet
+- loading
+- failed
+- not configured
+- unsupported
+- intentionally omitted
+- stale
+
+Missing advisory context changes what is known. It does not silently change
+canonical truth or lifecycle state.
+
+See `design/missing-information-doctrine.md` for the canonical design rule.
+
+---
+
 # UI as Cognitive System
 
 TradeForge UI is not a visualization layer.
