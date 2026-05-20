@@ -4,7 +4,7 @@ type: index
 status: canonical
 tags: [TradeForge, roadmap, milestones, architecture, MVP]
 created: 2026-05-08
-updated: 2026-05-12
+updated: 2026-05-19
 runtime_authority: ../../../../TradeForge/DOCS/Milestone_Roadmap_v2.md
 ---
 
@@ -39,7 +39,7 @@ TradeForge/DOCS/MILESTONE_ROADMAP_DEPRECATED.md
 
 It is retained only as historical planning context.
 
-Roadmap v2 supersedes the old backend-first roadmap direction.
+Roadmap v2 supersedes the old backend-first roadmap direction. It also remains the active roadmap after TF-F044 folded the proposed roadmap v3 cognitive advisory evolution into v2.
 
 Core shift:
 
@@ -72,7 +72,10 @@ It should not prove autonomous trading, broker replacement, charting platform so
 | M6 | Done | Persona Workspace projection layer |
 | M7 | Done | MVP runtime infrastructure |
 | M8 | Planned | First operational MVP vertical slice |
-| M9+ | Deferred | Market/scenario/AI/adaptive layers after MVP path checkpoint |
+| M9 | Done | Market context and provider layer |
+| M10-M10E | Done | Operational workflow, structured cognition, provider capability, and context workbench readiness |
+| M11 | Done | Foundational AI advisory boundary |
+| M12-M19 | Planned | Machine-assisted discretionary cognition evolution |
 
 ## M4 Closeout
 
@@ -258,5 +261,11 @@ draft design architecture, not canonical DESIGN.md
 If runtime roadmap and this KB index diverge, treat the runtime roadmap as operational planning authority and update this KB index as a semantic summary.
 
 
+
+
+
+## TF-F044 Roadmap Evolution
+
+TF-F044 integrated the proposed DOCS/Milestone_Roadmap_v3.md future direction into active DOCS/Milestone_Roadmap_v2.md. The semantic shift is toward machine-assisted discretionary cognition: advisory observations, evidence accumulation, contextual interpretation, behavioral auditability, cognitive replay, attention allocation, simulation, adaptive advisory research, and long-horizon cognitive performance analysis. The processed KB synthesis is [[Machine-Assisted Discretionary Cognition Synthesis]], and the emerging topic is [[Machine-Assisted Discretionary Cognition]].
 
 

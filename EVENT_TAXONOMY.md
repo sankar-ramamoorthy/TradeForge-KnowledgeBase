@@ -1,4 +1,4 @@
-# TradeForge — Event Taxonomy
+﻿# TradeForge â€” Event Taxonomy
 
 ## Purpose
 
@@ -73,6 +73,7 @@ persona.*
 workspace.*
 market.*
 scenario.*
+advisory.*
 decision.*
 execution.*
 review.*
@@ -154,7 +155,23 @@ They represent system-generated hypotheses.
 
 ---
 
-# 5. Decision Events
+# 5. Advisory Events
+
+Events related to advisory cognition artifact capture.
+
+Examples:
+
+- AdvisoryObservationCaptured
+
+Purpose:
+Record that a non-canonical advisory artifact existed in a persona/workspace context at a specific time.
+
+Important constraint:
+Advisory events record capture facts only. They do NOT make advisory content, recommendations, lifecycle transition intent, or execution authority canonical.
+
+---
+
+# 6. Decision Events
 
 Events representing human decision workflow state.
 
@@ -177,7 +194,7 @@ Decision events are:
 
 ---
 
-# 6. Execution Events
+# 7. Execution Events
 
 Events representing interaction with external systems.
 
@@ -195,7 +212,7 @@ Execution events reflect external reality (broker/system state), not internal in
 
 ---
 
-# 7. Review Events
+# 8. Review Events
 
 Events related to reflection and learning.
 
@@ -214,7 +231,7 @@ Review events are first-class system artifacts.
 
 ---
 
-# 8. System Events
+# 9. System Events
 
 Events related to system operations.
 
@@ -284,10 +301,10 @@ State is NEVER authoritative.
 
 The following are NOT valid TradeForge events:
 
-- “MarketLooksBullish”
-- “TraderConfident”
-- “GoodSetupDetected”
-- “HighQualityTrade”
+- â€œMarketLooksBullishâ€
+- â€œTraderConfidentâ€
+- â€œGoodSetupDetectedâ€
+- â€œHighQualityTradeâ€
 
 Reason:
 These are interpretations, not observable facts.
