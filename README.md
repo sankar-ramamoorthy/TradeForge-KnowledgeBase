@@ -1,4 +1,5 @@
 # TradeForge — Knowledge Base
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/sankar-ramamoorthy/TradeForge-KnowledgeBase)
 
 > **Work in progress.** This is the semantic and architectural governance repository for TradeForge.
 
