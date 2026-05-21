@@ -1,5 +1,12 @@
 ---
 name: structure-feedback-note
+id: skill-structure-feedback-note
+title: Structure Feedback Note
+category: ontology
+applies_to:
+  - codex
+  - claude
+version: 1.0
 description: Convert messy user feedback notes, self-observed workflow friction, pasted feedback, or unstructured raw captures into a structured raw feedback Markdown note for this knowledge base. Use when the user asks to structure, capture, convert, or normalize feedback notes into the feedback template, especially notes from knowledge/raw/ that should become clearer design input before any topic, ADR, code change, or kb-processing promotion.
 ---
 
@@ -31,7 +38,7 @@ Turn unstructured user feedback into a raw, non-canonical feedback note that can
    - Preserve the original text under `Raw Input`.
 8. Do not move the original messy note to `knowledge/processed/`.
    - `knowledge/processed/` is for stabilized syntheses, not raw originals.
-   - When this skill is used from `prompts/workflow/kb-processing.md`, the KB processing workflow owns final deletion of successfully processed raw notes.
+   - When this skill is used from `prompts/workflow/kb-processing.md`, the KB processing workflow owns final archiving of successfully processed raw notes into `knowledge/raw/archived/`.
    - If this skill is used standalone, leave the original source note in place unless the user explicitly asks to replace or remove it.
 9. Stop after creating the structured feedback note unless the user separately asks for analysis, promotion, issues, ADRs, implementation, or the caller is continuing a KB processing workflow.
 
@@ -93,7 +100,7 @@ The user's original note, pasted output, or rough feedback.
 - Do not update index pages, topic pages, entity pages, `PROJECT.md`, ADRs, or application repo files.
 - Do not create GitHub issues, implementation plans, or design decisions unless the user explicitly asks.
 - Do not over-resolve the feedback. Preserve the difference between observed friction, inferred problem, and possible solution.
-- Do not move messy raw originals into `knowledge/processed/`; use source traceability and let KB processing decide final deletion after successful promotion.
+- Do not move messy raw originals into `knowledge/processed/`; use source traceability and let KB processing decide final archiving into `knowledge/raw/archived/` after successful promotion.
 
 ## Defaults
 

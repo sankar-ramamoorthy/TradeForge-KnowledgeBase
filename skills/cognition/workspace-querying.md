@@ -1,8 +1,19 @@
+---
+id: skill-workspace-querying
+title: Workspace Querying
+category: cognition
+applies_to:
+  - codex
+  - claude
+version: 1.0
+description: Defines how agents interpret and reason about workspace state across canonical, derived, and inferred layers — workspaces are reconstructed cognition, not stored dashboards.
+---
+
 # Skill: Workspace Querying
 
 ## Purpose
 
-Defines how Codex should interpret and reason about workspace state.
+Defines how agents should interpret and reason about workspace state.
 
 ---
 
@@ -17,7 +28,7 @@ A workspace is:
 
 When reasoning about a workspace:
 
-Codex must distinguish:
+Agent must distinguish:
 
 - canonical state (event-derived)
 - derived projections (UI/state views)
@@ -55,7 +66,7 @@ All workspace queries must consider:
 
 # Hard Constraint
 
-Codex MUST NOT:
+Agent MUST NOT:
 
 - treat workspace as a static snapshot
 - assume UI equals state
