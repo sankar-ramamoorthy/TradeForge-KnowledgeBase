@@ -23,7 +23,9 @@
       "Bash(git -C \"C:\\\\Users\\\\bosto\\\\dockerstuff\\\\knowledge-base\\\\TradeForge\" add skills/cognition/scenario-ranking.md skills/cognition/workspace-querying.md skills/cognition/market-interpreting.md skills/ontology/structure-feedback-note.md)",
       "Bash(git -C 'C:\\\\Users\\\\bosto\\\\dockerstuff\\\\knowledge-base\\\\TradeForge' commit -m 'Add YAML front matter to cognition and ontology skills; broaden agent scope to Claude *)",
       "Bash(git -C \"C:\\\\Users\\\\bosto\\\\dockerstuff\\\\knowledge-base\\\\TradeForge\" add skills/SKILL.md)",
-      "Bash(git -C 'C:\\\\Users\\\\bosto\\\\dockerstuff\\\\knowledge-base\\\\TradeForge' commit -m 'Add YAML front matter to SKILL.md; broaden agent scope to Claude *)"
+      "Bash(git -C 'C:\\\\Users\\\\bosto\\\\dockerstuff\\\\knowledge-base\\\\TradeForge' commit -m 'Add YAML front matter to SKILL.md; broaden agent scope to Claude *)",
+      "Bash(git -C \"C:\\\\Users\\\\bosto\\\\dockerstuff\\\\knowledge-base\\\\TradeForge\" add knowledge/raw/2026-05-20-session-restart-prompt.md)",
+      "Bash(git -C \"C:\\\\Users\\\\bosto\\\\dockerstuff\\\\knowledge-base\\\\TradeForge\" commit -m \"Add session restart prompt for 2026-05-21\")"
     ]
   }
 }
