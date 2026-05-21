@@ -6,6 +6,9 @@ created: 2026-05-14
 updated: 2026-05-14
 source_issues:
   - TF-0062
+source_history:
+  - knowledge/raw/20260514-tf-0062-cross-workspace-context-planning.md
+  - knowledge/raw/20260514-tf-0062-cross-workspace-context-implementation.md
 tags:
   - operational-context
   - cross-workspace

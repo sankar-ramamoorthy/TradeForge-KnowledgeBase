@@ -2,7 +2,9 @@
 title: Implementation — TF-0049 Contextual Operational Summaries
 type: processed-knowledge
 status: processed
-source: knowledge/raw/20260513-tf-0049-contextual-summaries-implementation.md
+source:
+  - knowledge/raw/20260513-tf-0049-contextual-summaries-planning.md
+  - knowledge/raw/20260513-tf-0049-contextual-summaries-implementation.md
 issue: TF-0049
 milestone: M9
 created: 2026-05-13

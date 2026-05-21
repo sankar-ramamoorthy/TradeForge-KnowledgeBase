@@ -7,6 +7,11 @@ updated: 2026-05-14
 source_issues:
   - TF-0058
   - TF-0059
+source_history:
+  - knowledge/raw/20260513-tf0058-guided-demo-mode-planning.md
+  - knowledge/raw/20260513-tf0058-guided-demo-mode-implementation.md
+  - knowledge/raw/20260514-tf-0059-seeded-demo-scenarios-planning.md
+  - knowledge/raw/20260514-tf-0059-seeded-demo-scenarios-implementation.md
 tags:
   - demo
   - onboarding

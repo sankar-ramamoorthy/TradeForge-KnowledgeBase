@@ -8,6 +8,9 @@ updated: 2026-05-15
 source_history:
   - knowledge/raw/20260515-second-testing-session-persistence-observation.md
   - knowledge/raw/20260515-m10b-credential-boundary-planning.md
+  - knowledge/raw/Screenshot 2026-05-15 170901.png
+  - knowledge/raw/Screenshot 2026-05-15 171040.png
+  - knowledge/raw/Screenshot 2026-05-15 171300.png
 related:
   - "[[Event Ledger Canonical Truth]]"
   - "[[Events Are Immutable]]"

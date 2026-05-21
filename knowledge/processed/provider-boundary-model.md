@@ -4,6 +4,9 @@ type: processed-knowledge
 status: processed
 created: 2026-05-13
 source_issues: [TF-0042]
+source_history:
+  - knowledge/raw/20260513-tf-0042-provider-boundary-interfaces-planning.md
+  - knowledge/raw/20260513-tf-0042-provider-boundary-interfaces-implementation.md
 milestone: M9
 related_adrs: [ADR-0010, ADR-0032]
 tags: [market-context, provider-boundary, advisory, replayability, provenance]

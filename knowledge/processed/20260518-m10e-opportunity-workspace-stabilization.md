@@ -2,6 +2,9 @@
 title: M10E Opportunity Workspace stabilization
 type: processed-knowledge
 status: processed
+source_history:
+  - knowledge/raw/20260518-m10e-remaining-queue-planning.md
+  - knowledge/raw/20260518-m10e-remaining-queue-implementation.md
 ---
 
 # M10E Opportunity Workspace Stabilization

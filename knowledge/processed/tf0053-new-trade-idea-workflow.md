@@ -5,6 +5,9 @@ status: processed
 issue: TF-0053
 milestone: M10
 created: 2026-05-13
+source_history:
+  - knowledge/raw/20260513-tf0053-new-trade-idea-workflow-planning.md
+  - knowledge/raw/20260513-tf0053-new-trade-idea-workflow-implementation.md
 tags:
   - M10
   - lifecycle-bootstrapping
