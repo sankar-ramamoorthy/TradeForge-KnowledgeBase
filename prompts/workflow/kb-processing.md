@@ -357,15 +357,21 @@ Replayability is foundational.
 
 ---
 
-# 11. Delete Successfully Processed Raw Capture
+# 11. Archive Successfully Processed Raw Capture
 
-At the end of a successful processing pass, delete the source raw note from:
+At the end of a successful processing pass, move the source raw note from:
 
 ```text
 knowledge/raw/
 ```
 
-Deletion is allowed ONLY when all of the following are true:
+into the archive directory:
+
+```text
+knowledge/raw/archived/
+```
+
+Archiving is allowed ONLY when all of the following are true:
 
 - stable content has been promoted to the appropriate processed, topic, entity, workflow, playbook, prompt, skill, or index location
 - the promoted artifact records the source raw note path or title
@@ -373,15 +379,16 @@ Deletion is allowed ONLY when all of the following are true:
 - no required semantic, ontology, workflow, playbook, ADR, or operational synchronization action remains incomplete
 - the processing result can be reconstructed from the promoted artifacts and git history
 
-If processing is incomplete, ambiguous, blocked, or only partially successful, do NOT delete the raw note.
+If processing is incomplete, ambiguous, blocked, or only partially successful, do NOT archive the raw note.
 
 Rules:
-- raw note deletion must be explicit, not silent
-- never delete raw notes before promotion and traceability are complete
-- never delete raw notes to hide uncertainty, contradictions, or unresolved architectural concerns
-- mention the deleted raw note in the processing result
+- raw note archiving must be explicit, not silent
+- never archive raw notes before promotion and traceability are complete
+- never archive raw notes to hide uncertainty, contradictions, or unresolved architectural concerns
+- mention the archived raw note (including its new path) in the processing result
+- preserve the original filename when archiving; do not rename
 
-This rule prevents passive raw-note accumulation while preserving replayability through stabilized artifacts.
+This rule prevents passive raw-note accumulation while preserving both physical file history and replayability through the archived directory and git history.
 
 ---
 
