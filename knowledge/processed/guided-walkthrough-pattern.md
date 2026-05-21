@@ -6,6 +6,9 @@ created: 2026-05-14
 updated: 2026-05-14
 source_issues:
   - TF-0060
+source_history:
+  - knowledge/raw/20260514-tf-0060-guided-walkthrough-planning.md
+  - knowledge/raw/20260514-tf-0060-guided-walkthrough-implementation.md
 tags:
   - walkthrough
   - onboarding

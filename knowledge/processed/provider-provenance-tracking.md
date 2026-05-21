@@ -4,6 +4,9 @@ type: processed-knowledge
 status: processed
 milestone: M9
 issue: TF-0050
+source_history:
+  - knowledge/raw/20260513-tf-0050-provider-provenance-tracking-planning.md
+  - knowledge/raw/20260513-tf-0050-provider-provenance-tracking-implementation.md
 created: 2026-05-13
 tags:
   - market-data

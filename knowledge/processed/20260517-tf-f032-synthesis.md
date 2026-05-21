@@ -8,6 +8,8 @@ tags:
   - TradeForge
   - M10E
   - TF-F032
+source_history:
+  - knowledge/raw/20260517-tf-f032-planning.md
 related:
   - ADR-0039
   - ADR-0040

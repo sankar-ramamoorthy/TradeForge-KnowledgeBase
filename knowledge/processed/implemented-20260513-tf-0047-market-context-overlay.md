@@ -2,7 +2,9 @@
 title: Implementation — TF-0047 Market Context Workspace Overlays
 type: processed-knowledge
 status: processed
-source: knowledge/raw/20260513-tf-0047-market-context-overlay-implementation.md
+source:
+  - knowledge/raw/20260513-tf-0047-market-context-overlay-planning.md
+  - knowledge/raw/20260513-tf-0047-market-context-overlay-implementation.md
 issue: TF-0047
 milestone: M9
 created: 2026-05-13

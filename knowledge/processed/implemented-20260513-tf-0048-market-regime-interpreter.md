@@ -2,7 +2,9 @@
 title: Implementation — TF-0048 Market Regime Interpretation Model
 type: processed-knowledge
 status: processed
-source: knowledge/raw/20260513-tf-0048-market-regime-interpreter-implementation.md
+source:
+  - knowledge/raw/20260513-tf-0048-market-regime-interpreter-planning.md
+  - knowledge/raw/20260513-tf-0048-market-regime-interpreter-implementation.md
 issue: TF-0048
 milestone: M9
 created: 2026-05-13

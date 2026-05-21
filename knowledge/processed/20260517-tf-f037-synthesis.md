@@ -9,6 +9,11 @@ source_history:
   - knowledge/raw/brainstorm-20260517-opportunity-workspace-ux-and-context-acquisition.md
   - knowledge/raw/20260517-tf-f028-to-tf-f042-diagnosis.md
   - knowledge/raw/20260517-tf-f037-planning.md
+  - knowledge/raw/brainstorm session  Screenshot 2026-05-17 134303.png
+  - knowledge/raw/brainstorm session Screenshot 2026-05-17 135450.png
+  - knowledge/raw/brainstorm session  Screenshot 2026-05-17 135534.png
+  - knowledge/raw/brainstorm session  Screenshot 2026-05-17 135620.png
+  - knowledge/raw/brainstorm session Screenshot 2026-05-17 142020.png
 related:
   - "[[Derived State Must Remain Distinguishable]]"
 issues:
