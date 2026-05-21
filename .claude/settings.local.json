@@ -14,7 +14,16 @@
       "Bash(uv run *)",
       "Bash(npm.cmd run *)",
       "Bash(git commit *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(git -C \"C:\\\\Users\\\\bosto\\\\dockerstuff\\\\knowledge-base\\\\TradeForge\" add skills/architecture/decision-lifecycle.md skills/architecture/execution-discipline.md)",
+      "Bash(git -C 'C:\\\\Users\\\\bosto\\\\dockerstuff\\\\knowledge-base\\\\TradeForge' commit -m 'Add YAML front matter to architecture skills; broaden agent scope to Claude *)",
+      "Bash(git -C \"C:\\\\Users\\\\bosto\\\\dockerstuff\\\\knowledge-base\\\\TradeForge\" push origin M13)",
+      "Bash(git -C \"C:\\\\Users\\\\bosto\\\\dockerstuff\\\\knowledge-base\\\\TradeForge\" add skills/architecture/event-sourcing.md)",
+      "Bash(git -C 'C:\\\\Users\\\\bosto\\\\dockerstuff\\\\knowledge-base\\\\TradeForge' commit -m 'Add YAML front matter to event-sourcing skill; broaden agent scope to Claude *)",
+      "Bash(git -C \"C:\\\\Users\\\\bosto\\\\dockerstuff\\\\knowledge-base\\\\TradeForge\" add skills/cognition/scenario-ranking.md skills/cognition/workspace-querying.md skills/cognition/market-interpreting.md skills/ontology/structure-feedback-note.md)",
+      "Bash(git -C 'C:\\\\Users\\\\bosto\\\\dockerstuff\\\\knowledge-base\\\\TradeForge' commit -m 'Add YAML front matter to cognition and ontology skills; broaden agent scope to Claude *)",
+      "Bash(git -C \"C:\\\\Users\\\\bosto\\\\dockerstuff\\\\knowledge-base\\\\TradeForge\" add skills/SKILL.md)",
+      "Bash(git -C 'C:\\\\Users\\\\bosto\\\\dockerstuff\\\\knowledge-base\\\\TradeForge' commit -m 'Add YAML front matter to SKILL.md; broaden agent scope to Claude *)"
     ]
   }
 }
