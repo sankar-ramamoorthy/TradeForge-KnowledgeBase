@@ -162,12 +162,22 @@ Events related to advisory cognition artifact capture.
 Examples:
 
 - AdvisoryObservationCaptured
+- AdvisoryInterpretationCaptured
 
 Purpose:
 Record that a non-canonical advisory artifact existed in a persona/workspace context at a specific time.
 
 Important constraint:
 Advisory events record capture facts only. They do NOT make advisory content, recommendations, lifecycle transition intent, or execution authority canonical.
+
+Accepted capture-fact event types include:
+
+- `advisory.observation_captured`
+- `advisory.interpretation_captured`
+
+The event payload must not include generated advisory content, recommendation
+authority, lifecycle transition intent, execution authority, or buy/sell
+instructions.
 
 ---
 

@@ -3,6 +3,8 @@ title: M12 Advisory Artifact Boundary Synthesis
 type: processed-synthesis
 status: processed
 created: 2026-05-22
+source_history:
+  - knowledge/raw/archived/20260522-m12-advisory-artifact-boundary.md
 tags:
   - TradeForge
   - M12

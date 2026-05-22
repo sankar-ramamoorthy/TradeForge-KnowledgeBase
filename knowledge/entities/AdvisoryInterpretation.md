@@ -4,9 +4,11 @@ type: entity
 status: canonical
 tags: [TradeForge, entity, advisory, interpretation, cognition, M13]
 created: 2026-05-20
-updated: 2026-05-20
+updated: 2026-05-22
 milestone: M13
-runtime-issues: [TF-B001, TF-B010, TF-B014, TF-B015]
+runtime-issues: [TF-B001, TF-B002, TF-B003, TF-B004, TF-B005, TF-B006, TF-B007, TF-B008, TF-B009, TF-B010, TF-B011, TF-B012, TF-B013, TF-B014, TF-B015]
+source_history:
+  - knowledge/processed/20260521-m13-runtime-issue-spec-synthesis.md
 ---
 
 # AdvisoryInterpretation
@@ -18,6 +20,18 @@ turns one or more AdvisoryObservations into contextual meaning.
 
 It may describe contextual meaning, thesis influence, conflict, drift, or a
 probabilistic summary, but it does not create or revise lifecycle state.
+
+The M13 interpretation chain is:
+
+```text
+Observation -> Interpretation -> Contextual Weighting -> Thesis Influence
+```
+
+It is not:
+
+```text
+Indicator -> Buy/Sell
+```
 
 ## Authority
 
@@ -56,6 +70,7 @@ Decision and thesis links are contextual references only.
 ## Related Concepts
 
 - [[AdvisoryObservation]]
+- [[AdvisoryArtifact]]
 - [[ThesisInfluence]]
 - [[ContextualWeighting]]
 - [[ConflictingEvidence]]
