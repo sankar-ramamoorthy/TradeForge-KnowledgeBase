@@ -7,6 +7,7 @@ updated: 2026-05-22
 source_history:
   - knowledge/raw/archived/20260522-llm-adapter-strategy-and-capability-review.md
   - knowledge/processed/20260522-m13-preparation-readiness-synthesis.md
+  - knowledge/processed/20260522-tf-f045-litellm-credential-shape-synthesis.md
 authoritative_runtime_doc: C:/Users/bosto/dockerstuff/TradeForge/DOCS/llm-adapter-strategy.md
 tags: [TradeForge, LLM, AI-advisory, provider-boundary, LiteLLM, M12, M13]
 related:
@@ -52,7 +53,7 @@ validated advisory behavior.
 The recommended sequence is:
 
 ```text
-LiteLLM credential shape
+LiteLLM credential shape (done)
     -> OpenAI-compatible advisory provider
     -> replay summary prompt
     -> thesis review prompt
@@ -123,7 +124,7 @@ and require explicit rejection or a major architecture decision.
 ## Open Follow-Up
 
 Runtime issue tracking has decomposed the strategy into TF-F045 through TF-F054.
-The first implementation issue is TF-F045, followed by TF-F046 for the concrete
+TF-F045 is now done. The next implementation issue is TF-F046 for the concrete
 OpenAI-compatible advisory provider.
 
 The authoritative ordered list lives in:

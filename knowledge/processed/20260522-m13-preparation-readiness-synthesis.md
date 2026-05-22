@@ -6,6 +6,7 @@ created: 2026-05-22
 updated: 2026-05-22
 source_history:
   - knowledge/raw/archived/preperation done for M13 2026-05-22.md
+  - knowledge/processed/20260522-tf-f045-litellm-credential-shape-synthesis.md
 tags: [TradeForge, M13, runtime-planning, issue-discipline, LLM, advisory-interpretation]
 related:
   - "[[20260521-m13-runtime-issue-spec-synthesis]]"
@@ -32,7 +33,7 @@ This closes the planning gap identified by the LLM adapter strategy review.
 
 ## Starting Issue
 
-The correct first M13 issue is:
+The correct first M13 issue was:
 
 ```text
 TF-F045: Add LiteLLM credential shape to CredentialStore
@@ -42,6 +43,19 @@ TF-F045 should precede the concrete `OpenAICompatibleAdvisoryProvider` because
 the provider must retrieve `base_url`, `api_key`, and `default_model` through
 the existing credential boundary rather than through code, environment files, or
 ad hoc configuration.
+
+## TF-F045 Completion Update - 2026-05-22
+
+TF-F045 is now done in the runtime issue register.
+
+M13 advisory adapter work should proceed to TF-F046:
+
+```text
+Implement OpenAICompatibleAdvisoryProvider
+```
+
+TF-F046 should consume the completed LiteLLM credential shape and preserve the
+provider-agnostic advisory boundary.
 
 ## Dependency Clarification
 
@@ -100,4 +114,3 @@ Runtime planning is now aligned across:
 
 No new ADR is required for this preparation pass. Existing advisory,
 credential, and interpretation ADRs remain sufficient.
-
