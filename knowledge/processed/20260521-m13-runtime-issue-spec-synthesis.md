@@ -3,8 +3,10 @@ title: M13 Runtime Issue Spec Synthesis
 type: processed-synthesis
 status: processed
 created: 2026-05-21
+updated: 2026-05-22
 source_history:
   - knowledge/raw/20260521-m13-runtime-issue-spec-planning.md
+  - knowledge/processed/20260522-m13-preparation-readiness-synthesis.md
 tags: [m13, runtime-planning, issue-discipline, contextual-interpretation, advisory-boundary]
 related:
   - "[[Runtime KB Development Loop]]"
@@ -65,9 +67,18 @@ No new ADR is required for this planning pass. ADR-0042 already covers contextua
 
 ## Open Sequencing Constraint
 
-M13 implementation should not begin until:
+M13 interpretation implementation should not begin until:
 
 - M12 runtime implementation is complete.
 - M12 advisory observation and evidence persistence exists.
 - `advisory.observation_captured` and replay-visible advisory observation timelines are available.
 
+## M13 Readiness Update - 2026-05-22
+
+The runtime issue register now includes TF-F045 through TF-F054 as M13 LLM
+adapter prerequisite issues. The roadmap now groups M13 into LLM adapter
+prerequisites, interpretation domain/infrastructure, and replay/UX surfaces.
+
+The correct first M13 issue is TF-F045: add the LiteLLM credential shape to the
+CredentialStore. TF-F046, the concrete OpenAI-compatible advisory provider,
+blocks TF-B014 evidence narrative generation.
