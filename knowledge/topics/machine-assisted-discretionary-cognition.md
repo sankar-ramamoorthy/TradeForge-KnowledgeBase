@@ -8,6 +8,7 @@ tags: [TradeForge, cognition, AI-advisory, roadmap, discretionary-trading]
 related:
   - ../processed/20260519-machine-assisted-discretionary-cognition-synthesis.md
   - ../processed/20260522-llm-adapter-strategy-and-capability-review-synthesis.md
+  - ../processed/20260522-m13-contextual-interpretation-closeout-synthesis.md
   - ../../../../TradeForge/DOCS/Milestone_Roadmap_v2.md
 ---
 
@@ -47,18 +48,18 @@ Advisory artifacts must not automatically become TradeIdeas, theses, plans, appr
 
 ## LLM Adapter Sequencing
 
-Post-M12 advisory infrastructure is durable but not yet operationally alive
-without a concrete LLM adapter.
+Post-M12 advisory infrastructure became operationally alive in M13 through a
+concrete OpenAI-compatible LLM adapter routed through LiteLLM.
 
-The stable sequencing rule is:
+The original sequencing rule was:
 
 ```text
 concrete advisory LLM adapter -> validated prompts -> M13 interpretation semantics
 ```
 
-M13 contextual interpretation should not be implemented ahead of a working
-adapter because interpretation design should be grounded in validated advisory
-outputs, not hypothetical model behavior.
+M13 completed that sequence at the runtime level: LiteLLM credential shape,
+OpenAI-compatible provider, on-demand advisory services, interpretation
+analytics, and replay/UX API surfaces are implemented.
 
 The preferred adapter strategy is a single OpenAI-compatible provider routed
 through LiteLLM. Provider selection remains configuration and credential
@@ -69,7 +70,7 @@ management, not domain semantics.
 This topic frames the active v2 roadmap from M12 onward:
 
 - M12: advisory observations and cognitive evidence
-- M13: contextual interpretation and thesis influence
+- M13: contextual interpretation and thesis influence (runtime complete)
 - M14: behavioral intelligence and cognitive auditability
 - M15: replayable cognitive reconstruction
 - M16: attention allocation and opportunity funnel
@@ -79,4 +80,6 @@ This topic frames the active v2 roadmap from M12 onward:
 
 ## Current Status
 
-Emerging. This topic summarizes the processed brainstorm and roadmap integration. It is not yet a complete canonical doctrine file or entity taxonomy.
+Emerging. This topic summarizes the processed brainstorm, roadmap integration,
+and M13 closeout. It is not yet a complete canonical doctrine file or entity
+taxonomy.
