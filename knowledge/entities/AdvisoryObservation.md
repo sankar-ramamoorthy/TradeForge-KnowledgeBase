@@ -4,9 +4,14 @@ type: entity
 status: canonical
 tags: [TradeForge, entity, advisory, cognition, M12]
 created: 2026-05-19
-updated: 2026-05-19
+updated: 2026-05-22
 milestone: M12
-runtime-issues: [TF-A001, TF-A002, TF-A003, TF-A004, TF-A005]
+runtime-issues: [TF-A001, TF-A002, TF-A003, TF-A004, TF-A005, TF-A006, TF-A007, TF-A008, TF-A009, TF-A010]
+source_history:
+  - knowledge/processed/20260521-tf-a001-advisory-observation-closeout-synthesis.md
+  - knowledge/processed/20260521-tf-a002-tf-a004-advisory-observation-closeout-synthesis.md
+  - knowledge/processed/20260521-tf-a005-tf-a007-advisory-observation-closeout-synthesis.md
+  - knowledge/processed/20260521-tf-a008-tf-a010-advisory-observation-closeout-synthesis.md
 ---
 
 # AdvisoryObservation
@@ -56,6 +61,14 @@ Capture origin must use a stable value such as `operator_manual`, `provider_impo
 
 Decision and thesis links are optional contextual references only.
 
+Lightweight contextual artifacts, conflict markers, caveat-derived unresolved
+conflict markers, and derived evidence staleness metadata may be attached to an
+AdvisoryObservation as advisory metadata.
+
+These fields do not create `AdvisoryInterpretation` semantics, thesis influence,
+contextual weighting, confidence scoring, recommendation authority, lifecycle
+authority, or execution authority.
+
 ## Replay Meaning
 
 Replay may show that an AdvisoryObservation existed at a historical time and may
@@ -70,6 +83,7 @@ Replay must distinguish:
 ## Related Concepts
 
 - [[CognitiveEvidence]]
+- [[AdvisoryArtifact]]
 - [[TradeIdea]]
 - [[TradeThesis]]
 - [[ReplaySession]]
