@@ -1,354 +1,182 @@
-# TradeForge-KnowledgeBase
+# TradeForge — Knowledge Base
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/sankar-ramamoorthy/TradeForge-KnowledgeBase)
 
-TradeForge is a persona-driven, workflow-centric, event-sourced decision support architecture for trading and investing workflows.
+> **Work in progress.** This is the semantic and architectural governance repository for TradeForge.
 
-This repository is the canonical semantic and architectural knowledge system for TradeForge.
+This repository is the canonical knowledge system for [TradeForge](https://github.com/sankar-ramamoorthy/TradeForge) — a structured cognition and decision system for discretionary trading workflows.
 
-Canonical repository name:
+It is **not** the executable application. The running system lives in the runtime repository:
 
-```text
-TradeForge-KnowledgeBase
-```
+👉 **[TradeForge Runtime](https://github.com/sankar-ramamoorthy/TradeForge)**
+
+---
+
+## What Is This Repository?
+
+TradeForge treats its own development as a replayable cognition system. This repository is the memory and governance layer that makes that possible.
 
 It preserves:
 
-* ontology
-* architectural doctrine
-* workflow semantics
-* UX philosophy
-* replay/review philosophy
-* event taxonomy
-* AI governance rules
-* durable project memory
+* **Ontology** — what things mean in TradeForge (decisions, workspaces, personas, events, replays)
+* **Invariants** — architectural truths that must never break
+* **Architectural doctrine** — why the system is built the way it is
+* **Workflow semantics** — how workflows behave and why
+* **UX philosophy** — cognition-first, anti-dashboard interaction principles
+* **AI governance rules** — what AI may and may not do inside the system
+* **Replay philosophy** — how historical reconstruction should work
+* **Development memory** — planning captures, implementation notes, processed knowledge
 
-This repository is NOT the runtime application.
+The separation exists by design. Code evolves quickly. Semantic meaning and architectural rationale should evolve deliberately. This repository is the deliberate layer.
 
-The executable system lives in:
+---
 
-```text
-C:\Users\bosto\dockerstuff\TradeForge\
+## Why a Separate Repository?
+
+Most projects embed architectural intent in code comments, Confluence pages, or ADRs that drift from reality. TradeForge takes a different approach:
+
+* The **knowledge base** defines what is true semantically and architecturally
+* The **runtime repository** implements that truth in code
+* AI-assisted development sessions boot from this repository before writing any code
+* Planning, implementation notes, and architectural observations are captured here and promoted through a knowledge stabilization process
+
+This means:
+
+* Future development sessions — including AI-assisted ones — can reconstruct architectural intent without reading code history
+* Architectural drift is detectable and correctable by comparing the knowledge base against the implementation
+* Semantic meaning is preserved even as implementation details change
+
+---
+
+## Repository Structure
+
+### Root doctrine files
+
+| File | Purpose |
+|---|---|
+| `INVARIANTS.md` | Non-negotiable architectural and semantic truths |
+| `SEMANTIC_BOOTSTRAP.md` | System worldview and operational initialization for AI-assisted development |
+| `SEMANTIC_GOVERNANCE.md` | Rules for how knowledge stabilizes, promotes, and governs doctrine |
+| `ARCHITECTURE.md` | Canonical architecture doctrine and layer ownership |
+| `GLOSSARY.md` | Canonical terminology and semantic definitions |
+| `UX_DOCTRINE.md` | Operational workspace and cognition philosophy |
+| `EVENT_TAXONOMY.md` | Canonical event semantics and classifications |
+| `EXECUTION_CONTRACT.md` | Rules for how AI-assisted development sessions must operate |
+
+---
+
+### `knowledge/`
+
+The progressive knowledge stabilization layer.
+
+```
+knowledge/
+├── index/        Navigation, semantic entrypoints, context map
+├── raw/          Unprocessed planning and implementation captures
+├── processed/    Refined and synthesized knowledge
+├── entities/     Canonical entity definitions (TradeIdea, ReplaySession, etc.)
+├── topics/       Thematic syntheses (replayability, AI advisory, etc.)
+└── outputs/      Temporary synthesis artifacts
 ```
 
----
-
-# Purpose
-
-This repository exists to preserve:
-
-* what TradeForge means
-* why architectural decisions exist
-* how workflows behave
-* what invariants cannot break
-* how cognition is structured
-* how AI systems must operate within TradeForge
-
-This repository is designed for:
-
-* long-lived architectural coherence
-* replayable reasoning
-* AI-assisted engineering
-* ontology stability
-* workflow integrity
-* semantic governance
+Knowledge flows: `raw → processed → entities/topics` through deliberate promotion. Raw captures are not canonical. Entities are.
 
 ---
 
-# Core System Philosophy
+### `playbooks/`
 
-TradeForge is:
+Operational governance systems and repeatable development workflows.
 
-* persona-driven
-* workflow-centric
-* decision-centric
-* event-sourced
-* replay-oriented
-* review-oriented
-* AI-assisted
-* human-governed
+Key playbook: `playbooks/development/runtime-kb-development-loop.md`
 
-TradeForge is NOT:
-
-* an autonomous trading system
-* a signal-selling platform
-* a CRUD trade tracker
-* a generic brokerage dashboard
-* an AI-controlled execution engine
-
-The system exists to improve:
-
-* situational awareness
-* decision quality
-* execution discipline
-* reflective learning
-* long-term adaptation
+This defines the canonical development workflow — how runtime implementation and knowledge base work stay synchronized across development sessions.
 
 ---
 
-# Architectural Model
+### `prompts/`
 
-TradeForge is organized around:
+Reusable AI-assisted workflow entry points.
 
-```text
-Personas
-    ↓
-Persona Workspaces
-    ↓
-Market Intelligence Layer
-    ↓
-Scenario Discovery Layer
-    ↓
-Decision Lifecycle Engine
-    ↓
-Execution + Integration Layer
-    ↓
-Event Ledger
-    ↓
-Replay + Review System
+```
+prompts/workflow/
+├── runtime-planning.md      Planning phase prompt
+├── runtime-implementation.md  Implementation phase prompt
+├── kb-processing.md         Knowledge stabilization prompt
+└── operational-sync.md      Roadmap/register sync prompt
 ```
 
+These prompts operationalize the development loop in a reproducible way.
+
 ---
 
-# Canonical Truth Hierarchy
+### `skills/`
+
+Behavioral reasoning constraints for AI-assisted sessions.
+
+Skills define *how* to think — event sourcing discipline, lifecycle enforcement, replay integrity, workspace cognition. They are not procedures; they are reasoning constraints applied during development.
+
+---
+
+### `ontology/`
+
+Canonical concept definitions — personas, lifecycle states, workspace semantics, market regimes, scenario structures, review artifacts.
+
+---
+
+## Canonical Truth Hierarchy
 
 When contradictions exist, authority resolves in this order:
 
-1. INVARIANTS.md
-2. ontology definitions
-3. ADRs
-4. architecture doctrine
-5. processed knowledge
-6. raw notes/imports
-7. generated outputs
+1. `INVARIANTS.md`
+2. Ontology definitions
+3. ADRs (in the runtime repository)
+4. Architecture doctrine
+5. Processed knowledge
+6. Raw notes and captures
 
-Implementation must NEVER silently redefine semantic meaning.
-
----
-
-# Repository Structure
-
-## Core Files
-
-```text
-SEMANTIC_BOOTSTRAP.md
-```
-
-Initial semantic worldview and operational initialization context for Codex and AI-assisted workflows.
-
-```text
-SEMANTIC_GOVERNANCE.md
-```
-
-Canonical doctrine for semantic governance, canonical readiness, ontology stabilization, doctrine convergence, and KB processing discipline.
-
-```text
-INVARIANTS.md
-```
-
-Non-negotiable architectural and semantic truths.
-
-```text
-ARCHITECTURE.md
-```
-
-Canonical architecture doctrine and layer ownership.
-
-```text
-GLOSSARY.md
-```
-
-Canonical terminology and semantic definitions.
-
-```text
-UX_DOCTRINE.md
-```
-
-Operational workspace and cognition philosophy.
-
-```text
-EVENT_TAXONOMY.md
-```
-
-Canonical event semantics and classifications.
+Implementation must never silently redefine semantic meaning.
 
 ---
 
-# Main Directories
+## Core Invariants (Summary)
 
-## adr/
+* **Human decision sovereignty** — the system assists, never decides
+* **Event ledger is canonical truth** — all durable state derives from immutable events
+* **Replayability is foundational** — all material workflows must support deterministic reconstruction
+* **AI is advisory only** — AI may summarize, rank, and contextualize; it may never mutate canonical state, execute trades, or bypass lifecycle controls
+* **Workflow-centric, not CRUD-centric** — the architecture optimizes for decision workflows, not generic entity management
 
-Architecture decision records.
-
-Preserves:
-
-* rationale
-* tradeoffs
-* rejected alternatives
-* historical architectural evolution
+See `INVARIANTS.md` for the full list.
 
 ---
 
-## ontology/
+## Relationship to the Runtime
 
-Canonical concept definitions.
+| This repository | Runtime repository |
+|---|---|
+| Defines what things mean | Executes the system |
+| Ontology, doctrine, invariants | Services, events, APIs, UI |
+| Governs architecture | Implements architecture |
+| Preserved and evolved deliberately | Evolves with implementation |
+| [TradeForge-KnowledgeBase](https://github.com/sankar-ramamoorthy/TradeForge-KnowledgeBase) | [TradeForge](https://github.com/sankar-ramamoorthy/TradeForge) |
 
-Examples:
-
-* personas
-* lifecycle states
-* workspace semantics
-* review artifacts
-* market regimes
-* scenario structures
-
----
-
-## workflows/
-
-Workflow semantics and lifecycle definitions.
-
-Examples:
-
-* approval workflows
-* replay workflows
-* thesis workflows
-* review workflows
+When contradictions arise between the two repositories, the knowledge base is authoritative for semantic meaning. The runtime is authoritative for what is actually implemented today.
 
 ---
 
-## prompts/
+## Current Status
 
-Reusable operational Codex workflows.
+The knowledge base is synchronized with the runtime through **M10 (Operational Workflow UX and Demoability)**. Raw planning and implementation captures exist for all M9 and M10 issues. Entity definitions cover the core domain model.
 
-Prompts define:
-
-> what Codex should do.
-
-Examples:
-
-* ADR generation
-* replay analysis
-* vertical slice construction
+Ongoing work: ontology promotion, topic synthesis, playbook evolution as the runtime expands.
 
 ---
 
-## skills/
+## Contributing
 
-Behavioral reasoning overlays for Codex.
+This is a solo architectural project. The knowledge base is public for transparency — to show how a semantic governance layer can work alongside a runtime codebase, and what AI-assisted architecture discipline looks like in practice.
 
-Skills define:
-
-> how Codex should think.
-
-Examples:
-
-* event sourcing discipline
-* lifecycle enforcement
-* replay integrity
-* workspace cognition
-* scenario interpretation
+Questions and observations are welcome via issues on the runtime repository.
 
 ---
 
-## knowledge/
-
-Long-lived knowledge storage and synthesis.
-
-### index/ 
-
-navigation + semantic entrypoints
-
-
-### raw/
-
-Unprocessed notes and exploratory thinking.
-
-### processed/
-
-Refined synthesized knowledge.
-
-### entities/
-
-Canonical entity definitions.
-
-### topics/
-
-Topic syntheses and thematic overviews.
-
-### outputs/
-
-Generated outputs and temporary synthesis artifacts.
-
----
-
-# Runtime Repository Relationship
-
-This repository defines semantic and architectural truth.
-
-The runtime repository executes the system.
-
-Runtime repository:
-
-```text
-C:\Users\bosto\dockerstuff\TradeForge\
-```
-
-This repository governs:
-
-* ontology
-* doctrine
-* workflow semantics
-* AI alignment
-* replay philosophy
-* terminology
-* cognition structure
-
-The runtime repository governs:
-
-* executable code
-* services
-* event persistence
-* orchestration
-* APIs
-* integrations
-* runtime behavior
-
----
-
-# AI Governance Philosophy
-
-AI systems inside TradeForge are advisory only.
-
-AI may:
-
-* summarize
-* rank
-* cluster
-* contextualize
-* surface scenarios
-* assist review
-
-AI may NOT:
-
-* mutate canonical lifecycle state
-* execute trades
-* bypass workflow controls
-* write immutable ledger events
-* become source-of-truth authority
-
-Human decision sovereignty is mandatory.
-
----
-
-# Final Principle
-
-TradeForge exists to improve disciplined decision-making under uncertainty.
-
-Every addition to this repository should improve:
-
-* clarity of thought
-* situational awareness
-* workflow integrity
-* reflective learning
-* architectural coherence
-* replayability
-* semantic consistency
+*TradeForge — structured cognition for discretionary trading.*

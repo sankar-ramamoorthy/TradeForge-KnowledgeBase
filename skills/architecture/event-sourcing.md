@@ -1,3 +1,14 @@
+---
+id: skill-event-sourcing-discipline
+title: Event Sourcing Discipline
+category: architecture
+applies_to:
+  - codex
+  - claude
+version: 1.0
+description: Enforces strict event-sourced architecture — all state derives from events, replayability is mandatory, projections are never canonical truth.
+---
+
 # Skill: Event Sourcing Discipline
 
 ## Purpose
@@ -20,7 +31,7 @@ No exceptions.
 
 # Hard Constraints
 
-Codex MUST NOT:
+Agent MUST NOT:
 
 - mutate state directly
 - assume current system state without events
@@ -31,7 +42,7 @@ Codex MUST NOT:
 
 # Allowed Actions
 
-Codex MAY:
+Agent MAY:
 
 - define new event types
 - extend event taxonomy

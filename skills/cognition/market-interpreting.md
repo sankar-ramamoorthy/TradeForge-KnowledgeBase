@@ -1,3 +1,14 @@
+---
+id: skill-market-interpretation
+title: Market Interpretation
+category: cognition
+applies_to:
+  - codex
+  - claude
+version: 1.0
+description: Defines how raw market data is converted into structured context through normalization, structuring, contextualization, and scenario impact mapping — raw data is never treated as actionable insight.
+---
+
 # Skill: Market Interpretation
 
 ## Purpose
@@ -37,7 +48,7 @@ Meaning must be constructed.
 
 # Hard Constraint
 
-Codex MUST NOT:
+Agent MUST NOT:
 
 - treat raw data as actionable insight
 - infer trade decisions directly from data

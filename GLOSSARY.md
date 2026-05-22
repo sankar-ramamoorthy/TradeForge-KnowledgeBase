@@ -121,6 +121,40 @@ It does NOT:
 
 ---
 
+## Advisory Artifact
+
+An **Advisory Artifact** is durable non-canonical advisory content preserved for
+operator review, provenance inspection, and replay-safe historical context.
+
+It may contain observations, candidates, imported research, generated advisory
+notes, markdown cognition, interpretations, or snapshots.
+
+It is NOT:
+- canonical truth
+- lifecycle authority
+- execution permission
+- a buy/sell recommendation
+
+Only bounded capture facts may enter the Event Ledger.
+
+---
+
+## Advisory Candidate
+
+An **Advisory Candidate** is a reviewable advisory artifact representing a
+possible opportunity, risk, or attention item before commitment-space entry.
+
+It is NOT:
+- a TradeIdea
+- a lifecycle state
+- a plan
+- an approval
+- execution intent
+
+Promotion requires explicit operator action through the New Trade Idea workflow.
+
+---
+
 ## Decision Lifecycle Engine
 
 The **Decision Lifecycle Engine** is the authoritative workflow state machine.

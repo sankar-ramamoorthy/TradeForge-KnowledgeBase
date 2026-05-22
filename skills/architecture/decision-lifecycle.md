@@ -1,3 +1,14 @@
+---
+id: skill-decision-lifecycle
+title: Decision Lifecycle
+category: architecture
+applies_to:
+  - codex
+  - claude
+version: 1.0
+description: Governs how decisions move through TradeForge lifecycle states and enforces strict stage progression.
+---
+
 # Skill: Decision Lifecycle
 
 ## Purpose
@@ -37,7 +48,7 @@ Transitions MUST:
 
 # Hard Constraint
 
-Codex MUST NOT:
+Agent MUST NOT:
 
 - skip lifecycle stages
 - collapse multiple stages into one

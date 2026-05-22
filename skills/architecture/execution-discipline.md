@@ -1,8 +1,19 @@
+---
+id: skill-execution-discipline
+title: Execution Discipline
+category: architecture
+applies_to:
+  - codex
+  - claude
+version: 1.0
+description: Ensures agents follow the Execution Contract — explicit design plan, skill activation, and invariant validation — before writing any code.
+---
+
 # Skill: Execution Discipline
 
 ## Purpose
 
-Ensures Codex follows the Execution Contract before writing any code.
+Ensures agents follow the Execution Contract before writing any code.
 
 ---
 
@@ -17,7 +28,7 @@ No code generation without:
 
 # Required Behavior
 
-Before writing code, Codex must:
+Before writing code, Agent must:
 
 1. restate intended change in architectural terms
 2. identify affected layers
@@ -28,7 +39,7 @@ Before writing code, Codex must:
 
 # Hard Constraint
 
-Codex MUST NOT:
+Agent MUST NOT:
 
 - “just implement it”
 - skip reasoning steps

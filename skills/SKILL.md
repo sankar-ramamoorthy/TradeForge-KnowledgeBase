@@ -1,12 +1,23 @@
+---
+id: skill-system-index
+title: TradeForge Skills System
+category: meta
+applies_to:
+  - codex
+  - claude
+version: 1.0
+description: Defines the active operational skill system for TradeForge — behavioral reasoning overlays that govern how agents reason about architecture, domain concepts, workflows, and invariants.
+---
+
 # TradeForge Skills System
 
 ## Purpose
 
-This file defines the active operational skill system for Codex within the TradeForge knowledge-base.
+This file defines the active operational skill system for agents within the TradeForge knowledge-base.
 
 Skills are behavioral reasoning overlays.
 
-They modify how Codex:
+They modify how Agent:
 
 * reasons about architecture
 * interprets domain concepts
@@ -33,7 +44,7 @@ Those belong elsewhere in the knowledge-base.
 
 Skills are:
 
-> context-sensitive reasoning rules that govern how Codex behaves inside TradeForge.
+> context-sensitive reasoning rules that govern how Agent behaves inside TradeForge.
 
 Skills define:
 
@@ -59,11 +70,11 @@ Skills exist to reduce:
 
 Skills define:
 
-> how Codex should think.
+> how Agent should think.
 
 Prompts define:
 
-> what Codex should do.
+> what Agent should do.
 
 Example:
 
@@ -254,13 +265,13 @@ TradeForge/
 
 The runtime repository executes the system.
 
-The skills system governs how Codex reasons about that system.
+The skills system governs how Agent reasons about that system.
 
 ---
 
 # Final Principle
 
-Skills define how Codex behaves inside TradeForge.
+Skills define how Agent behaves inside TradeForge.
 
 Correct reasoning is more important than rapid generation.
 

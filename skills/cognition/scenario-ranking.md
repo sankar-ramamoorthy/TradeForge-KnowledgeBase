@@ -1,3 +1,14 @@
+---
+id: skill-scenario-ranking
+title: Scenario Ranking
+category: cognition
+applies_to:
+  - codex
+  - claude
+version: 1.0
+description: Defines how scenarios are generated, interpreted, and ranked — structured hypotheses evaluated by edge strength, regime fit, and risk asymmetry, never converted directly into trade decisions.
+---
+
 # Skill: Scenario Ranking
 
 ## Purpose
@@ -29,7 +40,7 @@ Scenarios must be ranked by:
 
 # Hard Rule
 
-Codex MUST NOT:
+Agent MUST NOT:
 
 - treat scenarios as trade decisions
 - convert scenarios directly into execution logic

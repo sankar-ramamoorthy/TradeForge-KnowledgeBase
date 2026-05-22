@@ -1,10 +1,31 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git mv *)",
+      "Bash(Get-ChildItem *)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\bosto\\\\dockerstuff\\\\knowledge-base\\\\TradeForge\" | Select-Object Name, @{Name='Type';Expression={if\\($_.PSIsContainer\\){'Directory'}else{'File'}}} | Format-Table -AutoSize)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\bosto\\\\dockerstuff\\\\knowledge-base\\\\TradeForge\\\\knowledge\" -Depth 1 | Select-Object Name, @{Name='Type';Expression={if\\($_.PSIsContainer\\){'Directory'}else{'File'}}} | Format-Table -AutoSize)",
+      "Bash(dir *)",
+      "PowerShell(Get-Content *)",
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
-      "Bash(git push *)"
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\bosto\\\\dockerstuff\\\\TradeForge\" -Directory | Where-Object { $_.Name -match \"frontend|web|client|react|app\" } | Select-Object Name)",
+      "Bash(Format-Table -AutoSize)",
+      "PowerShell(head *)",
+      "Bash(uv run *)",
+      "Bash(npm.cmd run *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(git -C \"C:\\\\Users\\\\bosto\\\\dockerstuff\\\\knowledge-base\\\\TradeForge\" add skills/architecture/decision-lifecycle.md skills/architecture/execution-discipline.md)",
+      "Bash(git -C 'C:\\\\Users\\\\bosto\\\\dockerstuff\\\\knowledge-base\\\\TradeForge' commit -m 'Add YAML front matter to architecture skills; broaden agent scope to Claude *)",
+      "Bash(git -C \"C:\\\\Users\\\\bosto\\\\dockerstuff\\\\knowledge-base\\\\TradeForge\" push origin M13)",
+      "Bash(git -C \"C:\\\\Users\\\\bosto\\\\dockerstuff\\\\knowledge-base\\\\TradeForge\" add skills/architecture/event-sourcing.md)",
+      "Bash(git -C 'C:\\\\Users\\\\bosto\\\\dockerstuff\\\\knowledge-base\\\\TradeForge' commit -m 'Add YAML front matter to event-sourcing skill; broaden agent scope to Claude *)",
+      "Bash(git -C \"C:\\\\Users\\\\bosto\\\\dockerstuff\\\\knowledge-base\\\\TradeForge\" add skills/cognition/scenario-ranking.md skills/cognition/workspace-querying.md skills/cognition/market-interpreting.md skills/ontology/structure-feedback-note.md)",
+      "Bash(git -C 'C:\\\\Users\\\\bosto\\\\dockerstuff\\\\knowledge-base\\\\TradeForge' commit -m 'Add YAML front matter to cognition and ontology skills; broaden agent scope to Claude *)",
+      "Bash(git -C \"C:\\\\Users\\\\bosto\\\\dockerstuff\\\\knowledge-base\\\\TradeForge\" add skills/SKILL.md)",
+      "Bash(git -C 'C:\\\\Users\\\\bosto\\\\dockerstuff\\\\knowledge-base\\\\TradeForge' commit -m 'Add YAML front matter to SKILL.md; broaden agent scope to Claude *)",
+      "Bash(git -C \"C:\\\\Users\\\\bosto\\\\dockerstuff\\\\knowledge-base\\\\TradeForge\" add knowledge/raw/2026-05-20-session-restart-prompt.md)",
+      "Bash(git -C \"C:\\\\Users\\\\bosto\\\\dockerstuff\\\\knowledge-base\\\\TradeForge\" commit -m \"Add session restart prompt for 2026-05-21\")"
     ]
   }
 }
