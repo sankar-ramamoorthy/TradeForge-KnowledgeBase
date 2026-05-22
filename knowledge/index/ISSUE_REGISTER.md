@@ -67,6 +67,7 @@ Do not mirror the full runtime issue register here.
 | TF-0031 | Done | React runtime must remain a frontend/API boundary and not import runtime internals or own workspace semantics |
 | TF-0032 | Done | Frontend workspace routes must preserve context without becoming workspace, lifecycle, replay, or event authority |
 | TF-0033 | Done | Shared layout primitives and frontend/DESIGN.md must translate UX doctrine without becoming semantic authority |
+| TF-0034 | Done | Session identity, runtime session, and active workspace context must remain three distinct concepts; Persona activation must not be inferred from user identity |
 | TF-0034 | Done | Session identity must remain separate from Persona while supporting explicit workspace continuity |
 
 
@@ -103,6 +104,45 @@ Relevant processed notes:
 
 ## TF-0034 Processing Result
 
+TF-0034 established the authentication/session boundary for M7 as the final M7 runtime infrastructure issue.
+
+Semantic conclusion:
+
+- user identity, runtime session, and active workspace context are three distinct concepts and must not be collapsed.
+- [[Persona]] remains a decision behavior model; persona activation remains explicit inside workspace context and is not inferred from user identity.
+- session context may provide workspace continuity defaults but does not own workspace truth, projection authority, or lifecycle authority.
+- `GET /session` is read-only; it does not append events, transition lifecycle state, or authorize workflow decisions.
+- replay remains event-backed; historical decisions preserve the persona context that shaped interpretation at the time, independently of mutable session state.
+- full multi-user authorization, credential handling, and role-based policy remain deferred beyond M7.
+- ADR 0022 now exists in the runtime repo and defines the authentication and operational identity boundary.
+
+Note: no raw KB notes were captured during TF-0034 development; KB synthesis was performed retrospectively from runtime sources.
+
+Relevant processed notes:
+
+- [[Plan - TF-0034 Authentication/Session Model]]
+- [[Implemented - TF-0034 Authentication/Session Model]]
+
+## M8 Processing Result
+
+TF-0035 through TF-0041 complete the first operational MVP vertical slice.
+
+Semantic conclusion:
+
+- all six core MVP workspaces are now operational rather than placeholder surfaces
+- user-facing lifecycle progression remains routed through the lifecycle API and domain validation
+- replay now participates directly in the same operational experience rather than remaining only a backend capability
+- review completion is reachable through the same event-backed workflow chain
+- M8 validated that the M4 through M7 route, projection, API, and runtime boundaries were sufficient for an end-to-end operational slice
+
+Relevant processed notes:
+
+- [[Plan - TF-0035 Operating Workspace]]
+- [[Implemented - TF-0035 Operating Workspace]]
+- [[Plan - TF-0036 Opportunity Workspace]]
+- [[Implemented - TF-0036 Opportunity Workspace]]
+- [[Implemented - TF-0037 Through TF-0041 M8 Operational MVP Vertical Slice]]
+- [[First Operational MVP Vertical Slice]]
 TF-0034 established the first runtime session boundary for the MVP frontend/API path.
 
 Semantic conclusion:
@@ -370,6 +410,8 @@ Semantic conclusion:
 
 Relevant processed notes:
 
+- [[TF-0027 FastAPI Runtime Planning Synthesis]]
+- [[TF-0027 FastAPI Runtime Implementation Synthesis]]
 - [[Implemented - TF-0027 FastAPI Runtime Boundary]]
 
 ## TF-0028 Processing Result
@@ -405,6 +447,40 @@ Relevant processed notes:
 
 - [[Plan - TF-0029 Replay API Endpoints]]
 - [[Implemented - TF-0029 Replay API Endpoints]]
+
+## TF-0030 Processing Result
+
+TF-0030 established read-only workspace projection APIs as the final M7 API-layer runtime capability.
+
+Semantic conclusion:
+
+- workspace projection APIs are HTTP read adapters, not workspace authority.
+- persona and workspace context must be explicit at the API boundary.
+- workspace projections remain derived, source-linked, and non-authoritative.
+- lifecycle state in projection responses is event-derived state only, not lifecycle authority.
+- no new event taxonomy, projection persistence, lifecycle mutation, or workspace truth was introduced.
+
+Relevant processed notes:
+
+- [[TF-0030 Workspace Projection API Synthesis]]
+- [[TF-0030 Workspace Projection API Implementation Synthesis]]
+
+## TF-0031 Processing Result
+
+TF-0031 established the React workspace runtime boundary for M7.
+
+Semantic conclusion:
+
+- the React frontend is a presentation and interaction boundary over FastAPI contracts.
+- browser state is operational and temporary, not canonical workspace truth.
+- workspace semantics remain governed by KB doctrine and runtime ADRs.
+- ADR 0021 now exists in the runtime repo and defines the React workspace runtime boundary.
+- full workspace routing, layout primitives, session identity, and lifecycle workflows remain deferred to TF-0032, TF-0033, TF-0034, and M8.
+
+Relevant processed notes:
+
+- [[TF-0031 React Frontend Runtime Boundary Planning Synthesis]]
+- [[TF-0031 React Frontend Scaffold Implementation Synthesis]]
 
 ## M6 Processing Result
 
