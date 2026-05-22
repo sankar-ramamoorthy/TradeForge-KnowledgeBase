@@ -3,7 +3,7 @@ title: Provider Boundary Model
 type: processed-synthesis
 status: processed
 created: 2026-05-13
-updated: 2026-05-21
+updated: 2026-05-22
 source_issues: [TF-0042]
 source_history:
   - knowledge/raw/archived/20260513-tf-0042-provider-boundary-interfaces-planning.md
@@ -17,6 +17,7 @@ related:
   - "[[HistoricalReconstruction]]"
   - "[[Provider Provenance Tracking]]"
   - "[[20260516-m10d-provider-capability-synthesis|M10D Provider Capability Model]]"
+  - "[[20260522-llm-adapter-strategy-and-capability-review-synthesis|LLM Adapter Strategy And Capability Review Synthesis]]"
 ---
 
 # Provider Boundary Model
@@ -209,6 +210,7 @@ Downstream processed artifacts already reference this boundary:
 - TF-0051: seeded demo provider flow
 - TF-0052: replay-compatible snapshot persistence
 - M10D: provider capability model
+- LLM adapter strategy: OpenAI-compatible advisory provider through LiteLLM
 
 No contradiction was found with the loaded invariants, architecture doctrine,
 event taxonomy, or semantic governance rules.
@@ -237,3 +239,4 @@ implementation detail of each class.
 - TF-0047: workspace context overlays consuming normalized snapshots
 - TF-0052: replay-compatible snapshot persistence using `data_as_of` as the historical anchor
 - M10D: typed provider capability registry extending provider selection beyond OHLCV
+- M12/M13 advisory intelligence: OpenAI-compatible LLM provider routed through LiteLLM without changing advisory authority
