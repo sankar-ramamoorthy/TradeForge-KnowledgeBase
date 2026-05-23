@@ -8,6 +8,8 @@ source_history:
   - knowledge/raw/archived/20260522-llm-adapter-strategy-and-capability-review.md
   - knowledge/processed/20260522-m13-preparation-readiness-synthesis.md
   - knowledge/processed/20260522-tf-f045-litellm-credential-shape-synthesis.md
+  - knowledge/processed/20260522-tf-f046-openai-compatible-advisory-provider-synthesis.md
+  - knowledge/processed/20260522-tf-f047-f052-advisory-services-routes-synthesis.md
 authoritative_runtime_doc: C:/Users/bosto/dockerstuff/TradeForge/DOCS/llm-adapter-strategy.md
 tags: [TradeForge, LLM, AI-advisory, provider-boundary, LiteLLM, M12, M13]
 related:
@@ -121,11 +123,20 @@ If future work lets LLM output mutate lifecycle state, write event-ledger facts
 directly, or replace operator approval, that would violate current invariants
 and require explicit rejection or a major architecture decision.
 
+## M13 Runtime Update
+
+The OpenAI-compatible advisory provider and on-demand advisory services are now
+implemented in M13. The strategy remains valid, but TF-F046 through TF-F052 are
+no longer future adapter work.
+
+Automatic enrichment remains deferred. NVIDIA NIM remains a LiteLLM
+configuration and validation concern rather than a TradeForge code boundary.
+
 ## Open Follow-Up
 
 Runtime issue tracking has decomposed the strategy into TF-F045 through TF-F054.
-TF-F045 is now done. The next implementation issue is TF-F046 for the concrete
-OpenAI-compatible advisory provider.
+TF-F045 through TF-F052 are now done. TF-F053 and TF-F054 are documentation or
+configuration-level follow-ons captured in runtime documentation.
 
 The authoritative ordered list lives in:
 

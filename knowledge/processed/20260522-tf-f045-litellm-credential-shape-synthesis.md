@@ -6,6 +6,7 @@ created: 2026-05-22
 updated: 2026-05-22
 source_history:
   - knowledge/raw/archived/brainstorm-20260522-tf-f045-litellm-credential-shape.md
+  - knowledge/raw/archived/20260522-tf-f045-litellm-credential-shape-implementation.md
 tags: [TradeForge, M13, TF-F045, LiteLLM, credential-boundary, AI-advisory]
 related:
   - "[[20260522-m13-preparation-readiness-synthesis]]"
@@ -80,4 +81,3 @@ The following remain future design concerns:
 - whether the CLI should later gain a more specialized LiteLLM setup command
 
 These questions do not block TF-F046.
-

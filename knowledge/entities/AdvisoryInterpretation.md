@@ -9,6 +9,9 @@ milestone: M13
 runtime-issues: [TF-B001, TF-B002, TF-B003, TF-B004, TF-B005, TF-B006, TF-B007, TF-B008, TF-B009, TF-B010, TF-B011, TF-B012, TF-B013, TF-B014, TF-B015]
 source_history:
   - knowledge/processed/20260521-m13-runtime-issue-spec-synthesis.md
+  - knowledge/processed/20260522-m13-contextual-interpretation-closeout-synthesis.md
+  - knowledge/processed/20260522-tf-b002-b009-interpretation-analytics-synthesis.md
+  - knowledge/processed/20260522-tf-b010-b015-replay-ux-surfaces-synthesis.md
 ---
 
 # AdvisoryInterpretation
@@ -75,3 +78,11 @@ Decision and thesis links are contextual references only.
 - [[ContextualWeighting]]
 - [[ConflictingEvidence]]
 - [[InterpretiveUncertainty]]
+
+## Runtime Stabilization
+
+M13 stabilized advisory interpretation analytics, replay-visible capture facts,
+probabilistic cognition summaries, and contextual reasoning timelines.
+
+These surfaces remain derived advisory views. They do not revise theses, approve
+plans, execute trades, or create lifecycle authority.
