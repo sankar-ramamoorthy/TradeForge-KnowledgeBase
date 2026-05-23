@@ -6,9 +6,9 @@ tags: [TradeForge, TF-F, feedback, bug, docker, advisory-provider]
 created: 2026-05-23
 updated: 2026-05-23
 source_history:
-  - knowledge/raw/feedback docker compose up bug.md
-  - knowledge/raw/20260523-tf-f056-diagnosis.md
-  - knowledge/raw/20260523-tf-f056-planning.md
+  - knowledge/raw/archived/feedback docker compose up bug.md
+  - knowledge/raw/archived/20260523-tf-f056-diagnosis.md
+  - knowledge/raw/archived/20260523-tf-f056-planning.md
 related:
   - "[[AI Advisory Boundary]]"
   - "[[Human Decision Sovereignty]]"
@@ -68,6 +68,12 @@ Added focused regression tests covering:
 
 No event, replay, lifecycle, credential schema, frontend, or Docker Compose
 behavior changed. The fix only restores safe app composition.
+
+## Promotion Assessment
+
+No entity, topic, workflow, playbook, prompt, or ADR promotion is required. This
+is a runtime composition bug fix within the existing AI advisory provider
+boundary.
 
 ## Closure Against Original Feedback
 
