@@ -6,10 +6,13 @@ created: 2026-05-22
 updated: 2026-05-22
 source_history:
   - knowledge/raw/archived/Plan for UI-Based Credential Management.md
+  - knowledge/raw/archived/20260522-tf-f055-ui-credential-management-planning.md
+  - knowledge/processed/20260522-tf-f055-ui-credential-management-implementation-synthesis.md
 tags: [TradeForge, credential-boundary, UI, admin-api, provider-configuration, TF-F055]
 related:
   - "[[Provider Boundary Model]]"
   - "[[20260522-tf-f045-litellm-credential-shape-synthesis]]"
+  - "[[20260522-tf-f055-ui-credential-management-implementation-synthesis]]"
 ---
 
 # UI-Based Credential Management Planning Synthesis
@@ -24,17 +27,18 @@ the existing Provider Configuration experience. The plan would allow operators
 to enter, rotate, mask, and revoke provider credentials from the browser while
 preserving the M10C credential boundary.
 
-## Proposed Runtime Issue
+## Runtime Issue
 
-The proposed issue is:
+The issue is:
 
 ```text
 TF-F055: Implement UI-based credential management
 ```
 
-Runtime synchronization check: TF-F055 was not found in the runtime
-`ISSUE_REGISTER.md` during this KB pass. It should be filed before
-implementation begins.
+Runtime synchronization update: TF-F055 is now Done in the runtime issue
+register and roadmap. Runtime ADR-0037 includes the UI credential management
+amendment, and `DOCS/credential-ui-strategy.md` preserves the implementation
+design.
 
 ## ADR Assessment
 
@@ -49,12 +53,12 @@ unchanged. The proposed amendment would add:
 This is an extension of the operational credential boundary, not a replacement
 for it.
 
-## Proposed Backend Shape
+## Backend Shape
 
-The backend plan introduces a `ProviderBootstrapService` that extracts provider
-instantiation from `create_app()` and exposes a reload method.
+The backend implementation introduced a `ProviderBootstrapService` that
+rebuilds provider-dependent services in-process after credential changes.
 
-The proposed admin API surface:
+The admin API surface:
 
 ```text
 GET    /admin/credentials
@@ -71,9 +75,10 @@ Rules:
 - missing master key returns a clear 503, not a UI setup path
 - provider reload occurs after successful save or revoke
 
-## Proposed Frontend Shape
+## Frontend Shape
 
-The plan extends `ProviderConfigurationPanel` rather than adding a new page.
+The implementation extends `ProviderConfigurationPanel` rather than adding a new
+page.
 
 Provider rows would show inline credential sections:
 
@@ -83,8 +88,8 @@ Provider rows would show inline credential sections:
 - submit flow through the admin credential API
 - confirmation after provider reload
 
-The frontend should use a static provider credential schema for current
-providers, including `litellm` with `base_url`, `api_key`, and `default_model`.
+The frontend uses a static provider credential schema for current providers,
+including `litellm` with `base_url`, `api_key`, and `default_model`.
 
 ## Boundary Preservation
 
@@ -102,15 +107,14 @@ It must not:
 Credentials remain operational capability metadata, not lifecycle state or
 Event Ledger truth.
 
-## Deferred Actions
+## Implementation Update
 
-Before implementation, runtime docs should be updated:
+The deferred runtime actions are complete:
 
-- append ADR-0037 amendment for UI credential management
-- add `DOCS/credential-ui-strategy.md`
-- add TF-F055 to `DOCS/ISSUE_REGISTER.md`
-- add TF-F055 to `DOCS/Milestone_Roadmap_v2.md`
+- ADR-0037 was amended for UI credential management.
+- `DOCS/credential-ui-strategy.md` was added.
+- TF-F055 was added to `DOCS/ISSUE_REGISTER.md`.
+- TF-F055 was added to `DOCS/Milestone_Roadmap_v2.md`.
 
-These actions are explicitly deferred; this KB pass preserves the planning
-reasoning and does not treat TF-F055 as accepted runtime work yet.
-
+The implementation closeout is preserved in
+[[20260522-tf-f055-ui-credential-management-implementation-synthesis]].
