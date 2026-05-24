@@ -196,6 +196,27 @@ Load only the semantic domains relevant to the current task.
 
 ---
 
+## M13A Provider Governance
+
+- [[TF-F059 M13A Provider Governance Roadmap Planning Synthesis]]
+- [[TF-F060 Provider Governance Control Surface Synthesis]]
+- [[TF-F061 Capability Routing Governance Synthesis]]
+- [[TF-F062 AI Gateway Route Alias Synthesis]]
+- [[TF-F063 Provider Diagnostics Health History Synthesis]]
+- [[TF-F064 Provider Governance Read APIs Planning Synthesis]]
+- [[TF-F064 Provider Governance Read APIs Implementation Synthesis]]
+- [[TF-F065 Credential Validation Planning Synthesis]]
+- [[TF-F065 Credential Validation Implementation Synthesis]]
+- [[TF-F066 AI Gateway Route Visibility Planning Synthesis]]
+- [[TF-F066 AI Gateway Route Visibility Implementation Synthesis]]
+- [[TF-F067 Provider Governance Frontend Planning Synthesis]]
+- [[TF-F067 Provider Governance Frontend Implementation Synthesis]]
+- [[TF-F068 M13A Readiness Planning Synthesis]]
+- [[TF-F068 M13A Readiness Implementation Synthesis]]
+- [[M13A Provider Governance Surface End-to-End Implementation Synthesis]]
+
+---
+
 ## Future Index Areas
 
 These areas should be expanded progressively as canonical pages are promoted:
