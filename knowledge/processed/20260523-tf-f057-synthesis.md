@@ -6,9 +6,9 @@ tags: [TradeForge, TF-F057, feedback, litellm, docker-compose, ai-advisory]
 created: 2026-05-23
 updated: 2026-05-23
 source_history:
-  - knowledge/raw/brainstorm-20260523-litellm-compose-runtime.md
-  - knowledge/raw/20260523-tf-f057-diagnosis.md
-  - knowledge/raw/20260523-tf-f057-planning.md
+  - knowledge/raw/archived/brainstorm-20260523-litellm-compose-runtime.md
+  - knowledge/raw/archived/20260523-tf-f057-diagnosis.md
+  - knowledge/raw/archived/20260523-tf-f057-planning.md
 related:
   - "[[AI Advisory Boundary]]"
   - "[[Human Decision Sovereignty]]"
@@ -45,6 +45,14 @@ The application advisory boundary was already implemented. The missing piece was
 ## Replay And Lifecycle Implications
 
 No event, replay, or lifecycle behavior changed. The service only hosts an external advisory endpoint. Replay continues to depend on event history and replay-safe captured advisory facts, not live model calls.
+
+## Promotion Assessment
+
+No entity, topic, workflow, playbook, prompt, or ADR promotion is required. The
+change is operational Compose infrastructure under the existing advisory
+boundary and credential-boundary doctrine. The source request included
+`2440 20260523-tf-f057-planning.md`; the actual raw file was
+`20260523-tf-f057-planning.md`.
 
 ## Verification
 
