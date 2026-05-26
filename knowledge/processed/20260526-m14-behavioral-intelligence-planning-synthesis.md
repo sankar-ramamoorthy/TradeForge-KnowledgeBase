@@ -4,8 +4,8 @@ type: processed-synthesis
 status: processed
 created: 2026-05-26
 source:
-  - knowledge/raw/20260526-m14-behavioral-intelligence-planning.md
-  - knowledge/raw/M14 Proposed plan.md
+  - knowledge/raw/archived/20260526-m14-behavioral-intelligence-planning.md
+  - knowledge/raw/archived/M14 Proposed plan.md
 issue: TF-C001
 milestone: M14
 tags:
@@ -48,7 +48,7 @@ severity, recurrence count, and explicit non-canonical authority metadata.
 
 ## Runtime Synchronization
 
-The runtime repository now records:
+At TF-C001 completion, the runtime repository recorded:
 
 - TF-C001 as Done in `DOCS/ISSUE_REGISTER.md`
 - TF-C002 through TF-C010 as Planned M14 follow-on work
@@ -58,8 +58,8 @@ The runtime repository now records:
 - `SizingViolationDetector` and `BehavioralSignalReadService` as the first
   runtime implementation of this boundary
 
-The runtime roadmap should describe M14 as active/in progress while TF-C002
-through TF-C010 remain planned.
+This was superseded by later M14 completion work. The runtime roadmap now
+describes M14 as Done, with TF-C001 through TF-C010 complete.
 
 ## Ontology Implications
 
@@ -76,11 +76,12 @@ entity definitions:
 - `DecisionQuality`
 - `BehavioralReplay`
 
-They should continue to stabilize through later M14 issues.
+They stabilized further through later M14 issues and should be interpreted
+through `knowledge/processed/20260526-m14-behavioral-intelligence-synthesis.md`.
 
 ## Workflow Implications
 
-M14 should continue in this order:
+At planning time, M14 continued in this order:
 
 1. TF-C002: Detect impulsive execution patterns
 2. TF-C003: Implement process deviation overlays
@@ -88,9 +89,9 @@ M14 should continue in this order:
    discipline deterioration, thesis attachment analysis, emotional reflection,
    behavior timelines, and decision-quality review metrics
 
-The next implementation should preserve the TF-C001 pattern: deterministic
-signals first, source-linked overlays second, higher-order interpretation only
-after the deterministic foundation exists.
+The completed M14 implementation preserved the TF-C001 pattern: deterministic
+signals first, source-linked overlays second, and higher-order interpretation as
+derived review context rather than canonical truth.
 
 ## Invariants Preserved
 
@@ -116,4 +117,3 @@ Archived processed raw captures:
 
 - `knowledge/raw/archived/20260526-m14-behavioral-intelligence-planning.md`
 - `knowledge/raw/archived/M14 Proposed plan.md`
-

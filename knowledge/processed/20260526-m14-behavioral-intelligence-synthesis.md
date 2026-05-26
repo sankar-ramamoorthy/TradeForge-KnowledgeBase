@@ -4,7 +4,9 @@ status: processed
 type: implementation-synthesis
 created: 2026-05-26
 source:
-  - knowledge/raw/20260526-m14-behavioral-intelligence-completion.md
+  - knowledge/raw/archived/20260526-m14-behavioral-intelligence-planning.md
+  - knowledge/raw/archived/M14 Proposed plan.md
+  - knowledge/processed/20260526-raw-archive-batch-processing-synthesis.md
 tags:
   - TradeForge
   - M14
@@ -43,3 +45,13 @@ Event Ledger history
 
 This pattern should be preserved for later cognitive auditability work unless a
 future ADR intentionally introduces new review-event semantics.
+
+## Completion State
+
+Runtime planning now treats M14 as complete:
+
+- TF-C001 through TF-C010 are Done in `DOCS/ISSUE_REGISTER.md`.
+- M14 is Done in `DOCS/Milestone_Roadmap_v2.md`.
+- M15 Replayable Cognitive Reconstruction is the next planned milestone.
+
+KB status documents should use this completion state.

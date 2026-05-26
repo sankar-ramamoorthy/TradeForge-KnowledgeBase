@@ -10,6 +10,8 @@ related:
   - ../processed/20260522-llm-adapter-strategy-and-capability-review-synthesis.md
   - ../processed/20260522-m13-contextual-interpretation-closeout-synthesis.md
   - ../processed/20260526-m14-behavioral-intelligence-planning-synthesis.md
+  - ../processed/20260526-m14-behavioral-intelligence-synthesis.md
+  - ../processed/20260526-raw-archive-batch-processing-synthesis.md
   - ../../../../TradeForge/DOCS/Milestone_Roadmap_v2.md
 ---
 
@@ -72,7 +74,7 @@ This topic frames the active v2 roadmap from M12 onward:
 
 - M12: advisory observations and cognitive evidence
 - M13: contextual interpretation and thesis influence (runtime complete)
-- M14: behavioral intelligence and cognitive auditability (active; TF-C001 complete)
+- M14: behavioral intelligence and cognitive auditability (runtime complete)
 - M15: replayable cognitive reconstruction
 - M16: attention allocation and opportunity funnel
 - M17: simulation and regime experimentation
@@ -82,13 +84,14 @@ This topic frames the active v2 roadmap from M12 onward:
 ## Current Status
 
 Emerging. This topic summarizes the processed brainstorm, roadmap integration,
-M13 closeout, and the M14 TF-C001 behavioral-signal foundation. It is not yet a
-complete canonical doctrine file or entity taxonomy.
+M13 closeout, M14 behavioral intelligence completion, and raw archive batch
+processing. It is not yet a complete canonical doctrine file or entity
+taxonomy.
 
 ## M14 Behavioral Signal Boundary
 
-M14 begins with deterministic BehavioralSignals rather than opaque behavioral
-scores or AI-authored judgments.
+M14 stabilized deterministic BehavioralSignals and higher-order derived review
+projections rather than opaque behavioral scores or AI-authored judgments.
 
 The first stable boundary is:
 
@@ -96,6 +99,6 @@ The first stable boundary is:
 Event Ledger history -> deterministic detector -> BehavioralSignal
 ```
 
-BehavioralSignals are derived, replayable, source-linked review context. They do
-not create lifecycle authority, execution authority, or canonical behavioral
-events.
+BehavioralSignals and M14 behavioral review projections are derived,
+replayable, source-linked review context. They do not create lifecycle
+authority, execution authority, or canonical behavioral events.
