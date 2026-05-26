@@ -165,7 +165,7 @@ When contradictions arise between the two repositories, the knowledge base is au
 
 ## Current Status
 
-The knowledge base is synchronized with the runtime through **M13B (AI Gateway Governance and Managed Advisory Runtime)**, including the TF-F075 stateless LiteLLM request-time credential composition correction and TF-F076 non-invasive readiness healthcheck correction. Raw and processed captures exist for the recent M13A/M13B feedback issues. M14 behavioral intelligence remains the next planned runtime milestone.
+The knowledge base is synchronized with the runtime through completed **M14 (Behavioral Intelligence and Cognitive Auditability)**. The archived raw notes have been batch-processed into promoted syntheses, and M15 replayable cognitive reconstruction is the next planned milestone.
 
 Ongoing work: ontology promotion, topic synthesis, playbook evolution as the runtime expands.
 

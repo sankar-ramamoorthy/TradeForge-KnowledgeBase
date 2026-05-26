@@ -78,7 +78,8 @@ It should not prove autonomous trading, broker replacement, charting platform so
 | M12-M13 | Done | Advisory observation layer and contextual interpretation |
 | M13A | Done | Provider governance and AI gateway configuration |
 | M13B | Done | Managed advisory runtime, explicit provider/model route selection, and stateless LiteLLM request-time credential composition |
-| M14-M19 | Planned | Behavioral intelligence, cognitive replay, attention allocation, simulation, adaptive research, and long-horizon cognition analysis |
+| M14 | Done | Behavioral intelligence and cognitive auditability |
+| M15-M19 | Planned | Cognitive replay, attention allocation, simulation, adaptive research, and long-horizon cognition analysis |
 
 ## M4 Closeout
 
@@ -272,6 +273,10 @@ Relevant KB artifacts:
 - [[Implemented - TF-0037 Through TF-0041 M8 Operational MVP Vertical Slice]]
 - [[First Operational MVP Vertical Slice]]
 - [[Persona Workspace Projection Layer]]
+- [[M14 Behavioral Intelligence Planning Synthesis]]
+- [[M14 Behavioral Intelligence Synthesis]]
+- [[Raw Archive Batch Processing Synthesis]]
+- [[BehavioralSignal]]
 
 Root design layer:
 
