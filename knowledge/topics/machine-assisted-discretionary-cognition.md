@@ -3,12 +3,13 @@ title: Machine-Assisted Discretionary Cognition
 type: topic
 status: emerging
 created: 2026-05-19
-updated: 2026-05-22
+updated: 2026-05-26
 tags: [TradeForge, cognition, AI-advisory, roadmap, discretionary-trading]
 related:
   - ../processed/20260519-machine-assisted-discretionary-cognition-synthesis.md
   - ../processed/20260522-llm-adapter-strategy-and-capability-review-synthesis.md
   - ../processed/20260522-m13-contextual-interpretation-closeout-synthesis.md
+  - ../processed/20260526-m14-behavioral-intelligence-planning-synthesis.md
   - ../../../../TradeForge/DOCS/Milestone_Roadmap_v2.md
 ---
 
@@ -71,7 +72,7 @@ This topic frames the active v2 roadmap from M12 onward:
 
 - M12: advisory observations and cognitive evidence
 - M13: contextual interpretation and thesis influence (runtime complete)
-- M14: behavioral intelligence and cognitive auditability
+- M14: behavioral intelligence and cognitive auditability (active; TF-C001 complete)
 - M15: replayable cognitive reconstruction
 - M16: attention allocation and opportunity funnel
 - M17: simulation and regime experimentation
@@ -81,5 +82,20 @@ This topic frames the active v2 roadmap from M12 onward:
 ## Current Status
 
 Emerging. This topic summarizes the processed brainstorm, roadmap integration,
-and M13 closeout. It is not yet a complete canonical doctrine file or entity
-taxonomy.
+M13 closeout, and the M14 TF-C001 behavioral-signal foundation. It is not yet a
+complete canonical doctrine file or entity taxonomy.
+
+## M14 Behavioral Signal Boundary
+
+M14 begins with deterministic BehavioralSignals rather than opaque behavioral
+scores or AI-authored judgments.
+
+The first stable boundary is:
+
+```text
+Event Ledger history -> deterministic detector -> BehavioralSignal
+```
+
+BehavioralSignals are derived, replayable, source-linked review context. They do
+not create lifecycle authority, execution authority, or canonical behavioral
+events.

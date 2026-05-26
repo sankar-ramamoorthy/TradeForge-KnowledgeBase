@@ -165,7 +165,7 @@ When contradictions arise between the two repositories, the knowledge base is au
 
 ## Current Status
 
-The knowledge base is synchronized with the runtime through **M10 (Operational Workflow UX and Demoability)**. Raw planning and implementation captures exist for all M9 and M10 issues. Entity definitions cover the core domain model.
+The knowledge base is synchronized with the runtime through active **M14 (Behavioral Intelligence and Cognitive Auditability)**. TF-C001 has stabilized the first deterministic `BehavioralSignal` boundary for recurring sizing violations, while TF-C002 through TF-C010 remain planned M14 follow-on work.
 
 Ongoing work: ontology promotion, topic synthesis, playbook evolution as the runtime expands.
 

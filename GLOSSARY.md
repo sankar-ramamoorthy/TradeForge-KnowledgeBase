@@ -384,6 +384,24 @@ Reviews are first-class system outputs.
 
 ---
 
+## Behavioral Signal
+
+A **Behavioral Signal** is a deterministic, source-linked derived read model
+that surfaces review-relevant process or discipline patterns from Event Ledger
+history.
+
+It is NOT:
+- canonical truth
+- a lifecycle event
+- execution authority
+- an approval gate
+- an AI-authored judgment
+
+Behavioral signals support cognitive auditability and reflective review while
+remaining distinguishable from canonical facts.
+
+---
+
 ## Workspace Surface
 
 A **Workspace Surface** is a conceptual UI layer within a persona workspace.
