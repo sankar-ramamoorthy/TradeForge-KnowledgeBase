@@ -174,6 +174,23 @@ TF-0032 established typed React workspace routes for the six core MVP workspaces
 
 TF-0033 established shared React operational layout primitives and `frontend/DESIGN.md` as a runtime translation artifact for frontend tokens and layout rationale.
 
+TF-0034 established the authentication/session boundary for M7, introducing three distinct identity concepts — user identity, runtime session, and active workspace context — to prevent session identity from collapsing into [[Persona]] and to preserve replay integrity.
+
+TF-0034 did not introduce full multi-user authorization, credential storage, OAuth, role-based policy, persona activation from user identity, or session-backed event writes.
+
+M8 is now complete:
+
+- TF-0035: Implement Operating Workspace (**Done**)
+- TF-0036: Implement Opportunity Workspace (**Done**)
+- TF-0037: Implement Plan Review Workspace (**Done**)
+- TF-0038: Implement Active Position Workspace (**Done**)
+- TF-0039: Implement Replay Workspace (**Done**)
+- TF-0040: Implement Review Workspace (**Done**)
+- TF-0041: Implement first replayable lifecycle flow (**Done**)
+
+M8 established the first full operational MVP workflow across all six core workspaces and verified
+the full Idea -> Thesis -> Plan -> Approval -> Execution -> Position -> Review chain as an
+event-backed, replay-compatible path.
 TF-0034 established a minimal runtime session boundary that separates user identity, runtime session identity, and active persona/workspace context.
 
 ## Fast MVP Path
@@ -237,14 +254,23 @@ Relevant KB artifacts:
 - [[Implemented - TF-0025 Alembic Migration Infrastructure]]
 - [[Plan - TF-0026 Postgres Event Ledger]]
 - [[Implemented - TF-0026 Postgres Event Ledger]]
+- [[TF-0027 FastAPI Runtime Planning Synthesis]]
+- [[TF-0027 FastAPI Runtime Implementation Synthesis]]
 - [[Implemented - TF-0027 FastAPI Runtime Boundary]]
 - [[Plan - TF-0028 Lifecycle API Endpoints]]
 - [[Implemented - TF-0028 Lifecycle API Endpoints]]
 - [[Plan - TF-0029 Replay API Endpoints]]
 - [[Implemented - TF-0029 Replay API Endpoints]]
+- [[TF-0030 Workspace Projection API Synthesis]]
+- [[TF-0030 Workspace Projection API Implementation Synthesis]]
+- [[TF-0031 React Frontend Runtime Boundary Planning Synthesis]]
+- [[TF-0031 React Frontend Scaffold Implementation Synthesis]]
 - [[Implemented - TF-0032 Workspace Routing System]]
 - [[Implemented - TF-0033 Shared Operational Layout System]]
-- [[Implemented - TF-0034 Authentication And Session Model]]
+- [[Plan - TF-0034 Authentication/Session Model]]
+- [[Implemented - TF-0034 Authentication/Session Model]]
+- [[Implemented - TF-0037 Through TF-0041 M8 Operational MVP Vertical Slice]]
+- [[First Operational MVP Vertical Slice]]
 - [[Persona Workspace Projection Layer]]
 
 Root design layer:
