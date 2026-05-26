@@ -452,6 +452,11 @@ Task touches:
 - RL systems
 - adaptive behavior
 - strategy intelligence
+- provider governance for advisory systems
+- AI gateway routing and route aliases
+- managed advisory runtime boundaries
+- governed downstream provider secrets
+- advisory smoke tests and diagnostics
 
 ## Load
 
@@ -459,12 +464,14 @@ Canonical doctrine:
 
 - AI doctrine
 - advisory boundaries
+- managed AI gateway and governed provider-secret doctrine
 
 Canonical entities:
 
 - advisory systems
 - simulation entities
 - regime models
+- provider governance artifacts
 
 Canonical topics:
 
@@ -472,11 +479,17 @@ Canonical topics:
 - trading intelligence
 - reinforcement learning
 - strategy analysis
+- provider governance
+- AI gateway routing
+- operational diagnostics
+- credential governance
 
 Relevant ADRs:
 
 - AI architecture ADRs
 - RL integration ADRs
+- managed AI gateway ADRs
+- credential governance ADRs
 
 ## Avoid Loading
 

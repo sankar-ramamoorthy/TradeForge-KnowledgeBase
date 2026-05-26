@@ -165,7 +165,7 @@ When contradictions arise between the two repositories, the knowledge base is au
 
 ## Current Status
 
-The knowledge base is synchronized with the runtime through **M10 (Operational Workflow UX and Demoability)**. Raw planning and implementation captures exist for all M9 and M10 issues. Entity definitions cover the core domain model.
+The knowledge base is synchronized with the runtime through **M13B (AI Gateway Governance and Managed Advisory Runtime)**, including the TF-F075 stateless LiteLLM request-time credential composition correction and TF-F076 non-invasive readiness healthcheck correction. Raw and processed captures exist for the recent M13A/M13B feedback issues. M14 behavioral intelligence remains the next planned runtime milestone.
 
 Ongoing work: ontology promotion, topic synthesis, playbook evolution as the runtime expands.
 
