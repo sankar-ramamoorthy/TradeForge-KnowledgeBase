@@ -4,7 +4,7 @@ type: index
 status: canonical
 tags: [TradeForge, roadmap, milestones, architecture, MVP]
 created: 2026-05-08
-updated: 2026-05-19
+updated: 2026-05-26
 runtime_authority: ../../../../TradeForge/DOCS/Milestone_Roadmap_v2.md
 ---
 
@@ -72,12 +72,13 @@ It should not prove autonomous trading, broker replacement, charting platform so
 | M6 | Done | Persona Workspace projection layer |
 | M7 | Done | MVP runtime infrastructure |
 | M8 | Done | First operational MVP vertical slice |
-| M9+ | Deferred | Market/scenario/AI/adaptive layers after MVP path checkpoint |
-| M8 | Planned | First operational MVP vertical slice |
 | M9 | Done | Market context and provider layer |
 | M10-M10E | Done | Operational workflow, structured cognition, provider capability, and context workbench readiness |
 | M11 | Done | Foundational AI advisory boundary |
-| M12-M19 | Planned | Machine-assisted discretionary cognition evolution |
+| M12-M13 | Done | Advisory observation layer and contextual interpretation |
+| M13A | Done | Provider governance and AI gateway configuration |
+| M13B | Done | Managed advisory runtime, explicit provider/model route selection, and stateless LiteLLM request-time credential composition |
+| M14-M19 | Planned | Behavioral intelligence, cognitive replay, attention allocation, simulation, adaptive research, and long-horizon cognition analysis |
 
 ## M4 Closeout
 
