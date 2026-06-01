@@ -1,0 +1,56 @@
+Import Preview
+Advisory draft context
+AdvisoryNon-canonical
+Drop markdown in imports/incoming.
+Local thesis import scan failed: Not Found
+
+PS C:\Users\bosto\dockerstuff\TradeForge> tree /f imports
+Folder PATH listing
+Volume serial number is 6408-2CE5
+C:\USERS\BOSTO\DOCKERSTUFF\TRADEFORGE\IMPORTS
+└───incoming
+        ATKR_thesis_draft.md
+
+PS C:\Users\bosto\dockerstuff\TradeForge> dir
+
+
+    Directory: C:\Users\bosto\dockerstuff\TradeForge
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         5/22/2026  11:01 PM                .claude
+d-----         5/13/2026  12:08 PM                .mypy_cache
+d-----          5/8/2026   8:15 PM                .pytest_cache
+d-----          5/8/2026   8:46 PM                .ruff_cache
+d-----         5/19/2026   3:27 PM                .uv-cache
+d-----         5/11/2026   1:57 PM                .venv
+d-----         5/25/2026  10:47 PM                DOCS
+d-----         5/23/2026  11:15 PM                frontend
+d-----         5/27/2026   7:22 PM                imports
+d-----         5/11/2026   1:58 PM                migrations
+d-----         5/25/2026  10:44 PM                scripts
+d-----         5/16/2026   3:28 PM                src
+d-----         5/26/2026   4:23 PM                tests
+-a----          5/9/2026  12:06 AM            132 .dockerignore
+-a----          5/8/2026  11:20 AM             66 .gitattributes
+-a----         5/16/2026   3:58 PM           4042 .gitignore
+-a----         5/26/2026  12:57 PM           3214 .keys.enc
+-a----         5/11/2026  10:59 PM           5575 AGENTS.md
+-a----         5/11/2026   1:57 PM            663 alembic.ini
+-a----          5/7/2026  10:36 PM           4817 ARCHITECTURE.md
+-a----         5/11/2026  11:00 PM           4860 CLAUDE.md
+-a----         5/25/2026  11:41 AM             52 docker-compose.litellm-debug.yml
+-a----         5/26/2026   3:51 PM           2141 docker-compose.yml
+-a----          5/9/2026  12:06 AM            267 Dockerfile
+-a----         5/26/2026  12:41 PM           6170 HOW-TO-SETUP-KEYS.md
+-a----          5/7/2026  10:39 PM           2513 INVARIANTS.md
+-a----          5/8/2026  11:20 AM          11524 LICENSE
+-a----         5/26/2026   1:00 PM            492 litellm_config.yaml
+-a----         5/23/2026   3:32 PM            382 package.json
+-a----          5/7/2026  10:39 PM           1590 PROJECT.md
+-a----         5/25/2026   7:37 PM           1205 pyproject.toml
+-a----         5/26/2026   5:13 PM          12142 README.md
+-a----         5/13/2026   5:26 PM           1217 run_demo.py
+-a----         5/25/2026   7:39 PM         144402 uv.lock
+-a----          5/7/2026  10:40 PM           2484 UX_DOCTRINE.md
