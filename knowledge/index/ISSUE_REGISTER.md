@@ -522,3 +522,29 @@ Relevant processed notes:
 - [[Machine-Assisted Discretionary Cognition Synthesis]]
 - [[Machine-Assisted Discretionary Cognition]]
 
+## EV-00 / EV-05 Evidence Density Processing Result
+
+The 2026-07-12 Evidence Density processing pass added explicit runtime issue
+authority for evidence freshness, symbol eligibility, watchlist membership, and
+transparent attention ranking. The first EV runtime slice (EV-00 through EV-05)
+landed the same day.
+
+Semantic conclusion:
+
+- evidence density is not merely more market data; it is source-linked context
+  that helps explain what deserves attention and why
+- attention ranking is deterministic derived state, not canonical truth,
+  lifecycle authority, execution permission, AI authority, or a buy/sell
+  recommendation
+- ranking reasons must remain operator-visible and replay-compatible
+- replay must reconstruct evidence and ranking from persisted snapshots,
+  historical artifacts, Event Ledger state, and deterministic rules only
+- runtime implementation uses `market.watchlist_entry_added` and
+  `market.watchlist_entry_updated` as the only new canonical EV facts; snapshot
+  refreshes, rankings, evidence panels, and charts remain advisory read models
+
+Relevant processed notes:
+
+- [[Evidence Density And Attention Ranking Synthesis]]
+- [[Evidence Density And Attention Ranking]]
+
