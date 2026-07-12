@@ -302,4 +302,27 @@ If runtime roadmap and this KB index diverge, treat the runtime roadmap as opera
 
 TF-F044 integrated the proposed DOCS/Milestone_Roadmap_v3.md future direction into active DOCS/Milestone_Roadmap_v2.md. The semantic shift is toward machine-assisted discretionary cognition: advisory observations, evidence accumulation, contextual interpretation, behavioral auditability, cognitive replay, attention allocation, simulation, adaptive advisory research, and long-horizon cognitive performance analysis. The processed KB synthesis is [[Machine-Assisted Discretionary Cognition Synthesis]], and the emerging topic is [[Machine-Assisted Discretionary Cognition]].
 
+## Evidence Density And Attention Ranking Refinement
+
+The 2026-07-12 roadmap refinement moved the next product-value slice toward
+Evidence Density before paper execution. The runtime roadmap and issue register
+added EV-00 through EV-05, and the first EV runtime slice landed on
+2026-07-12.
+
+Semantic conclusion:
+
+- TradeForge should first answer what deserves attention, why it matters now,
+  what changed, and what evidence is missing
+- transparent ranking prevents snapshot collection from becoming an unranked
+  evidence pile
+- ranking remains deterministic, provenance-backed, replay-safe, and
+  non-authoritative
+- watchlist intent is canonical as `market.watchlist_*`; evidence refresh,
+  ranking, panel facts, and charts are advisory derived state
+
+Relevant processed notes:
+
+- [[Evidence Density And Attention Ranking Synthesis]]
+- [[Evidence Density And Attention Ranking]]
+
 
