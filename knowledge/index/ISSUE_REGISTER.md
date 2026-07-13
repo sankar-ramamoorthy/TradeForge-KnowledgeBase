@@ -566,3 +566,22 @@ Relevant processed note:
 
 - [[TF-F078 Synthesis - Evidence API Vite Proxy Gap]]
 
+## TF-F079 Alpha Vantage Partial Fundamentals
+
+TF-F079 processed provider feedback where Alpha Vantage `OVERVIEW` could return
+usable company profile and ratio data while `INCOME_STATEMENT` returned a
+payload without `annualReports`. The runtime had treated that secondary payload
+problem as a total fundamentals failure.
+
+Semantic conclusion:
+
+- provider-specific format differences belong inside adapter normalization
+- partial provider success should remain usable when the normalized contract can
+  represent missing sections explicitly
+- available overview data is advisory derived context, not event-ledger truth
+- diagnostics should identify the upstream function boundary rather than
+  leaking implementation-only key lookup errors
+
+Relevant processed note:
+
+- [[TF-F079 Synthesis - Alpha Vantage Partial Fundamentals]]

@@ -343,4 +343,23 @@ Relevant processed note:
 
 - [[TF-F078 Synthesis - Evidence API Vite Proxy Gap]]
 
+## TF-F079 Provider Fundamentals Feedback
+
+The M-EZ corrective feedback stream also closed an Alpha Vantage fundamentals
+degradation issue. A usable `OVERVIEW` response should produce partial advisory
+fundamentals even when the separate `INCOME_STATEMENT` payload is unavailable
+or malformed.
+
+Semantic conclusion:
+
+- evidence density depends on graceful provider degradation, not just more
+  provider calls
+- FMP and Alpha Vantage remain separate provider adapters with separate shape
+  normalization
+- missing revenue/net income can be represented as partial context rather than
+  full context unavailability
+
+Relevant processed note:
+
+- [[TF-F079 Synthesis - Alpha Vantage Partial Fundamentals]]
 
