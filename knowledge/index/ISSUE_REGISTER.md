@@ -548,3 +548,21 @@ Relevant processed notes:
 - [[Evidence Density And Attention Ranking Synthesis]]
 - [[Evidence Density And Attention Ranking]]
 
+## TF-F078 Evidence Refresh Non-JSON Response
+
+TF-F078 processed a post-EV feedback report where Evidence Refresh returned a
+non-JSON response in the dev UI. Diagnosis showed the backend `/evidence`
+routes were registered, but Vite did not proxy the new `/evidence` prefix and
+therefore returned frontend HTML to an API client expecting JSON.
+
+Semantic conclusion:
+
+- this was an operational dev-proxy gap, not an EV evidence authority defect
+- no event model, lifecycle, replay, or API contract semantics changed
+- dev tooling must stay synchronized with newly introduced runtime API
+  prefixes so workspace actions do not degrade into opaque transport errors
+
+Relevant processed note:
+
+- [[TF-F078 Synthesis - Evidence API Vite Proxy Gap]]
+

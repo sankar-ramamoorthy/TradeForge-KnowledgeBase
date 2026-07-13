@@ -325,4 +325,22 @@ Relevant processed notes:
 - [[Evidence Density And Attention Ranking Synthesis]]
 - [[Evidence Density And Attention Ranking]]
 
+## TF-F078 Evidence Dev Proxy Feedback
+
+The first EV feedback pass after implementation identified a dev proxy gap:
+Vite did not forward the new `/evidence` API prefix, so the frontend received
+HTML instead of JSON for Evidence Refresh. The bounded corrective issue is
+TF-F078.
+
+Semantic conclusion:
+
+- the EV route existed in FastAPI; the issue was local dev routing
+- `/evidence` and `/market` dev proxy coverage are operational support for the
+  evidence surfaces, not changes to evidence semantics
+- this feedback closes against the M-EZ Evidence Density slice
+
+Relevant processed note:
+
+- [[TF-F078 Synthesis - Evidence API Vite Proxy Gap]]
+
 
